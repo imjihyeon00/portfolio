@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Parallax Effect</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="stylesheet" href="../assets/css/highlight.css">
+
+  <style>
+    .paraNav {
+      top: 20px;
+      transition: top .5s ease;
+    }
+
+    .paraNav.hide {
+      top: -200px;
+    }
+
+    .paraNav li a {
+      width: auto;
+      padding: 5px;
+      width: 30px;
+      height: 30px;
+    }
+
+    .paraNav li.active a {
+      border-radius: 30px;
+    }
+  </style>
+</head>
+
+<body class="parallax">
+
+  <!-- header -->
+  <header class="paraInfo">
+    <h1><a href="index.html">Parallax Effect06 - jQuery</a></h1>
+    <p>패랠랙스 스크로링 효과 - 이질감</p>
+  </header>
+  <!-- //header -->
+
+
+  <!-- main -->
+  <main>
+    <div class="paraScroll">scrollTop() : <span>0</span>px</div>
+
+    <!--//scroll-->
+    <div class="paraNav">
+      <ul>
+        <li class="active"><a href="#section1">s1</a></li>
+        <li><a href="#section2">s2</a></li>
+        <li><a href="#section3">s3</a></li>
+        <li><a href="#section4">s4</a></li>
+        <li><a href="#section5">s5</a></li>
+        <li><a href="#section6">s6</a></li>
+        <li><a href="#section7">s7</a></li>
+        <li><a href="#section8">s8</a></li>
+        <li><a href="#section9">s9</a></li>
+      </ul>
+    </div>
+    <!-- //nav -->
+
+    <div class="paraCont">
+
+      <section id="section1" class="content-item">
+        <span class="num">01</span>
+        <h2 class="title">Section1</h2>
+        <figure class="img-Wrap">
+          <div class="img"></div>
+        </figure>
+        <p class="desc">Don't dwell on the past</p>
+      </section>
+      <!-- section1 -->
+
+      <section id="section2" class="content-item">
+        <span class="num">02</span>
+        <h2 class="title">Section2</h2>
+        <figure class="img-Wrap">
+          <div class="img"></div>
+        </figure>
+        <p class="desc">Pain past is pleasure</p>
+      </section>
+      <!-- section2 -->
+
+      <section id="section3" class="content-item">
+        <span class="num">03</span>
+        <h2 class="title">Section3</h2>
+        <figure class="img-Wrap">
+          <div class="img"></div>
+        </figure>
+        <p class="desc">Don't give up easily even if you failed</p>
+      </section>
+      <!-- section3 -->
+
+      <section id="section4" class="content-item">
+        <span class="num">04</span>
+        <h2 class="title">Section4</h2>
+        <figure class="img-Wrap">
+          <div class="img"></div>
+        </figure>
+        <p class="desc">Love what you do</p>
+      </section>
+      <!-- section4 -->
+
+      <section id="section5" class="content-item">
+        <span class="num">05</span>
+        <h2 class="title">Section5</h2>
+        <figure class="img-Wrap">
+          <div class="img"></div>
+        </figure>
+        <p class="desc">This too shall pass away</p>
+      </section>
+      <!-- section5 -->
+
+      <section id="section6" class="content-item">
+        <span class="num">06</span>
+        <h2 class="title">Section6</h2>
+        <figure class="img-Wrap">
+          <div class="img"></div>
+        </figure>
+        <p class="desc">If not now, then when?</p>
+      </section>
+      <!-- section6 -->
+
+      <section id="section7" class="content-item">
+        <span class="num">07</span>
+        <h2 class="title">Section7</h2>
+        <figure class="img-Wrap">
+          <div class="img"></div>
+        </figure>
+        <p class="desc">Don't dwell on the past</p>
+      </section>
+      <!-- section7 -->
+
+      <section id="section8" class="content-item">
+        <span class="num">08</span>
+        <h2 class="title">Section8</h2>
+        <figure class="img-Wrap">
+          <div class="img"></div>
+        </figure>
+        <p class="desc">Don't dwell on the past</p>
+      </section>
+      <!-- section8 -->
+
+      <section id="section9" class="content-item">
+        <span class="num">09</span>
+        <h2 class="title">Section9</h2>
+        <figure class="img-Wrap">
+          <div class="img"></div>
+        </figure>
+        <p class="desc">Don't dwell on the past</p>
+      </section>
+      <!-- section9 -->
+
+    </div>
+    <!-- //contents -->
+  </main>
+  <!-- //main -->
+
+  <!-- footer -->
+  <footer class="paraFooter">
+    <h1>Parallax <em>Srolling</em></h1>
+    <div class="footerInfo">
+      <h2>자바스크립트</h2>
+      <ul>
+        <li><a href="javascriptPE01.html">1</a></li>
+        <li><a href="javascriptPE02.html">2</a></li>
+        <li><a href="javascriptPE03.html">3</a></li>
+        <li><a href="javascriptPE04.html">4</a></li>
+        <li><a href="javascriptPE05.html">5</a></li>
+        <li class="active"><a href="javascriptPE06.html">6</a></li>
+        <li><a href="javascriptPE07.html">7</a></li>
+        <li><a href="javascriptPE08.html">8</a></li>
+      </ul>
+    </div>
+    <div class="footerInfo">
+      <h2>제이쿼리</h2>
+      <ul>
+        <li><a href="jqueryPE01.html">1</a></li>
+        <li><a href="jqueryPE02.html">2</a></li>
+        <li><a href="jqueryPE03.html">3</a></li>
+        <li><a href="jqueryPE04.html">4</a></li>
+        <li><a href="jqueryPE05.html">5</a></li>
+        <li><a href="jqueryPE06.html">6</a></li>
+        <li><a href="jqueryPE07.html">7</a></li>
+        <li><a href="jqueryPE08.html">8</a></li>
+      </ul>
+    </div>
+  </footer>
+  <!-- //footer -->
+
+  <!-- source -->
+  <div class="source">
+    <button>소스보기</button>
+  </div>
+  <!-- //source -->
+
+  <!-- modal -->
+  <div id="modal">
+    <div class="modal-bg">
+      <div class="modal-cont">
+        <div class="code-view">
+          <div class="view-header">
+            <!-- aria : 접근성 / aria-hidden=true : 빈칸을 읽지 않음 -->
+            <div class="dot" aria-hidden="true">
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+          </div>
+          <div class="view-title">
+            <ul>
+              <li class="active"><a href="#">HTML</a></li>
+              <li><a href="#">CSS</a></li>
+              <li><a href="#">jQuery</a></li>
+            </ul>
+          </div>
+          <div class="view-cont">
+            <div class="html">
+              <pre><code class="language-html">&lt;main&gt;
+    &lt;div class="paraScroll"&gt;scrollTop() : &lt;span&gt;0&lt;/span&gt;px&lt;/div&gt;
+
+    &lt;!--//scroll--&gt;
+    &lt;div class="paraNav"&gt;
+        &lt;ul&gt;
+            &lt;li class="active"&gt;&lt;a href="#section1"&gt;s1&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href="#section2"&gt;s2&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href="#section3"&gt;s3&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href="#section4"&gt;s4&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href="#section5"&gt;s5&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href="#section6"&gt;s6&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href="#section7"&gt;s7&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href="#section8"&gt;s8&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href="#section9"&gt;s9&lt;/a&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/div&gt;
+    &lt;!-- //nav --&gt;
+
+    &lt;div class="paraCont"&gt;
+
+        &lt;section id="section1" class="content-item"&gt;
+            &lt;span class="num"&gt;01&lt;/span&gt;
+            &lt;h2 class="title"&gt;Section1&lt;/h2&gt;
+            &lt;figure class="img-Wrap"&gt;
+                &lt;div class="img"&gt;&lt;/div&gt;
+            &lt;/figure&gt;
+            &lt;p class="desc"&gt;Don't dwell on the past&lt;/p&gt;
+        &lt;/section&gt;
+        &lt;!-- section1 --&gt;
+
+        &lt;section id="section2" class="content-item"&gt;
+            &lt;span class="num"&gt;02&lt;/span&gt;
+            &lt;h2 class="title"&gt;Section2&lt;/h2&gt;
+            &lt;figure class="img-Wrap"&gt;
+                &lt;div class="img"&gt;&lt;/div&gt;
+            &lt;/figure&gt;
+            &lt;p class="desc"&gt;Pain past is pleasure&lt;/p&gt;
+        &lt;/section&gt;
+        &lt;!-- section2 --&gt;
+
+        &lt;section id="section3" class="content-item"&gt;
+            &lt;span class="num"&gt;03&lt;/span&gt;
+            &lt;h2 class="title"&gt;Section3&lt;/h2&gt;
+            &lt;figure class="img-Wrap"&gt;
+                &lt;div class="img"&gt;&lt;/div&gt;
+            &lt;/figure&gt;
+            &lt;p class="desc"&gt;Don't give up easily even if you failed&lt;/p&gt;
+        &lt;/section&gt;
+        &lt;!-- section3 --&gt;
+
+        &lt;section id="section4" class="content-item"&gt;
+            &lt;span class="num"&gt;04&lt;/span&gt;
+            &lt;h2 class="title"&gt;Section4&lt;/h2&gt;
+            &lt;figure class="img-Wrap"&gt;
+                &lt;div class="img"&gt;&lt;/div&gt;
+            &lt;/figure&gt;
+            &lt;p class="desc"&gt;Love what you do&lt;/p&gt;
+        &lt;/section&gt;
+        &lt;!-- section4 --&gt;
+
+        &lt;section id="section5" class="content-item"&gt;
+            &lt;span class="num"&gt;05&lt;/span&gt;
+            &lt;h2 class="title"&gt;Section5&lt;/h2&gt;
+            &lt;figure class="img-Wrap"&gt;
+                &lt;div class="img"&gt;&lt;/div&gt;
+            &lt;/figure&gt;
+            &lt;p class="desc"&gt;This too shall pass away&lt;/p&gt;
+        &lt;/section&gt;
+        &lt;!-- section5 --&gt;
+
+        &lt;section id="section6" class="content-item"&gt;
+            &lt;span class="num"&gt;06&lt;/span&gt;
+            &lt;h2 class="title"&gt;Section6&lt;/h2&gt;
+            &lt;figure class="img-Wrap"&gt;
+                &lt;div class="img"&gt;&lt;/div&gt;
+            &lt;/figure&gt;
+            &lt;p class="desc"&gt;If not now, then when?&lt;/p&gt;
+        &lt;/section&gt;
+        &lt;!-- section6 --&gt;
+
+        &lt;section id="section7" class="content-item"&gt;
+            &lt;span class="num"&gt;07&lt;/span&gt;
+            &lt;h2 class="title"&gt;Section7&lt;/h2&gt;
+            &lt;figure class="img-Wrap"&gt;
+                &lt;div class="img"&gt;&lt;/div&gt;
+            &lt;/figure&gt;
+            &lt;p class="desc"&gt;Don't dwell on the past&lt;/p&gt;
+        &lt;/section&gt;
+        &lt;!-- section7 --&gt;
+
+        &lt;section id="section8" class="content-item"&gt;
+            &lt;span class="num"&gt;08&lt;/span&gt;
+            &lt;h2 class="title"&gt;Section8&lt;/h2&gt;
+            &lt;figure class="img-Wrap"&gt;
+                &lt;div class="img"&gt;&lt;/div&gt;
+            &lt;/figure&gt;
+            &lt;p class="desc"&gt;Don't dwell on the past&lt;/p&gt;
+        &lt;/section&gt;
+        &lt;!-- section8 --&gt;
+
+        &lt;section id="section9" class="content-item"&gt;
+            &lt;span class="num"&gt;09&lt;/span&gt;
+            &lt;h2 class="title"&gt;Section9&lt;/h2&gt;
+            &lt;figure class="img-Wrap"&gt;
+                &lt;div class="img"&gt;&lt;/div&gt;
+            &lt;/figure&gt;
+            &lt;p class="desc"&gt;Don't dwell on the past&lt;/p&gt;
+        &lt;/section&gt;
+        &lt;!-- section9 --&gt;
+
+    &lt;/div&gt;
+    &lt;!-- //contents --&gt;
+&lt;/main&gt;
+</code></pre>
+            </div>
+            <div class="css">
+              <pre><code class="language-css">.paraNav {
+    top: 20px;
+    transition: top .5s ease;
+}
+
+.paraNav.hide {
+    top: -200px;
+}
+
+.paraNav li a {
+    width: auto;
+    padding: 5px;
+    width: 30px;
+    height: 30px;
+}
+
+.paraNav li.active a {
+    border-radius: 30px;
+}
+</code></pre>
+            </div>
+            <div class="javascript">
+              <pre><code class="language-js">const scrollMenu = function () {
+    document.querySelectorAll('.paraNav ul li a').forEach((li, idx) => {
+        li.addEventListener('click', e => {
+            e.preventDefault();
+            document.querySelector(li.getAttribute('href')).scrollIntoView({
+                behavior: 'smooth'
+            });
+        });
+    });
+}
+const scrollProgress = function () {
+    let scrollTop = window.pageYOffset || document.documentElement.offsetTop || window.scrollY;
+
+    document.querySelectorAll('.content-item').forEach(item => {
+        let offset1 = (scrollTop - item.offsetTop) * 0.1;
+        let offset2 = (scrollTop - item.offsetTop) * 0.2;
+
+        item.querySelector('.img').style.transform = "translateX(" + offset1 + "px)";
+        item.querySelector('.desc').style.transform = "translateX(" + -offset2 + "px)";
+    });
+
+    //메뉴
+    document.querySelectorAll('.content-item').forEach((item, idx) => {
+        if (scrollTop > item.offsetTop - 2) {
+            document.querySelectorAll('.paraNav ul li').forEach(li => {
+                li.classList.remove('active');
+            });
+            document.querySelector('.paraNav ul li:nth-child(' + (idx + 1) + ')').classList.add('active');
+        }
+    });
+
+    //출력
+    document.querySelector('.paraScroll span').innerText = parseInt(scrollTop);
+}
+
+window.addEventListener('scroll', scrollProgress);
+scrollMenu();
+</code></pre>
+            </div>
+          </div>
+        </div>
+        <button>닫기</button>
+      </div>
+    </div>
+  </div>
+  <!-- //modal -->
+
+
+  <!-- script -->
+  <script src="../assets/js/custom.js"></script>
+  <script src="../assets/js/highlight.min.js"></script>
+  <script>
+    const scrollMenu = function () {
+      document.querySelectorAll('.paraNav ul li a').forEach((li, idx) => {
+        li.addEventListener('click', e => {
+          e.preventDefault();
+          document.querySelector(li.getAttribute('href')).scrollIntoView({
+            behavior: 'smooth'
+          });
+        });
+      });
+    }
+    const scrollProgress = function () {
+      let scrollTop = window.pageYOffset || document.documentElement.offsetTop || window.scrollY;
+
+      // let offset1 = scrollTop - document.getElementById('section1').offsetTop;
+      // let offset2 = scrollTop - document.getElementById('section2').offsetTop;
+      // let offset3 = scrollTop - document.getElementById('section3').offsetTop;
+      // let offset4 = scrollTop - document.getElementById('section4').offsetTop;
+      // let offset5 = scrollTop - document.getElementById('section5').offsetTop;
+      // let offset6 = scrollTop - document.getElementById('section6').offsetTop;
+      // let offset7 = scrollTop - document.getElementById('section7').offsetTop;
+      // let offset8 = scrollTop - document.getElementById('section8').offsetTop;
+      // let offset9 = scrollTop - document.getElementById('section9').offsetTop;
+
+      // document.getElementById('section1').style.transform = "translateX(" + offset1 + "px)";
+      // document.getElementById('section2').style.transform = "translateX(" + offset2 + "px)";
+      // document.getElementById('section3').style.transform = "translateX(" + offset3 + "px)";
+      // document.getElementById('section4').style.transform = "translateX(" + offset4 + "px)";
+      // document.getElementById('section5').style.transform = "translateX(" + offset5 + "px)";
+      // document.getElementById('section6').style.transform = "translateX(" + offset6 + "px)";
+      // document.getElementById('section7').style.transform = "translateX(" + offset7 + "px)";
+      // document.getElementById('section8').style.transform = "translateX(" + offset8 + "px)";
+      // document.getElementById('section9').style.transform = "translateX(" + offset9 + "px)";
+
+      // for (let i = 1; i <= document.querySelectorAll('.content-item').length; i++) {
+      //   let offset = scrollTop - document.getElementById('section' + i).offsetTop;
+      //   document.getElementById('section' + i).style.transform = "translateX(" + offset + "px)";
+      // }
+
+      document.querySelectorAll('.content-item').forEach(item => {
+        let offset1 = (scrollTop - item.offsetTop) * 0.1;
+        let offset2 = (scrollTop - item.offsetTop) * 0.2;
+
+        item.querySelector('.img').style.transform = "translateX(" + offset1 + "px)";
+        item.querySelector('.desc').style.transform = "translateX(" + -offset2 + "px)";
+      });
+
+      //메뉴
+      document.querySelectorAll('.content-item').forEach((item, idx) => {
+        if (scrollTop > item.offsetTop - 2) {
+          document.querySelectorAll('.paraNav ul li').forEach(li => {
+            li.classList.remove('active');
+          });
+          document.querySelector('.paraNav ul li:nth-child(' + (idx + 1) + ')').classList.add('active');
+        }
+      });
+
+      //출력
+      document.querySelector('.paraScroll span').innerText = parseInt(scrollTop);
+    }
+
+
+    window.addEventListener('scroll', scrollProgress);
+    scrollMenu();
+  </script>
+</body>
+
+</html>
