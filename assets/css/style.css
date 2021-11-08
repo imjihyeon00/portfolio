@@ -1,0 +1,78 @@
+@charset "utf-8";
+@import url(./font.css);
+
+/* 스킵메뉴 */
+#skip {position: relative; line-height: 30px;}
+#skip a {position: absolute; left: 0; top: -40px; width: 140px; border: 1px solid #fff; color: #fff; text-align: center; background: #333;}
+#skip a:active,
+#skip a:focus {top:0;}
+
+body {
+  background-color: #242424;
+  cursor:none;
+}
+
+/* CURSOR */
+.cursor {
+  pointer-events: none;
+  position: fixed;
+  display: block;
+  border-radius: 0;
+  transform-origin: center center;
+  mix-blend-mode: difference;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  filter: url("#goo");
+}
+.cursor span {
+  position: absolute;
+  display: block;
+  width: 26px;
+  height: 26px;
+  border-radius: 20px;
+  background-color: #fff;
+  transform-origin: center center;
+  transform: translate(-50%, -50%);
+}
+
+/* HEADER */
+#header {
+  overflow: hidden;
+  width: 100vw;
+  position: fixed;
+  padding: 35px 65px;
+}
+
+.logo {
+  float: left;
+}
+
+.logo a{
+  font-family: 'Montserrat', sans-serif;
+  color: #DFD3C3;
+}
+.logo a span {
+  display: block;
+  line-height: 1.2;
+}
+
+.logo .frontend {
+  font-size: 1.2vw;
+  font-weight: 300;
+}
+
+.logo .portfolio {
+  font-size: 1.15vw;
+  font-weight: 800;
+}
+
+.contact {
+  float: right;
+}
+
+.contact a{
+  font-family: 'Eros Romano';
+  font-size: 2vw;
+  color: #DFD3C3;
+}
