@@ -84,6 +84,14 @@
   src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/NEXON Lv2 Gothic Bold.woff") format("woff");
   font-style: normal;
 }
+@font-face {
+  font-family: "Eros Romano";
+  src: url("../../../assets/font/ErosRomanoRegular.eot");
+  src: url("../../../assets/font/ErosRomanoRegular.eot?#iefix") format("embedded-opentype"), url("../../../assets/font/ErosRomanoRegular.woff2") format("woff2"), url("../../../assets/font/ErosRomanoRegular.woff") format("woff"), url("../../../assets/font/ErosRomanoRegular.svg#ErosRomanoRegular") format("svg");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
 /* reset */
 body,
 div,
@@ -637,9 +645,9 @@ figcaption {
   }
 }
 .parallax {
-  background: #222;
-  color: #fff;
-  font-family: "S-CoreDream";
+  background: #242424;
+  color: #DFD3C3;
+  font-family: "Eros Romano";
 }
 .parallax .source {
   position: fixed;
@@ -706,7 +714,7 @@ figcaption {
   list-style: none;
 }
 .paraNav li a {
-  color: #fff;
+  color: #DFD3C3;
   text-decoration: none;
   display: inline-block;
   padding: 5px;
@@ -716,8 +724,8 @@ figcaption {
   line-height: 30px;
 }
 .paraNav li.active a {
-  background: #fff;
-  color: #000;
+  background: #DFD3C3;
+  color: #242424;
   border-radius: 50%;
 }
 
@@ -787,7 +795,7 @@ figcaption {
   filter: saturate(100%);
 }
 .paraCont .content-item .desc {
-  font-size: 6vw;
+  font-size: 7vw;
   line-height: 1.4;
   margin-top: -6vw;
   margin-right: -3vw;
@@ -859,8 +867,8 @@ figcaption {
   margin-bottom: 3vw;
 }
 .paraFooter em {
+  font-family: "Eros Romano";
   display: block;
-  font-family: ‘Lato’;
   font-weight: 100;
   padding-left: 18vw;
 }
@@ -882,8 +890,8 @@ figcaption {
   list-style: none;
 }
 .paraFooter .footerInfo li a {
-  color: #fff;
-  border: 1px dashed #fff;
+  color: #DFD3C3;
+  border: 1px dashed #DFD3C3;
   width: 30px;
   height: 30px;
   display: inline-block;
@@ -892,7 +900,7 @@ figcaption {
   text-decoration: none;
 }
 .paraFooter .footerInfo li.active a {
-  background: #fff;
+  background: #DFD3C3;
   color: #000;
 }
 

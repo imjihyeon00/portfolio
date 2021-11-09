@@ -9,7 +9,6 @@
 
 body {
   background-color: #242424;
-  cursor:none;
 }
 
 /* CURSOR */
@@ -67,12 +66,14 @@ body {
   font-weight: 800;
 }
 
-.contact {
+.contactLink {
   float: right;
 }
 
-.contact a{
+.contactLink a{
   font-family: 'Eros Romano';
   font-size: 2vw;
   color: #DFD3C3;
 }
+
+

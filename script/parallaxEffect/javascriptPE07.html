@@ -69,17 +69,8 @@
 
 <body class="parallax">
 
-    <!-- header -->
-    <header class="paraInfo">
-        <h1><a href="index.html">Parallax Effect07 - Javascript</a></h1>
-        <p>패랠랙스 스크로링 효과 - 텍스트 효과</p>
-    </header>
-    <!-- //header -->
-
-
     <!-- main -->
     <main>
-        <div class="paraScroll">scrollTop() : <span>0</span>px</div>
 
         <!--//scroll-->
         <div class="paraNav">
@@ -105,7 +96,7 @@
                 <figure class="img-Wrap">
                     <div class="img"></div>
                 </figure>
-                <p class="desc split">Don't dwell on the past</p>
+                <p class="desc split">No sweat, No sweet</p>
             </section>
             <!-- section1 -->
 
@@ -125,7 +116,7 @@
                 <figure class="img-Wrap">
                     <div class="img"></div>
                 </figure>
-                <p class="desc split">Don't give up easily even if you failed</p>
+                <p class="desc split">Time is gold</p>
             </section>
             <!-- section3 -->
 
@@ -145,7 +136,7 @@
                 <figure class="img-Wrap">
                     <div class="img"></div>
                 </figure>
-                <p class="desc">This too shall pass away</p>
+                <p class="desc split">This too shall pass away</p>
             </section>
             <!-- section5 -->
 
@@ -175,7 +166,7 @@
                 <figure class="img-Wrap">
                     <div class="img"></div>
                 </figure>
-                <p class="desc split">Don't dwell on the past</p>
+                <p class="desc split">Habit is second nature</p>
             </section>
             <!-- section8 -->
 
@@ -185,7 +176,7 @@
                 <figure class="img-Wrap">
                     <div class="img"></div>
                 </figure>
-                <p class="desc split">Don't dwell on the past</p>
+                <p class="desc split">The hardest work is to idle</p>
             </section>
             <!-- section9 -->
 
@@ -198,7 +189,7 @@
     <footer class="paraFooter">
         <h1>Parallax <em>Srolling</em></h1>
         <div class="footerInfo">
-            <h2>자바스크립트</h2>
+            <h2>JAVASCRIPT</h2>
             <ul>
                 <li><a href="javascriptPE01.html">1</a></li>
                 <li><a href="javascriptPE02.html">2</a></li>
@@ -211,7 +202,7 @@
             </ul>
         </div>
         <div class="footerInfo">
-            <h2>제이쿼리</h2>
+            <h2>JQUERY</h2>
             <ul>
                 <li><a href="jqueryPE01.html">1</a></li>
                 <li><a href="jqueryPE02.html">2</a></li>
@@ -545,11 +536,6 @@ scrollMenu();
                 });
             });
         }
-        //글자 쪼개기
-        // let text = document.querySelector('#section1 .desc').innerText;
-        // let split = text.split('').join('</span><span>');
-        // split = "<span>" + split + "</span>";
-        // document.querySelector('#section1 .desc').innerHTML = split;
 
         //다중 글자 쪼개기
         document.querySelectorAll('.split').forEach(el => {
@@ -563,39 +549,6 @@ scrollMenu();
         //스크롤 이펙트
         window.addEventListener('scroll', () => {
             let scrollTop = window.pageYOffset || document.documentElement.scrollTop || window.scrollY;
-
-            // if(scrollTop >= document.getElementById('section1').offsetTop - window.innerHeight/3){
-            //     document.querySelectorAll('#section1 .split span').forEach((elem,index) => {
-            //         setTimeout(() => {
-            //             elem.classList.add('show');
-            //         },50*index);
-            //     });
-            // }
-
-            //for
-            // let cnt = document.querySelectorAll('.content-item').length;
-
-            // for (let i = 1; i <= cnt; i++) {
-            //     if (scrollTop >= document.getElementById('section' + i).offsetTop) {
-            //         document.getElementById('section' + i);
-            //         document.querySelectorAll('#section' + i + ' .split span').forEach((elem, index) => {
-            //             setTimeout(() => {
-            //                 elem.classList.add('show');
-            //             }, 50*index);
-            //         });
-            //     }
-            // }
-
-            //forEach()
-            // document.querySelectorAll('.content-item').forEach(function(el,idx){
-            //     if(scrollTop >= el.offsetTop){
-            //         el.querySelectorAll('.split span').forEach((elem, index)=>{
-            //             setTimeout(() => {
-            //                 elem.classList.add('show');
-            //             }, 50*index);
-            //         });
-            //     }
-            // });
 
             //gsap
             document.querySelectorAll('.content-item').forEach((el, idx) => {
@@ -623,8 +576,6 @@ scrollMenu();
                 }
             });
 
-            //출력
-            document.querySelector('.paraScroll span').innerText = parseInt(scrollTop);
         });
         scrollMenu();
     </script>

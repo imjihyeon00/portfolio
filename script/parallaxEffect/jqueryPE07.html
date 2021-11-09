@@ -68,19 +68,8 @@
 </head>
 
 <body class="parallax">
-
-    <!-- header -->
-    <header class="paraInfo">
-        <h1><a href="index.html">Parallax Effect07 - jQuery</a></h1>
-        <p>패랠랙스 스크로링 효과 - 텍스트 효과</p>
-    </header>
-    <!-- //header -->
-
-
     <!-- main -->
     <main>
-        <div class="paraScroll">scrollTop() : <span>0</span>px</div>
-
         <!--//scroll-->
         <div class="paraNav">
             <ul>
@@ -105,7 +94,7 @@
                 <figure class="img-Wrap">
                     <div class="img"></div>
                 </figure>
-                <p class="desc">Don't dwell on the past</p>
+                <p class="desc">No sweat, No sweet</p>
             </section>
             <!-- section1 -->
 
@@ -125,7 +114,7 @@
                 <figure class="img-Wrap">
                     <div class="img"></div>
                 </figure>
-                <p class="desc">Don't give up easily even if you failed</p>
+                <p class="desc">Time is gold</p>
             </section>
             <!-- section3 -->
 
@@ -175,7 +164,7 @@
                 <figure class="img-Wrap">
                     <div class="img"></div>
                 </figure>
-                <p class="desc">Don't dwell on the past</p>
+                <p class="desc">Habit is second nature</p>
             </section>
             <!-- section8 -->
 
@@ -185,7 +174,7 @@
                 <figure class="img-Wrap">
                     <div class="img"></div>
                 </figure>
-                <p class="desc">Don't dwell on the past</p>
+                <p class="desc">The hardest work is to idle</p>
             </section>
             <!-- section9 -->
 
@@ -198,7 +187,7 @@
     <footer class="paraFooter">
         <h1>Parallax <em>Srolling</em></h1>
         <div class="footerInfo">
-            <h2>자바스크립트</h2>
+            <h2>JAVASCRIPT</h2>
             <ul>
                 <li><a href="javascriptPE01.html">1</a></li>
                 <li><a href="javascriptPE02.html">2</a></li>
@@ -211,7 +200,7 @@
             </ul>
         </div>
         <div class="footerInfo">
-            <h2>제이쿼리</h2>
+            <h2>JQUERY</h2>
             <ul>
                 <li><a href="jqueryPE01.html">1</a></li>
                 <li><a href="jqueryPE02.html">2</a></li>
@@ -541,12 +530,6 @@ $(window).scroll(function(){
                 scrollTop: offset
             }, 600);
         });
-        //글씨 쪼개기(한개)
-        // let text = $('#section1 .desc').text();
-        // let split = text.split('').join('</span><span>');
-        // split = '<span>'+split+'</span>';
-
-        // $('#section1 .desc').html(split);
 
         //글씨 쪼개기(여러개) each()
         $('.content-item .desc').each(function (index, item) {
@@ -558,54 +541,6 @@ $(window).scroll(function(){
         });
 
         $(window).scroll(function () {
-            // if($(window).scrollTop() > $('#section1').offset().top){
-            //     $('#section1 .desc').addClass('show');
-            // } else {
-            //     $('#section1 .desc').removeClass('show');
-            // }
-            // if($(window).scrollTop() > $('#section2').offset().top){
-            //     $('#section2 .desc').addClass('show');
-            // } else {
-            //     $('#section2 .desc').removeClass('show');
-            // }
-            // $('.content-item .desc').each(function(index,item){
-            //     if($(window).scrollTop() >= $(this).offset().top - $(window).height()/2){
-            //         $(this).addClass('show');
-            //     } else {
-            //         $(this).removeClass('show');
-            //     }
-            // });
-
-            //한 글자씩 나타나기
-            // if($(window).scrollTop() > $('#section1').offset().top){
-            //     $('#section1 .desc span').each(i => {
-            //         setTimeout(() => {
-            //             $('#section1 .desc span').eq(i).addClass('show');
-            //         }, 50 * i);
-            //     });
-            // }
-
-            //for
-            // for(let i=1; i<=$('.content-item').length;i++){
-            //     if($(window).scrollTop() > $('#section'+ i).offset().top){
-            //         $('#section'+ i+' .desc span').each(idx => {
-            //             setTimeout(() => {
-            //                 $('#section'+ i+' .desc span').eq(idx).addClass('show');
-            //             }, 50 * idx);
-            //         });
-            //     }
-            // }
-
-            //each()
-            // $('.content-item').each(function(index,item){
-            //     if($(window).scrollTop() >= $(this).offset().top - $(window).height()/2){
-            //         $(this).find('.desc span').each(idx => {
-            //             setTimeout(()=>{
-            //                 $(this).find('.desc span').eq(idx).addClass('show');
-            //             },50*idx);
-            //         });
-            //     }
-            // });
 
             //gsap
             $('.content-item').each(function (index) {

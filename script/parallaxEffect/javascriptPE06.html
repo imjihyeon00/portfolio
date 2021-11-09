@@ -36,19 +36,8 @@
 </head>
 
 <body class="parallax">
-
-  <!-- header -->
-  <header class="paraInfo">
-    <h1><a href="index.html">Parallax Effect06 - jQuery</a></h1>
-    <p>패랠랙스 스크로링 효과 - 이질감</p>
-  </header>
-  <!-- //header -->
-
-
   <!-- main -->
   <main>
-    <div class="paraScroll">scrollTop() : <span>0</span>px</div>
-
     <!--//scroll-->
     <div class="paraNav">
       <ul>
@@ -73,7 +62,7 @@
         <figure class="img-Wrap">
           <div class="img"></div>
         </figure>
-        <p class="desc">Don't dwell on the past</p>
+        <p class="desc">No sweat, No sweet</p>
       </section>
       <!-- section1 -->
 
@@ -93,7 +82,7 @@
         <figure class="img-Wrap">
           <div class="img"></div>
         </figure>
-        <p class="desc">Don't give up easily even if you failed</p>
+        <p class="desc">Time is gold</p>
       </section>
       <!-- section3 -->
 
@@ -143,7 +132,7 @@
         <figure class="img-Wrap">
           <div class="img"></div>
         </figure>
-        <p class="desc">Don't dwell on the past</p>
+        <p class="desc">Habit is second nature</p>
       </section>
       <!-- section8 -->
 
@@ -153,7 +142,7 @@
         <figure class="img-Wrap">
           <div class="img"></div>
         </figure>
-        <p class="desc">Don't dwell on the past</p>
+        <p class="desc">The hardest work is to idle</p>
       </section>
       <!-- section9 -->
 
@@ -166,7 +155,7 @@
   <footer class="paraFooter">
     <h1>Parallax <em>Srolling</em></h1>
     <div class="footerInfo">
-      <h2>자바스크립트</h2>
+      <h2>JAVASCRIPT</h2>
       <ul>
         <li><a href="javascriptPE01.html">1</a></li>
         <li><a href="javascriptPE02.html">2</a></li>
@@ -179,7 +168,7 @@
       </ul>
     </div>
     <div class="footerInfo">
-      <h2>제이쿼리</h2>
+      <h2>JQUERY</h2>
       <ul>
         <li><a href="jqueryPE01.html">1</a></li>
         <li><a href="jqueryPE02.html">2</a></li>
@@ -426,31 +415,6 @@ scrollMenu();
     const scrollProgress = function () {
       let scrollTop = window.pageYOffset || document.documentElement.offsetTop || window.scrollY;
 
-      // let offset1 = scrollTop - document.getElementById('section1').offsetTop;
-      // let offset2 = scrollTop - document.getElementById('section2').offsetTop;
-      // let offset3 = scrollTop - document.getElementById('section3').offsetTop;
-      // let offset4 = scrollTop - document.getElementById('section4').offsetTop;
-      // let offset5 = scrollTop - document.getElementById('section5').offsetTop;
-      // let offset6 = scrollTop - document.getElementById('section6').offsetTop;
-      // let offset7 = scrollTop - document.getElementById('section7').offsetTop;
-      // let offset8 = scrollTop - document.getElementById('section8').offsetTop;
-      // let offset9 = scrollTop - document.getElementById('section9').offsetTop;
-
-      // document.getElementById('section1').style.transform = "translateX(" + offset1 + "px)";
-      // document.getElementById('section2').style.transform = "translateX(" + offset2 + "px)";
-      // document.getElementById('section3').style.transform = "translateX(" + offset3 + "px)";
-      // document.getElementById('section4').style.transform = "translateX(" + offset4 + "px)";
-      // document.getElementById('section5').style.transform = "translateX(" + offset5 + "px)";
-      // document.getElementById('section6').style.transform = "translateX(" + offset6 + "px)";
-      // document.getElementById('section7').style.transform = "translateX(" + offset7 + "px)";
-      // document.getElementById('section8').style.transform = "translateX(" + offset8 + "px)";
-      // document.getElementById('section9').style.transform = "translateX(" + offset9 + "px)";
-
-      // for (let i = 1; i <= document.querySelectorAll('.content-item').length; i++) {
-      //   let offset = scrollTop - document.getElementById('section' + i).offsetTop;
-      //   document.getElementById('section' + i).style.transform = "translateX(" + offset + "px)";
-      // }
-
       document.querySelectorAll('.content-item').forEach(item => {
         let offset1 = (scrollTop - item.offsetTop) * 0.1;
         let offset2 = (scrollTop - item.offsetTop) * 0.2;
@@ -469,8 +433,6 @@ scrollMenu();
         }
       });
 
-      //출력
-      document.querySelector('.paraScroll span').innerText = parseInt(scrollTop);
     }
 
 

@@ -19,31 +19,8 @@
 
 <body class="parallax">
 
-  <!-- header -->
-  <header class="paraInfo">
-    <h1><a href="index.html">Parallax Effect01 - jQuery</a></h1>
-    <p>패랠랙스 스크로링 효과 - 메뉴 이동</p>
-  </header>
-  <!-- //header -->
-
-
   <!-- main -->
   <main>
-    <div class="paraScroll">scrollTop() : <span>0</span></div>
-    <div class="paraInfo2">
-      <ul>
-        <li>section1 offset(): <span class="offset1">0</span></li>
-        <li>section2 offset(): <span class="offset2">0</span></li>
-        <li>section3 offset(): <span class="offset3">0</span></li>
-        <li>section4 offset(): <span class="offset4">0</span></li>
-        <li>section5 offset(): <span class="offset5">0</span></li>
-        <li>section6 offset(): <span class="offset6">0</span></li>
-        <li>section7 offset(): <span class="offset7">0</span></li>
-        <li>section8 offset(): <span class="offset8">0</span></li>
-        <li>section9 offset(): <span class="offset9">0</span></li>
-      </ul>
-
-    </div>
 
     <!--//scroll-->
     <div class="paraNav">
@@ -69,7 +46,7 @@
         <figure class="img-Wrap">
           <div class="img"></div>
         </figure>
-        <p class="desc">Don't dwell on the past</p>
+        <p class="desc">No sweat, No sweet</p>
       </section>
       <!-- section1 -->
 
@@ -89,7 +66,7 @@
         <figure class="img-Wrap">
           <div class="img"></div>
         </figure>
-        <p class="desc">Don't give up easily even if you failed</p>
+        <p class="desc">Time is gold</p>
       </section>
       <!-- section3 -->
 
@@ -139,7 +116,7 @@
         <figure class="img-Wrap">
           <div class="img"></div>
         </figure>
-        <p class="desc">Don't dwell on the past</p>
+        <p class="desc">Habit is second nature</p>
       </section>
       <!-- section8 -->
 
@@ -149,7 +126,7 @@
         <figure class="img-Wrap">
           <div class="img"></div>
         </figure>
-        <p class="desc">Don't dwell on the past</p>
+        <p class="desc">The hardest work is to idle</p>
       </section>
       <!-- section9 -->
 
@@ -163,7 +140,7 @@
   <footer class="paraFooter">
     <h1>Parallax <em>Srolling</em></h1>
     <div class="footerInfo">
-      <h2>자바스크립트</h2>
+      <h2>JAVASCRIPT</h2>
       <ul>
         <li><a href="javascriptPE01.html">1</a></li>
         <li><a href="javascriptPE02.html">2</a></li>
@@ -176,7 +153,7 @@
       </ul>
     </div>
     <div class="footerInfo">
-      <h2>제이쿼리</h2>
+      <h2>JQUERY</h2>
       <ul>
         <li class="active"><a href="jqueryPE01.html">1</a></li>
         <li><a href="jqueryPE02.html">2</a></li>
@@ -214,7 +191,7 @@
             <ul>
               <li class="active"><a href="#">HTML</a></li>
               <li><a href="#">CSS</a></li>
-              <li><a href="#">Javascript</a></li>
+              <li><a href="#">jQuery</a></li>
             </ul>
           </div>
           <div class="view-cont">
@@ -662,13 +639,6 @@ $(window).scroll(function () {
           $('.paraNav ul li').eq(i).addClass('active').siblings().removeClass('active');
         }
       });
-
-      //info
-      $('.paraScroll span').text(parseInt(scrollTop));
-
-      for (let i = 1; i <= $('.content-item').length; i++) {
-        $('.offset' + i).text(parseInt($('#section' + i).offset().top) + 'px');
-      }
     });
   </script>
 </body>

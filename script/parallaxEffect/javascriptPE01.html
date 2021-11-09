@@ -15,33 +15,8 @@
 </head>
 
 <body class="parallax">
-
-  <!-- header -->
-  <header class="paraInfo">
-    <h1><a href="index.html">Parallax Effect01 - javascript</a></h1>
-    <p>패랠랙스 스크로링 효과 - 메뉴 이동</p>
-  </header>
-  <!-- //header -->
-
-
   <!-- main -->
   <main>
-    <div class="paraScroll">window.scrollY : <span>0</span></div>
-    <div class="paraInfo2">
-      <ul>
-        <li>section1 offset(): <span class="offset1">0</span></li>
-        <li>section2 offset(): <span class="offset2">0</span></li>
-        <li>section3 offset(): <span class="offset3">0</span></li>
-        <li>section4 offset(): <span class="offset4">0</span></li>
-        <li>section5 offset(): <span class="offset5">0</span></li>
-        <li>section6 offset(): <span class="offset6">0</span></li>
-        <li>section7 offset(): <span class="offset7">0</span></li>
-        <li>section8 offset(): <span class="offset8">0</span></li>
-        <li>section9 offset(): <span class="offset9">0</span></li>
-      </ul>
-
-    </div>
-
     <!--//scroll-->
     <div class="paraNav">
       <ul>
@@ -66,7 +41,7 @@
         <figure class="img-Wrap">
           <div class="img"></div>
         </figure>
-        <p class="desc">Don't dwell on the past</p>
+        <p class="desc">No sweat, No sweet</p>
       </section>
       <!-- section1 -->
 
@@ -86,7 +61,7 @@
         <figure class="img-Wrap">
           <div class="img"></div>
         </figure>
-        <p class="desc">Don't give up easily even if you failed</p>
+        <p class="desc">Time is gold</p>
       </section>
       <!-- section3 -->
 
@@ -136,7 +111,7 @@
         <figure class="img-Wrap">
           <div class="img"></div>
         </figure>
-        <p class="desc">Don't dwell on the past</p>
+        <p class="desc">Habit is second nature</p>
       </section>
       <!-- section8 -->
 
@@ -146,10 +121,9 @@
         <figure class="img-Wrap">
           <div class="img"></div>
         </figure>
-        <p class="desc">Don't dwell on the past</p>
+        <p class="desc">The hardest work is to idle</p>
       </section>
       <!-- section9 -->
-
 
     </div>
     <!-- //contents -->
@@ -160,7 +134,7 @@
   <footer class="paraFooter">
     <h1>Parallax <em>Srolling</em></h1>
     <div class="footerInfo">
-      <h2>자바스크립트</h2>
+      <h2>JAVASCRIPT</h2>
       <ul>
         <li class="active"><a href="javascriptPE01.html">1</a></li>
         <li><a href="javascriptPE02.html">2</a></li>
@@ -173,7 +147,7 @@
       </ul>
     </div>
     <div class="footerInfo">
-      <h2>제이쿼리</h2>
+      <h2>JQUERY</h2>
       <ul>
         <li><a href="jqueryPE01.html">1</a></li>
         <li><a href="jqueryPE02.html">2</a></li>
@@ -216,171 +190,121 @@
           </div>
           <div class="view-cont">
             <div class="html">
-              <pre><code class="language-html">&lt;!DOCTYPE html&gt;
-&lt;html lang="ko"&gt;
-
-&lt;head&gt;
-    &lt;meta charset="UTF-8"&gt;
-    &lt;meta http-equiv="X-UA-Compatible" content="IE=edge"&gt;
-    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
-    &lt;title&gt;Parallax Effect&lt;/title&gt;
-
-    &lt;link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap" rel="stylesheet"&gt;
-
-    &lt;link rel="stylesheet" href="../assets/css/style.css"&gt;
-    &lt;link rel="stylesheet" href="../assets/css/highlight.css"&gt;
-&lt;/head&gt;
-
-&lt;body class="parallax"&gt;
-
-    &lt;!-- header --&gt;
-    &lt;header class="paraInfo"&gt;
-        &lt;h1&gt;&lt;a href="index.html"&gt;Parallax Effect01 - javascript&lt;/a&gt;&lt;/h1&gt;
-        &lt;p&gt;패랠랙스 스크로링 효과 - 메뉴 이동&lt;/p&gt;
-    &lt;/header&gt;
-    &lt;!-- //header --&gt;
-
-
-    &lt;!-- main --&gt;
-    &lt;main&gt;
-        &lt;div class="paraScroll"&gt;window.scrollY : &lt;span&gt;0&lt;/span&gt;&lt;/div&gt;
-        &lt;div class="paraInfo2"&gt;
-            &lt;ul&gt;
-                &lt;li&gt;section1 offset(): &lt;span class="offset1"&gt;0&lt;/span&gt;&lt;/li&gt;
-                &lt;li&gt;section2 offset(): &lt;span class="offset2"&gt;0&lt;/span&gt;&lt;/li&gt;
-                &lt;li&gt;section3 offset(): &lt;span class="offset3"&gt;0&lt;/span&gt;&lt;/li&gt;
-                &lt;li&gt;section4 offset(): &lt;span class="offset4"&gt;0&lt;/span&gt;&lt;/li&gt;
-                &lt;li&gt;section5 offset(): &lt;span class="offset5"&gt;0&lt;/span&gt;&lt;/li&gt;
-                &lt;li&gt;section6 offset(): &lt;span class="offset6"&gt;0&lt;/span&gt;&lt;/li&gt;
-                &lt;li&gt;section7 offset(): &lt;span class="offset7"&gt;0&lt;/span&gt;&lt;/li&gt;
-                &lt;li&gt;section8 offset(): &lt;span class="offset8"&gt;0&lt;/span&gt;&lt;/li&gt;
-                &lt;li&gt;section9 offset(): &lt;span class="offset9"&gt;0&lt;/span&gt;&lt;/li&gt;
-            &lt;/ul&gt;
-        &lt;/div&gt;
-
-        &lt;!--//scroll--&gt;
-        &lt;div class="paraNav"&gt;
-            &lt;ul&gt;
-                &lt;li class="active"&gt;&lt;a href="#section1"&gt;s1&lt;/a&gt;&lt;/li&gt;
-                &lt;li&gt;&lt;a href="#section2"&gt;s2&lt;/a&gt;&lt;/li&gt;
-                &lt;li&gt;&lt;a href="#section3"&gt;s3&lt;/a&gt;&lt;/li&gt;
-                &lt;li&gt;&lt;a href="#section4"&gt;s4&lt;/a&gt;&lt;/li&gt;
-                &lt;li&gt;&lt;a href="#section5"&gt;s5&lt;/a&gt;&lt;/li&gt;
-                &lt;li&gt;&lt;a href="#section6"&gt;s6&lt;/a&gt;&lt;/li&gt;
-                &lt;li&gt;&lt;a href="#section7"&gt;s7&lt;/a&gt;&lt;/li&gt;
-                &lt;li&gt;&lt;a href="#section8"&gt;s8&lt;/a&gt;&lt;/li&gt;
-                &lt;li&gt;&lt;a href="#section9"&gt;s9&lt;/a&gt;&lt;/li&gt;
-            &lt;/ul&gt;
-        &lt;/div&gt;
-        &lt;!-- //nav --&gt;
-
-        &lt;div class="paraCont"&gt;
-            &lt;section id="section1" class="content-item"&gt;
-                &lt;span class="num"&gt;01&lt;/span&gt;
-                &lt;h2 class="title"&gt;Section1&lt;/h2&gt;
-                &lt;figure class="img-Wrap"&gt;
-                    &lt;div class="img"&gt;&lt;/div&gt;
-                &lt;/figure&gt;
-                &lt;p class="desc"&gt;Don't dwell on the past&lt;/p&gt;
-            &lt;/section&gt;
-            &lt;!-- section1 --&gt;
-
-            &lt;section id="section2" class="content-item"&gt;
-                &lt;span class="num"&gt;02&lt;/span&gt;
-                &lt;h2 class="title"&gt;Section2&lt;/h2&gt;
-                &lt;figure class="img-Wrap"&gt;
-                    &lt;div class="img"&gt;&lt;/div&gt;
-                &lt;/figure&gt;
-                &lt;p class="desc"&gt;Pain past is pleasure&lt;/p&gt;
-            &lt;/section&gt;
-            &lt;!-- section2 --&gt;
-
-            &lt;section id="section3" class="content-item"&gt;
-                &lt;span class="num"&gt;03&lt;/span&gt;
-                &lt;h2 class="title"&gt;Section3&lt;/h2&gt;
-                &lt;figure class="img-Wrap"&gt;
-                    &lt;div class="img"&gt;&lt;/div&gt;
-                &lt;/figure&gt;
-                &lt;p class="desc"&gt;Don't give up easily even if you failed&lt;/p&gt;
-            &lt;/section&gt;
-            &lt;!-- section3 --&gt;
-
-            &lt;section id="section4" class="content-item"&gt;
-                &lt;span class="num"&gt;04&lt;/span&gt;
-                &lt;h2 class="title"&gt;Section4&lt;/h2&gt;
-                &lt;figure class="img-Wrap"&gt;
-                    &lt;div class="img"&gt;&lt;/div&gt;
-                &lt;/figure&gt;
-                &lt;p class="desc"&gt;Love what you do&lt;/p&gt;
-            &lt;/section&gt;
-            &lt;!-- section4 --&gt;
-
-            &lt;section id="section5" class="content-item"&gt;
-                &lt;span class="num"&gt;05&lt;/span&gt;
-                &lt;h2 class="title"&gt;Section5&lt;/h2&gt;
-                &lt;figure class="img-Wrap"&gt;
-                    &lt;div class="img"&gt;&lt;/div&gt;
-                &lt;/figure&gt;
-                &lt;p class="desc"&gt;This too shall pass away&lt;/p&gt;
-            &lt;/section&gt;
-            &lt;!-- section5 --&gt;
-
-            &lt;section id="section6" class="content-item"&gt;
-                &lt;span class="num"&gt;06&lt;/span&gt;
-                &lt;h2 class="title"&gt;Section6&lt;/h2&gt;
-                &lt;figure class="img-Wrap"&gt;
-                    &lt;div class="img"&gt;&lt;/div&gt;
-                &lt;/figure&gt;
-                &lt;p class="desc"&gt;If not now, then when?&lt;/p&gt;
-            &lt;/section&gt;
-            &lt;!-- section6 --&gt;
-
-            &lt;section id="section7" class="content-item"&gt;
-                &lt;span class="num"&gt;07&lt;/span&gt;
-                &lt;h2 class="title"&gt;Section7&lt;/h2&gt;
-                &lt;figure class="img-Wrap"&gt;
-                    &lt;div class="img"&gt;&lt;/div&gt;
-                &lt;/figure&gt;
-                &lt;p class="desc"&gt;Don't dwell on the past&lt;/p&gt;
-            &lt;/section&gt;
-            &lt;!-- section7 --&gt;
-
-            &lt;section id="section8" class="content-item"&gt;
-                &lt;span class="num"&gt;08&lt;/span&gt;
-                &lt;h2 class="title"&gt;Section8&lt;/h2&gt;
-                &lt;figure class="img-Wrap"&gt;
-                    &lt;div class="img"&gt;&lt;/div&gt;
-                &lt;/figure&gt;
-                &lt;p class="desc"&gt;Don't dwell on the past&lt;/p&gt;
-            &lt;/section&gt;
-            &lt;!-- section8 --&gt;
-
-            &lt;section id="section9" class="content-item"&gt;
-                &lt;span class="num"&gt;09&lt;/span&gt;
-                &lt;h2 class="title"&gt;Section9&lt;/h2&gt;
-                &lt;figure class="img-Wrap"&gt;
-                    &lt;div class="img"&gt;&lt;/div&gt;
-                &lt;/figure&gt;
-                &lt;p class="desc"&gt;Don't dwell on the past&lt;/p&gt;
-            &lt;/section&gt;
-            &lt;!-- section9 --&gt;
-        &lt;/div&gt;
-        &lt;!-- //contents --&gt;
-    &lt;/main&gt;
-    &lt;!-- //main --&gt;
-
-    &lt;!-- footer --&gt;
-    &lt;footer class="paraFooter"&gt;
-    &lt;/footer&gt;
-    &lt;!-- //footer --&gt;
-
-    &lt;!-- source --&gt;
-    &lt;div class="source"&gt;
-        &lt;button onclick="modal()"&gt;소스보기&lt;/button&gt;
+              <pre><code class="language-html">  &lt;!-- main --&gt;
+&lt;main&gt;
+    &lt;!--//scroll--&gt;
+    &lt;div class="paraNav"&gt;
+        &lt;ul&gt;
+            &lt;li class="active"&gt;&lt;a href="#section1"&gt;s1&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href="#section2"&gt;s2&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href="#section3"&gt;s3&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href="#section4"&gt;s4&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href="#section5"&gt;s5&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href="#section6"&gt;s6&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href="#section7"&gt;s7&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href="#section8"&gt;s8&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href="#section9"&gt;s9&lt;/a&gt;&lt;/li&gt;
+        &lt;/ul&gt;
     &lt;/div&gt;
-    &lt;!-- //source --&gt;
-&lt;/body&gt;
-&lt;/html&gt;
+    &lt;!-- //nav --&gt;
+
+    &lt;div class="paraCont"&gt;
+
+        &lt;section id="section1" class="content-item"&gt;
+            &lt;span class="num"&gt;01&lt;/span&gt;
+            &lt;h2 class="title"&gt;Section1&lt;/h2&gt;
+            &lt;figure class="img-Wrap"&gt;
+                &lt;div class="img"&gt;&lt;/div&gt;
+            &lt;/figure&gt;
+            &lt;p class="desc"&gt;No sweat, No sweet&lt;/p&gt;
+        &lt;/section&gt;
+        &lt;!-- section1 --&gt;
+
+        &lt;section id="section2" class="content-item"&gt;
+            &lt;span class="num"&gt;02&lt;/span&gt;
+            &lt;h2 class="title"&gt;Section2&lt;/h2&gt;
+            &lt;figure class="img-Wrap"&gt;
+                &lt;div class="img"&gt;&lt;/div&gt;
+            &lt;/figure&gt;
+            &lt;p class="desc"&gt;Pain past is pleasure&lt;/p&gt;
+        &lt;/section&gt;
+        &lt;!-- section2 --&gt;
+
+        &lt;section id="section3" class="content-item"&gt;
+            &lt;span class="num"&gt;03&lt;/span&gt;
+            &lt;h2 class="title"&gt;Section3&lt;/h2&gt;
+            &lt;figure class="img-Wrap"&gt;
+                &lt;div class="img"&gt;&lt;/div&gt;
+            &lt;/figure&gt;
+            &lt;p class="desc"&gt;Time is gold&lt;/p&gt;
+        &lt;/section&gt;
+        &lt;!-- section3 --&gt;
+
+        &lt;section id="section4" class="content-item"&gt;
+            &lt;span class="num"&gt;04&lt;/span&gt;
+            &lt;h2 class="title"&gt;Section4&lt;/h2&gt;
+            &lt;figure class="img-Wrap"&gt;
+                &lt;div class="img"&gt;&lt;/div&gt;
+            &lt;/figure&gt;
+            &lt;p class="desc"&gt;Love what you do&lt;/p&gt;
+        &lt;/section&gt;
+        &lt;!-- section4 --&gt;
+
+        &lt;section id="section5" class="content-item"&gt;
+            &lt;span class="num"&gt;05&lt;/span&gt;
+            &lt;h2 class="title"&gt;Section5&lt;/h2&gt;
+            &lt;figure class="img-Wrap"&gt;
+                &lt;div class="img"&gt;&lt;/div&gt;
+            &lt;/figure&gt;
+            &lt;p class="desc"&gt;This too shall pass away&lt;/p&gt;
+        &lt;/section&gt;
+        &lt;!-- section5 --&gt;
+
+        &lt;section id="section6" class="content-item"&gt;
+            &lt;span class="num"&gt;06&lt;/span&gt;
+            &lt;h2 class="title"&gt;Section6&lt;/h2&gt;
+            &lt;figure class="img-Wrap"&gt;
+                &lt;div class="img"&gt;&lt;/div&gt;
+            &lt;/figure&gt;
+            &lt;p class="desc"&gt;If not now, then when?&lt;/p&gt;
+        &lt;/section&gt;
+        &lt;!-- section6 --&gt;
+
+        &lt;section id="section7" class="content-item"&gt;
+            &lt;span class="num"&gt;07&lt;/span&gt;
+            &lt;h2 class="title"&gt;Section7&lt;/h2&gt;
+            &lt;figure class="img-Wrap"&gt;
+                &lt;div class="img"&gt;&lt;/div&gt;
+            &lt;/figure&gt;
+            &lt;p class="desc"&gt;Don't dwell on the past&lt;/p&gt;
+        &lt;/section&gt;
+        &lt;!-- section7 --&gt;
+
+        &lt;section id="section8" class="content-item"&gt;
+            &lt;span class="num"&gt;08&lt;/span&gt;
+            &lt;h2 class="title"&gt;Section8&lt;/h2&gt;
+            &lt;figure class="img-Wrap"&gt;
+                &lt;div class="img"&gt;&lt;/div&gt;
+            &lt;/figure&gt;
+            &lt;p class="desc"&gt;Habit is second nature&lt;/p&gt;
+        &lt;/section&gt;
+        &lt;!-- section8 --&gt;
+
+        &lt;section id="section9" class="content-item"&gt;
+            &lt;span class="num"&gt;09&lt;/span&gt;
+            &lt;h2 class="title"&gt;Section9&lt;/h2&gt;
+            &lt;figure class="img-Wrap"&gt;
+                &lt;div class="img"&gt;&lt;/div&gt;
+            &lt;/figure&gt;
+            &lt;p class="desc"&gt;The hardest work is to idle&lt;/p&gt;
+        &lt;/section&gt;
+        &lt;!-- section9 --&gt;
+
+
+    &lt;/div&gt;
+    &lt;!-- //contents --&gt;
+&lt;/main&gt;
+&lt;!-- //main --&gt;
 </code></pre>
             </div>
             <div class="css">
@@ -616,14 +540,6 @@ window.addEventListener('scroll', function () {
             document.querySelector('.paraNav ul li:nth-child(' + (idx + 1) + ')').classList.add('active');
         }
     });
-
-
-    //info
-    document.querySelector('.paraScroll span').innerText = parseInt(scrollTop) + 'px';
-
-    document.querySelectorAll('.content-item').forEach((el, idx) =&gt; {
-        document.querySelector('.offset' + (idx + 1)).innerText = parseInt(document.querySelector('#section' + (idx + 1)).offsetTop) + 'px';
-    });
 });
 </code></pre>
             </div>
@@ -658,15 +574,6 @@ window.addEventListener('scroll', function () {
           document.querySelectorAll('.paraNav ul li').forEach(el => el.classList.remove('active'));
           document.querySelector('.paraNav ul li:nth-child(' + (idx + 1) + ')').classList.add('active');
         }
-      });
-
-
-      //info
-      document.querySelector('.paraScroll span').innerText = parseInt(scrollTop) + 'px';
-
-      document.querySelectorAll('.content-item').forEach((el, idx) => {
-        document.querySelector('.offset' + (idx + 1)).innerText = parseInt(document.querySelector('#section' + (
-          idx + 1)).offsetTop) + 'px';
       });
     });
   </script>
