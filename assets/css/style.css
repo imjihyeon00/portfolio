@@ -2,13 +2,25 @@
 @import url(./font.css);
 
 /* 스킵메뉴 */
-#skip {position: relative; line-height: 30px;}
-#skip a {position: absolute; left: 0; top: -40px; width: 140px; border: 1px solid #fff; color: #fff; text-align: center; background: #333;}
-#skip a:active,
-#skip a:focus {top:0;}
+#skip {
+  position: relative;
+  line-height: 30px;
+}
 
-body {
-  background-color: #242424;
+#skip a {
+  position: absolute;
+  left: 0;
+  top: -40px;
+  width: 140px;
+  border: 1px solid #fff;
+  color: #fff;
+  text-align: center;
+  background: #333;
+}
+
+#skip a:active,
+#skip a:focus {
+  top: 0;
 }
 
 /* CURSOR */
@@ -24,6 +36,7 @@ body {
   z-index: 1000;
   filter: url("#goo");
 }
+
 .cursor span {
   position: absolute;
   display: block;
@@ -41,16 +54,18 @@ body {
   width: 100vw;
   position: fixed;
   padding: 35px 65px;
+  z-index: 10000;
 }
 
 .logo {
   float: left;
 }
 
-.logo a{
+.logo a {
   font-family: 'Montserrat', sans-serif;
   color: #DFD3C3;
 }
+
 .logo a span {
   display: block;
   line-height: 1.2;
@@ -70,10 +85,69 @@ body {
   float: right;
 }
 
-.contactLink a{
+.contactLink a {
   font-family: 'Eros Romano';
   font-size: 2vw;
   color: #DFD3C3;
 }
 
+/* MAIN */
+#main {}
 
+.horizon {
+  display: flex;
+  position: fixed;
+  left: 0;
+  top: 0;
+}
+.circle {
+  width: 10vw;
+  height: 10vw;
+  position: absolute;
+  background-color: #DFD3C3;
+  border-radius: 50%;
+}
+.home {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #DFD3C3;
+  width: 100vw;
+  height: 100vh;
+  text-align: center;
+  background-color: #242424;
+  position: relative;
+}
+
+.home_title {
+  font-size: 9vw;
+  text-transform: uppercase;
+  font-family: 'Eros Romano';
+  line-height: 1;
+  margin-bottom: 55px;
+}
+
+.home_desc {}
+
+.home_desc .line {
+  border-top: 1px solid #dfd3c3;
+  width: 20%;
+  height: 1px;
+  display: inline-block;
+  margin-bottom: 30px;
+}
+
+.home_desc p{
+  font-size: 1vw;
+  font-family: 'Chosunilbo_myungjo';
+  line-height: 1.57;
+}
+
+.hidden {
+  overflow: hidden;
+}
+
+.c_home{
+
+}

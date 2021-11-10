@@ -91,6 +91,7 @@ h6 {
 img,
 fieldset {
     border: 0 none;
+    width: 100%;
 }
 
 /* 버튼 초기화 */

@@ -53,12 +53,35 @@
   <main id="main">
     <h1 class="ir_so">메인 영역입니다.</h1>
     <div class="horizon">
+
+      <!-- HOME -->
       <article class="home">
         <h3 class="ir_so">홈 화면 입니다.</h3>
         <div class="home_title">
-          <span>frontend</span>
-          <span>portfolio</span>
-          <span>works</span>
+          <p>frontend</p>
+          <p>portfolio <span>works</span></p>
+        </div>
+        <div class="home_desc">
+          <span class="line"></span>
+          <p>새로운 변화가 끊임없이 일어나는 웹 환경에서 최신 트렌드에 뒤처지지 않기 위해 <br>스터디 혹은 세미나등의 참여하며 자기개발에 힘쓰겠습니다. </p>
+        </div>
+        <div class="circle c_home">
+          <div class="hidden">
+            <img src="./assets/img/arrow.svg" alt="화살표">
+            <img src="./assets/img/arrow.svg" alt="화살표">
+          </div>
+        </div>
+      </article>
+      <!-- //HOME -->
+      <article class="home">
+        <h3 class="ir_so">홈 화면 입니다.</h3>
+        <div class="home_title">
+          <p>frontend</p>
+          <p>portfolio <span>works</span></p>
+        </div>
+        <div class="home_desc">
+          <span class="line"></span>
+          <p>새로운 변화가 끊임없이 일어나는 웹 환경에서 최신 트렌드에 뒤처지지 않기 위해 <br>스터디 혹은 세미나등의 참여하며 자기개발에 힘쓰겠습니다. </p>
         </div>
       </article>
     </div>
@@ -67,6 +90,27 @@
 
 
   <!-- SCRIPT -->
+  <script>
+    const horizon = document.querySelector(".horizon");
+    const circle = document.querySelector(".circle");
+
+    const home = document.querySelector(".home");
+
+    let scrollTotalWidth = horizon.clientWidth;
+    document.querySelector("body").style.height = scrollTotalWidth + "px";
+
+    window.addEventListener("scroll", () => {
+      let scrollTop = document.documentElement.scrollTop || window.scrollY || window.pageYOffset;
+
+      let nWidth = scrollTotalWidth - document.querySelector("body").clientWidth;
+      let nHeight = document.querySelector("body").clientHeight - window.innerHeight;
+
+      let ratio = nWidth / nHeight;
+      let goLeft = scrollTop * ratio;
+
+      horizon.style.left = -goLeft + "px";
+    });
+  </script>
 
 </body>
 
