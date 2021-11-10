@@ -65,7 +65,7 @@
             transform: translate3d(-50%, -50%, 150px);
             text-align: center;
             color: #fff;
-            font-family: "NEXONLv1Gothic";
+            font-family: "Chosunilbo_myungjo";
             background: rgba(0, 0, 0, .3);
             padding: 2vw;
             font-size: 1vw;
@@ -106,13 +106,7 @@
     </main>
     <!-- //contents -->
 
-    <!-- info -->
     <div class="info">
-        <h1><a href="index.html">Mouse Effect 04 - Javascript</a></h1>
-        <p>마우스 이펙트 - 마우스 방향에 따라 움직이기</p>
-    </div>
-
-    <div class="info right">
         <ul>
             <li><a href="javascriptME01.html">1</a></li>
             <li><a href="javascriptME02.html">2</a></li>
@@ -132,19 +126,6 @@
             <li><a href="jqueryME06.html">6</a></li>
             <li><a href="jqueryME07.html">7</a></li>
             <li><a href="jqueryME08.html">8</a></li>
-        </ul>
-    </div>
-
-    <div class="info left list">
-        <ul>
-            <li>pageX : <span class="pageX">0</span></li>
-            <li>pageY : <span class="pageY">0</span></li>
-            <li>standardX : <span class="standardX">0</span></li>
-            <li>standardY : <span class="standardY">0</span></li>
-            <li>maxX : <span class="maxX">0</span></li>
-            <li>maxY : <span class="maxY">0</span></li>
-            <li>angleX : <span class="angleX">0</span></li>
-            <li>angleY : <span class="angleY">0</span></li>
         </ul>
     </div>
 
@@ -372,15 +353,6 @@ document.addEventListener('mousemove', mouseMove);
             //커서
             gsap.to(".cursor", { duration: .3, left: pageX, top: pageY });
 
-            //출력
-            document.querySelector('.pageX').textContent = pageX;
-            document.querySelector('.pageY').textContent = pageY;
-            document.querySelector('.standardX').textContent = standardX;
-            document.querySelector('.standardY').textContent = standardY;
-            document.querySelector('.maxX').textContent = maxX;
-            document.querySelector('.maxY').textContent = maxY;
-            document.querySelector('.angleX').textContent = parseInt(angleX);
-            document.querySelector('.angleY').textContent = parseInt(angleY);
         }
 
         document.addEventListener('mousemove', mouseMove);

@@ -14,6 +14,7 @@
     body {
       overflow: hidden;
     }
+
     .mouseCont {
       display: flex;
       align-items: center;
@@ -23,7 +24,7 @@
       width: 100%;
       height: 100vh;
       overflow: hidden;
-      font-family: 'S-CoreDream';
+      font-family: 'Chosunilbo_myungjo';
       cursor: none;
     }
 
@@ -40,8 +41,8 @@
 
     .mouseCont em {
       font-style: normal;
-      border-bottom: 0.2vw dashed orange;
-      color: orange;
+      border-bottom: 0.2vw dashed #CCA345;
+      color: #CCA345;
     }
 
     .cursor {
@@ -103,7 +104,7 @@
 
 </head>
 
-<body class="bg bg10 blue">
+<body class="bg bg2 black2">
 
   <!-- contents -->
   <main>
@@ -118,11 +119,6 @@
 
   <!-- info -->
   <div class="info">
-    <h1><a href="index.html">Mouse Effect 02 - javascript</a></h1>
-    <p>마우스 이펙트 - 마우스 따라다니기</p>
-  </div>
-
-  <div class="info right">
     <ul>
       <li><a href="javascriptME01.html">1</a></li>
       <li class="active"><a href="javascriptME02.html">2</a></li>
@@ -143,14 +139,6 @@
       <li><a href="jqueryME07.html">7</a></li>
       <li><a href="jqueryME08.html">8</a></li>
     </ul>
-  </div>
-
-  <div class="info left list">
-    <ul>
-      <li>pageX: <span class="pageX">0</span></li>
-      <li>pageY: <span class="pageY">0</span></li>
-    </ul>
-
   </div>
 
   <div class="info bottom source">
@@ -330,25 +318,9 @@ document.querySelectorAll('.info').forEach(el => {
 
     //움직임 효과
     document.addEventListener('mousemove', (e) => {
-      // cursor.style.left = (e.pageX - 5) + 'px';
-      // cursor.style.top = (e.pageY - 5) + 'px';
-      // follower.style.left = (e.pageX - 15) + 'px';
-      // follower.style.top = (e.pageY - 15) + 'px';
-
-      // let x = e.pageX - 5;
-      // let y = e.pageY - 5;
-      // let followerX = e.pageX - 15;
-      // let followeY = e.pageY - 15;
-      // document.querySelector('.cursor').style.cssText = 'left: ' + x + 'px; ' + 'top: ' + y + 'px;';
-      // document.querySelector('.follower').style.cssText = 'left: ' + followerX + 'px; ' + 'top: ' + followeY + 'px;';
-
       //gsap
       gsap.to(cursor, { duration: 0.3, left: e.pageX - 5, top: e.pageY - 5 });
       gsap.to(follower, { duration: 0.8, left: e.pageX - 15, top: e.pageY - 15 });
-
-      //출력용
-      document.querySelector('.pageX').innerText = e.pageX;
-      document.querySelector('.pageY').innerText = e.pageY;
     });
 
     document.querySelectorAll('.mouseCont em').forEach(em => {

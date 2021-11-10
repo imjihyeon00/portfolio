@@ -14,6 +14,7 @@
         body {
             overflow: hidden;
         }
+
         .moveWrap {
             display: flex;
             align-items: center;
@@ -58,7 +59,7 @@
             white-space: nowrap;
             color: #fff;
             background: rgba(0, 0, 0, .4);
-            font-family: "NEXONLv1Gothic";
+            font-family: "Chosunilbo_myungjo";
             line-height: 1.6;
         }
 
@@ -76,7 +77,7 @@
 
 </head>
 
-<body class="bg bg7 black">
+<body class="bg bg7 black2">
 
     <!-- contents -->
     <main>
@@ -95,11 +96,6 @@
 
     <!-- info -->
     <div class="info">
-        <h1><a href="index.html">Mouse Effect 05 - Javascript</a></h1>
-        <p>마우스 이펙트 - 마우스 방향에 따라 움직이기</p>
-    </div>
-
-    <div class="info right">
         <ul>
             <li><a href="javascriptME01.html">1</a></li>
             <li><a href="javascriptME02.html">2</a></li>
@@ -119,13 +115,6 @@
             <li><a href="jqueryME06.html">6</a></li>
             <li><a href="jqueryME07.html">7</a></li>
             <li><a href="jqueryME08.html">8</a></li>
-        </ul>
-    </div>
-
-    <div class="info left list">
-        <ul>
-            <li>pageX : <span class="pageX">0</span></li>
-            <li>pageY : <span class="pageY">0</span></li>
         </ul>
     </div>
 
@@ -293,10 +282,6 @@ moveImage.addEventListener('mousemove', mouseMove);
             let img = document.querySelector('.moveImage img');
 
             img.style.transform = 'translate(' + x + 'px,' + y + 'px)';
-
-            //출력
-            document.querySelector('.pageX').textContent = pageX;
-            document.querySelector('.pageY').textContent = pageY;
         }
 
         moveImage.addEventListener('mousemove', mouseMove);
