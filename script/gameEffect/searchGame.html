@@ -24,6 +24,25 @@
             font-style: normal;
         }
 
+        @font-face {
+            font-family: 'Chosunilbo_myungjo';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/Chosunilbo_myungjo.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        @font-face {
+            font-family: 'Eros Romano';
+            src: url('../../assets/font/ErosRomanoRegular.eot');
+            src: url('../../assets/font/ErosRomanoRegular.eot?#iefix') format('embedded-opentype'),
+                url('../../assets/font/ErosRomanoRegular.woff2') format('woff2'),
+                url('../../assets/font/ErosRomanoRegular.woff') format('woff'),
+                url('../../assets/font/ErosRomanoRegular.svg#ErosRomanoRegular') format('svg');
+            font-weight: normal;
+            font-style: normal;
+            font-display: swap;
+        }
+
         * {
             margin: 0;
             padding: 0;
@@ -36,7 +55,8 @@
         }
 
         body {
-            background:
+            background-color: #161616;
+            /* background:
                 radial-gradient(black 3px, transparent 4px),
                 radial-gradient(black 3px, transparent 4px),
                 linear-gradient(#fff 4px, transparent 0),
@@ -44,21 +64,21 @@
                 linear-gradient(-45deg, transparent 75px, transparent 76px, #a4a4a4 76px, #a4a4a4 77px, transparent 78px, transparent 109px),
                 #fff;
             background-size: 109px 109px, 109px 109px, 100% 6px, 109px 109px, 109px 109px;
-            background-position: 54px 55px, 0px 0px, 0px 0px, 0px 0px, 0px 0px;
+            background-position: 54px 55px, 0px 0px, 0px 0px, 0px 0px, 0px 0px; */
         }
 
         /* audio */
         .audio {
             position: absolute;
             right: 20px;
-            top: 20px;
+            top: 5vw;
         }
 
         .audio .btn-sound {
             display: block;
             width: 40px;
             height: 40px;
-            background: #223547;
+            background: #44402a;
             text-align: center;
             line-height: 43px;
             color: #fff;
@@ -70,8 +90,8 @@
         .searchWrap {
             width: 80vw;
             min-height: 30vh;
-            background-color: #f1f1f6;
-            border: 4px solid #223547;
+            background-color: #ebe2d5;
+            border: 4px solid #242424;
             border-radius: 1vw;
             padding: 4vw 2vw;
             margin: 5vw auto;
@@ -84,14 +104,14 @@
         .search span {
             font-family: 'GyeonggiBatang';
             font-size: 1.4vw;
-            color: #223547;
+            color: #242424;
         }
 
         .search h1 {
-            font-family: 'TmonMonsori';
+            font-family: 'Eros Romano';
             font-size: 4vw;
             line-height: 2;
-            color: #223547;
+            color: #44402a;
         }
 
         .search label {
@@ -106,7 +126,7 @@
         .search input {
             font-family: 'GyeonggiBatang';
             font-size: 24px;
-            border: 4px solid #223547;
+            border: 4px solid #44402a;
             border-radius: 50px;
             padding: 10px 30px;
             background: #fff;
@@ -116,18 +136,18 @@
         .search button {
             font-family: 'GyeonggiBatang';
             font-size: 24px;
-            border: 4px solid #223547;
+            border: 4px solid #44402a;
             border-radius: 50px;
             padding: 10px 30px;
-            background: #223547;
+            background: #44402a;
             color: #fff;
             cursor: pointer;
             transition: all .3s;
         }
 
         .search button:hover {
-            border-color: #456b8f;
-            background: #456b8f;
+            border-color: #b7ad79;
+            background: #b7ad79;
         }
 
         .info {
@@ -140,7 +160,7 @@
         }
 
         .info .time {
-            background: #223547;
+            background: #44402a;
             padding: 10px 20px;
             color: #fff;
             border-radius: 3px;
@@ -156,10 +176,9 @@
             display: none;
         }
 
-        .answers {}
-
         .answers span {
-            border: 1px solid #223547;
+            border: 1px solid #44402a;
+            color: #242424;
             display: inline-block;
             padding: 10px 20px;
             border-radius: 50px;
@@ -169,23 +188,24 @@
         }
 
         .answers span:hover {
-            background: #223547;
+            background: #44402a;
             color: #fff;
         }
 
-        .missAnswers::before{
+        .missAnswers::before {
             content: "오답보기";
             margin-top: 20px;
             display: block;
         }
+
         .missAnswers {
             display: none;
         }
 
         .missAnswers span {
-            border: 1px solid #223547;
+            border: 1px solid #44402a;
             display: inline-block;
-            background-color: #223547;
+            background-color: #44402a;
             color: #fff;
             padding: 10px 20px;
             border-radius: 50px;
@@ -195,8 +215,8 @@
         }
 
         .missAnswers span:hover {
-            background: #fff;
-            color: #223547;
+            background: #ebe2d5;
+            color: #242424;
         }
 
         .again-btn {
@@ -216,7 +236,7 @@
     <div class="searchWrap">
         <div class="search">
             <span>1분 동안 CSS 속성 검색하기</span>
-            <h1>CSS 속성 검색하기</h1>
+            <h1>CSS SEARCH GAME</h1>
             <div>
                 <label for="search-box">검색하기</label>
                 <input id="search-box" class="start-input" type="text" placeholder="CSS 속성을 입력하세요!" disabled="disabled">
@@ -236,7 +256,7 @@
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script>
-        const quizAnswers = ["align-content","align-items","align-self","all","animation","animation-delay","animation-direction","animation-duration","animation-fill-mode","animation-iteration-count","animation-name","animation-play-state","animation-timing-function","backface-visibility","background","background-attachment","background-blend-mode","background-clip","background-color","background-image","background-origin","background-position","background-repeat","background-size","border","border-bottom","border-bottom-color","border-bottom-left-radius","border-bottom-right-radius","border-bottom-style","border-bottom-width","border-collapse","border-color","border-image","border-image-outset","border-image-repeat","border-image-slice","border-image-source","border-image-width","border-left","border-left-color","border-left-style","border-left-width","border-radius","border-right","border-right-color","border-right-style","border-right-width","border-spacing","border-style","border-top","border-top-color","border-top-left-radius","border-top-right-radiu","border-top-style","border-top-width ","border-width","bottom","box-decoration-break","box-shadow","box-sizing","caption-side","caret-color","clear","clip","color","column-count","column-fill","column-gap","column-rule ","column-rule-color","column-rule-style","column-rule-width","column-span","column-width","columns","content","counter-increment","counter-reset","cursor","direction","display","empty-cells","filter","flex","flex-basis","flex-direction","flex-flow","flex-grow","flex-shrink","flex-wrap","float","font","font-family","font-size","font-size-adjust","font-stretch","font-style","font-variant","font-weight","grid","grid-area","grid-auto-columns","grid-auto-flow","grid-auto-rows","grid-column","grid-column-end","grid-column-gap","grid-column-start","grid-gap","grid-row","grid-row-end","grid-row-gap","grid-row-start","grid-template","grid-template-areas","grid-template-columns","grid-template-rows","hanging-punctuation","height","hyphens","isolation","justify-content","left","letter-spacing","line-height","list-style","list-style-image","list-style-position","list-style-type","margin","margin-bottom","margin-left","margin-right","margin-top","max-height","max-width ","min-height","min-width","mix-blend-mode","object-fit","object-position","opacity","order","outline","outline-color","outline-offset","outline-style","outline-width","overflow","overflow-x","overflow-y","padding","padding-bottom","padding-left","padding-right","padding-top","page-break-after","page-break-before","page-break-inside","perspective","perspective-origin","pointer-events","position","quotes","resize","right","tab-size","table-layout","text-align","text-align-last","text-decoration","text-decoration-color ","text-decoration-line","text-decoration-style","text-indent","text-justify","text-overflow","text-shadow","text-transform","top","transform","transform-origin","transform-style","transition","transition-delay","transition-duration","transition-property","transition-timing-function","unicode-bidi","user-select","vertical-align","visibility","white-space","width","word-break","word-spacing","word-wrap","z-index"];
+        const quizAnswers = ["align-content", "align-items", "align-self", "all", "animation", "animation-delay", "animation-direction", "animation-duration", "animation-fill-mode", "animation-iteration-count", "animation-name", "animation-play-state", "animation-timing-function", "backface-visibility", "background", "background-attachment", "background-blend-mode", "background-clip", "background-color", "background-image", "background-origin", "background-position", "background-repeat", "background-size", "border", "border-bottom", "border-bottom-color", "border-bottom-left-radius", "border-bottom-right-radius", "border-bottom-style", "border-bottom-width", "border-collapse", "border-color", "border-image", "border-image-outset", "border-image-repeat", "border-image-slice", "border-image-source", "border-image-width", "border-left", "border-left-color", "border-left-style", "border-left-width", "border-radius", "border-right", "border-right-color", "border-right-style", "border-right-width", "border-spacing", "border-style", "border-top", "border-top-color", "border-top-left-radius", "border-top-right-radiu", "border-top-style", "border-top-width ", "border-width", "bottom", "box-decoration-break", "box-shadow", "box-sizing", "caption-side", "caret-color", "clear", "clip", "color", "column-count", "column-fill", "column-gap", "column-rule ", "column-rule-color", "column-rule-style", "column-rule-width", "column-span", "column-width", "columns", "content", "counter-increment", "counter-reset", "cursor", "direction", "display", "empty-cells", "filter", "flex", "flex-basis", "flex-direction", "flex-flow", "flex-grow", "flex-shrink", "flex-wrap", "float", "font", "font-family", "font-size", "font-size-adjust", "font-stretch", "font-style", "font-variant", "font-weight", "grid", "grid-area", "grid-auto-columns", "grid-auto-flow", "grid-auto-rows", "grid-column", "grid-column-end", "grid-column-gap", "grid-column-start", "grid-gap", "grid-row", "grid-row-end", "grid-row-gap", "grid-row-start", "grid-template", "grid-template-areas", "grid-template-columns", "grid-template-rows", "hanging-punctuation", "height", "hyphens", "isolation", "justify-content", "left", "letter-spacing", "line-height", "list-style", "list-style-image", "list-style-position", "list-style-type", "margin", "margin-bottom", "margin-left", "margin-right", "margin-top", "max-height", "max-width ", "min-height", "min-width", "mix-blend-mode", "object-fit", "object-position", "opacity", "order", "outline", "outline-color", "outline-offset", "outline-style", "outline-width", "overflow", "overflow-x", "overflow-y", "padding", "padding-bottom", "padding-left", "padding-right", "padding-top", "page-break-after", "page-break-before", "page-break-inside", "perspective", "perspective-origin", "pointer-events", "position", "quotes", "resize", "right", "tab-size", "table-layout", "text-align", "text-align-last", "text-decoration", "text-decoration-color ", "text-decoration-line", "text-decoration-style", "text-indent", "text-justify", "text-overflow", "text-shadow", "text-transform", "top", "transform", "transform-origin", "transform-style", "transition", "transition-delay", "transition-duration", "transition-property", "transition-timing-function", "unicode-bidi", "user-select", "vertical-align", "visibility", "white-space", "width", "word-break", "word-spacing", "word-wrap", "z-index"];
 
         const $totalCount = $(".total"),
             $scoreCount = $(".score"),
@@ -250,17 +270,17 @@
             $msg = $(".msg"),
             $reStart = $(".again-btn");
 
-        let timeRemaingin = 60, //남은 시간 설정(초)
+        let timeRemaingin = 6, //남은 시간 설정(초)
             score = 0,          //점수 설정
             timeInterval,
             playSoundClass = "is-playing",
             answers;
 
 
-        function startQuiz(){
+        function startQuiz() {
             //전체 문제 수
             $totalCount.text(quizAnswers.length);
-            
+
             //현재 점수 표시
             $scoreCount.text(score);
 
@@ -272,18 +292,18 @@
 
             //정답체크
             checkAnswers();
-            
+
             //오디오
             sound();
         }
 
         // 인풋 체크
-        function checkInput(event){
+        function checkInput(event) {
             let input = event.currentTarget.value.trim().toLowerCase();
-            
-            if(answers.hasOwnProperty(input) && !answers[input]){
+
+            if (answers.hasOwnProperty(input) && !answers[input]) {
                 answers[input] = true;
-                
+
                 //점수 반영
                 score++;
                 $scoreCount.text(score);
@@ -295,9 +315,9 @@
                 $startInput.val('');
             }
         }
-        
+
         // audio 
-        function sound(){
+        function sound() {
             $btnSound.find("i").toggleClass("fa-volume-up fa-volume-off");
             $btnSound.toggleClass(playSoundClass);
 
@@ -309,70 +329,70 @@
         }
 
         //정답체크
-        function checkAnswers(){
+        function checkAnswers() {
             //데이터 저장방식 변경
             //사용자가 입력한 값 == 배열안에 데이터
             //정답 -> flase -> true -> 출력
             //오답 -> false -> 출력
 
             answers = {};
-            quizAnswers.forEach(function(item){
+            quizAnswers.forEach(function (item) {
                 let answer = item.trim().toLowerCase();
                 answers[answer] = false;
             });
         }
 
         //오답체크 
-        function missAnswers(){
-            quizAnswers.forEach(function(item){
+        function missAnswers() {
+            quizAnswers.forEach(function (item) {
                 let answer = item.trim().toLowerCase();
-                if(!answers[answer]){
+                if (!answers[answer]) {
                     $missAnswers.show().append(`<span>${item}</span>`);
                 }
             });
         }
-        
+
         //시간설정
-        function reduceTime(){
+        function reduceTime() {
             timeRemaingin--;
-            if(timeRemaingin == 0) endQuiz();
+            if (timeRemaingin == 0) endQuiz();
             $timeRemain.text(displayTime());
         }
 
         //시간 표시하기
-        function displayTime(){
-            if(timeRemaingin<=0){
-                return "0:00";                
-            }  else {
+        function displayTime() {
+            if (timeRemaingin <= 0) {
+                return "0:00";
+            } else {
                 let minutes = Math.floor(timeRemaingin / 60),
                     seconds = timeRemaingin % 60;
 
-                if(seconds < 10) seconds = "0"+seconds;
+                if (seconds < 10) seconds = "0" + seconds;
 
                 return minutes + ":" + seconds;
             }
         }
 
         //게임 끝
-        function endQuiz(){
+        function endQuiz() {
             //음악 정지
-            if ($btnSound.hasClass(playSoundClass)){
+            if ($btnSound.hasClass(playSoundClass)) {
                 sound();
             }
 
             alert("게임 끝났습니다!!");
-            
+
             //시간 정지 
             clearInterval(timeInterval);
-            
+
             //정답체크 비활성화
-            $startInput.attr("disabled",true);
+            $startInput.attr("disabled", true);
 
             //오답 보여주기
             missAnswers();
 
             //메세지 출력
-            let totalScore = Math.round((score/quizAnswers.length)*100);
+            let totalScore = Math.round((score / quizAnswers.length) * 100);
             $msg.show().text(`게임이 끝났습니다. 당신은 ${quizAnswers.length}문제 중에 ${score}개를 맞추었습니다. 당신의 점수는 ${totalScore}점 입니다.`);
 
             //다시 도전하기
@@ -382,10 +402,10 @@
         }
 
         //다시 도전하기
-        function reStart(){
+        function reStart() {
             sound();
             timeRemaingin = 60;
-            score = 0; 
+            score = 0;
             $answers.empty();
             $missAnswers.empty().hide();
             $msg.hide();
@@ -393,7 +413,7 @@
             startQuiz();
         }
 
-        function mdnLink(){
+        function mdnLink() {
             console.log(event.currentTarget);
         }
 
