@@ -92,6 +92,12 @@
   font-style: normal;
   font-display: swap;
 }
+@font-face {
+  font-family: "Chosunilbo_myungjo";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/Chosunilbo_myungjo.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
 /* reset */
 body,
 div,
@@ -320,7 +326,7 @@ figcaption {
   padding: 20px;
   position: absolute;
   left: 0;
-  top: 0;
+  top: 35px;
 }
 .info.right {
   left: auto;
@@ -359,9 +365,9 @@ figcaption {
 }
 .info li a {
   text-decoration: none;
-  color: #fff;
+  color: #DFD3C3;
   display: inline-block;
-  border: 1px dashed #fff;
+  border: 1px dashed #DFD3C3;
   border-radius: 50%;
   width: 20px;
   height: 20px;
@@ -371,7 +377,7 @@ figcaption {
   margin-bottom: 5px;
 }
 .info li.active a {
-  background: #fff;
+  background: #DFD3C3;
   color: #000;
 }
 .info.list {
@@ -645,7 +651,7 @@ figcaption {
   }
 }
 .parallax {
-  background: #242424;
+  background: #050505;
   color: #DFD3C3;
   font-family: "Eros Romano";
 }
@@ -703,9 +709,9 @@ figcaption {
 .paraNav {
   position: fixed;
   right: 20px;
-  top: 20px;
+  top: 80px;
   z-index: 1000;
-  background: rgba(0, 0, 0, 0.4);
+  background: #36363680;
   padding: 15px 20px;
   border-radius: 50px;
 }

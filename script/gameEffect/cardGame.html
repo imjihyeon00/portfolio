@@ -24,6 +24,26 @@
             font-style: normal;
         }
 
+        @font-face {
+            font-family: 'Chosunilbo_myungjo';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/Chosunilbo_myungjo.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        @font-face {
+            font-family: 'Eros Romano';
+            src: url('../../assets/font/ErosRomanoRegular.eot');
+            src: url('../../assets/font/ErosRomanoRegular.eot?#iefix') format('embedded-opentype'),
+                url('../../assets/font/ErosRomanoRegular.woff2') format('woff2'),
+                url('../../assets/font/ErosRomanoRegular.woff') format('woff'),
+                url('../../assets/font/ErosRomanoRegular.svg#ErosRomanoRegular') format('svg');
+            font-weight: normal;
+            font-style: normal;
+            font-display: swap;
+        }
+
+
         /* reset */
         * {
             margin: 0;
@@ -40,24 +60,25 @@
         }
 
         body {
-            background: #E5F2FE;
+            background: #1a1a1a;
         }
 
         /* title */
         .title {
             position: absolute;
             left: 20px;
-            top: 20px;
+            top: 60px;
+            color: #DFD3C3;
         }
 
         .title h1 {
-            font-family: 'Cafe24Ssurround';
+            font-family: 'Eros Romano';
             margin-bottom: 20px;
             font-size: 50px;
         }
 
         .score {
-            font-family: 'Cafe24SsurroundAir';
+            font-family: 'Chosunilbo_myungjo';
             font-size: 30px;
         }
 
@@ -69,14 +90,14 @@
         .audio {
             position: absolute;
             right: 20px;
-            top: 20px;
+            top: 80px;
         }
 
         .audio .btn-sound {
             display: block;
             width: 40px;
             height: 40px;
-            background: #95b6d8;
+            background: #6A5F49;
             text-align: center;
             line-height: 43px;
             color: #fff;
@@ -93,7 +114,7 @@
             width: 100%;
             height: 100vh;
             backdrop-filter: blur(10px);
-            background: rgba(48, 19, 68, 0.4);
+            background: #1a1a1ab8;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -103,14 +124,14 @@
         }
 
         .success h2 {
-            font-family: 'Cafe24Ssurround';
+            font-family: 'Chosunilbo_myungjo';
             font-size: 6vw;
             color: #fff;
             margin-bottom: 20px;
         }
 
         .success .btn-continue {
-            font-family: 'Cafe24SsurroundAir';
+            font-family: 'Eros Romano';
             font-size: 3vw;
             background: #000;
             border: 0;
@@ -141,10 +162,10 @@
             top: 50%;
             transform: translate(-50%, -50%);
             perspective: 600px;
-            border: 6px solid #000;
+            border: 6px solid #6A5F49;
             border-radius: 1vw;
             padding: 1vw;
-            background-color: #dbf8ef;
+            background-color: #6A5F49;
         }
 
         .cardWrap.is-disabled {
@@ -193,7 +214,7 @@
             width: 100%;
             height: 100%;
             border-radius: .4vw;
-            background-color: #bee2d7;
+            background-color: #DFD3C3;
             backface-visibility: hidden;
             background-position: center;
             background-repeat: no-repeat;
@@ -210,43 +231,43 @@
 
         /* card img */
         .cardWrap .card .front {
-            background-image: url(../assets/img/desert.svg);
+            background-image: url(../assets/img/frame.png);
         }
 
         .card[data-type=img1] .back {
-            background-image: url(../assets/img/leaf.png);
+            background-image: url(../assets/img/rosemary.png);
         }
 
         .card[data-type=img2] .back {
-            background-image: url(../assets/img/bottle.png);
+            background-image: url(../assets/img/house-plants.png);
         }
 
         .card[data-type=img3] .back {
-            background-image: url(../assets/img/cactus.png);
+            background-image: url(../assets/img/flowerpot.png);
         }
 
         .card[data-type=img4] .back {
-            background-image: url(../assets/img/flower.png);
+            background-image: url(../assets/img/pothos.png);
         }
 
         .card[data-type=img5] .back {
-            background-image: url(../assets/img/flowers.png);
+            background-image: url(../assets/img/monstera.png);
         }
 
         .card[data-type=img6] .back {
-            background-image: url(../assets/img/growing-plant.png);
+            background-image: url(../assets/img/palm-tree.png);
         }
 
         .card[data-type=img7] .back {
-            background-image: url(../assets/img/pistachio.png);
+            background-image: url(../assets/img/ficus.png);
         }
 
         .card[data-type=img8] .back {
-            background-image: url(../assets/img/plant.png);
+            background-image: url(../assets/img/lemon-tree.png);
         }
 
         .card[data-type=img9] .back {
-            background-image: url(../assets/img/seeding.png);
+            background-image: url(../assets/img/watering-can.png);
         }
     </style>
 </head>
@@ -255,7 +276,7 @@
 
     <main>
         <article class="title">
-            <h1>카드 뒤집기 게임</h1>
+            <h1>card match game</h1>
             <div class="score">
                 <p class="turns">기회 : <span>5</span>번</p>
                 <p class="attempts">시도 : <span>0</span></p>
@@ -278,7 +299,7 @@
                 <p class="attempts">시도 : <span>0</span></p>
                 <p class="wins">우승 : <span>0</span></p>
             </div>
-            <button class="btn-continue">다시 도전하기</button>
+            <button class="btn-continue">RE PLAY</button>
         </div>
 
         <section class="cardWrap">
@@ -380,10 +401,10 @@
             timeoutLength = 900;
 
         let sound = [
-                "../assets/audio/match2.mp3",
-                "../assets/audio/match.mp3",
-                "../assets/audio/up.mp3",
-            ],
+            "../assets/audio/match2.mp3",
+            "../assets/audio/match.mp3",
+            "../assets/audio/up.mp3",
+        ],
             soundMatch = new Audio(sound[0]),
             soundNoMatch = new Audio(sound[1]),
             soundSuccess = new Audio(sound[2]),
@@ -451,7 +472,7 @@
                     }
                 }
             }
-            
+
             //카드를 완성했을 때
             //dataMatch의 true 갯수 == 전체 카드 갯수 : 성공 음악 추가 / 우승+1 / 성공메세지
             let cnt = $("[" + dataMatch + "=true" + "]").length;

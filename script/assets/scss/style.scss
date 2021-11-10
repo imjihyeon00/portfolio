@@ -113,6 +113,14 @@
   font-display: swap;
 }
 
+@font-face {
+  font-family: 'Chosunilbo_myungjo';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/Chosunilbo_myungjo.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
 /* reset */
 body,
 div,
@@ -368,7 +376,7 @@ $gradient5: linear-gradient(to bottom, #f6d365 0%, #fda085 100%);
   padding: 20px;
   position: absolute;
   left: 0;
-  top: 0;
+  top: 35px;
 
   &.right {
     left: auto;
@@ -413,9 +421,9 @@ $gradient5: linear-gradient(to bottom, #f6d365 0%, #fda085 100%);
 
     a {
       text-decoration: none;
-      color: #fff;
+      color: #DFD3C3;
       display: inline-block;
-      border: 1px dashed #fff;
+      border: 1px dashed #DFD3C3;
       border-radius: 50%;
       width: 20px;
       height: 20px;
@@ -427,7 +435,7 @@ $gradient5: linear-gradient(to bottom, #f6d365 0%, #fda085 100%);
 
     &.active {
       a {
-        background: #fff;
+        background: #DFD3C3;
         color: #000;
       }
     }
@@ -725,7 +733,7 @@ $gradient5: linear-gradient(to bottom, #f6d365 0%, #fda085 100%);
 
 //parallax
 .parallax {
-  background: #242424;
+  background: #050505;
   color: #DFD3C3;
   font-family: $font-eros;
 
@@ -787,9 +795,9 @@ $gradient5: linear-gradient(to bottom, #f6d365 0%, #fda085 100%);
 .paraNav {
   position: fixed;
   right: 20px;
-  top: 20px;
+  top: 80px;
   z-index: 1000;
-  background: rgba(0, 0, 0, 0.4);
+  background: #36363680;
   padding: 15px 20px;
   border-radius: 50px;
 

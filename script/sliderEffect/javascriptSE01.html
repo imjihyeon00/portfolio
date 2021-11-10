@@ -71,7 +71,7 @@
 
 </head>
 
-<body class="bg bg13 brown">
+<body class="bg bg2 black2">
 
   <!-- contents -->
   <main>
@@ -87,13 +87,7 @@
   </main>
   <!-- //contents -->
 
-  <!-- info -->
-  <div class="info">
-    <h1><a href="index.html">Slider Effect 01 - javascript</a></h1>
-    <p>이미지 슬라이드 - 페이드 효과</p>
-  </div>
-
-  <div class="info right">
+  <div class="info ">
     <ul>
       <li class="active"><a href="javascriptSE01.html">1</a></li>
       <li><a href="javascriptSE02.html">2</a></li>
@@ -250,9 +244,6 @@ setInterval(() =&gt; {
 
     setInterval(() => {
       let nextIndex = (currentIndex + 1) % sliderCount;
-
-      // slider[currentIndex].style.display = "none";
-      // slider[nextIndex].style.display = "block";
 
       slider[currentIndex].style.opacity = 0;
       slider[nextIndex].style.opacity = 1;

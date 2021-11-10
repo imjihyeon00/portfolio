@@ -730,7 +730,6 @@ $(window).scroll(function () {
       });
 
       $('.content-item').each(function (idx, el) {
-        console.log(el);
         if (scrollTop >= $(this).offset().top) {
           $(this).addClass('show');
           $('.paraNav ul li').eq(idx).addClass('active')
