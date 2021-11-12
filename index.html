@@ -24,14 +24,6 @@
 </head>
 
 <body>
-  <!-- 스킵 메뉴 -->
-  <div id="skip">
-    <a rel="bookmark" href="#">홈</a>
-    <a rel="bookmark" href="#">프로젝트</a>
-    <a rel="bookmark" href="#">스크립트</a>
-    <a rel="bookmark" href="#">컨택</a>
-  </div>
-  <!-- //스킵 메뉴 -->
   <!-- CURSOR -->
   <div id="cursor" class="cursor"></div>
 
@@ -54,7 +46,7 @@
     <div class="horizon">
 
       <!-- HOME -->
-      <article class="home">
+      <article id="home" class="home">
         <h3 class="ir_so">홈 영역 입니다.</h3>
         <div class="home_title">
           <p>frontend</p>
@@ -70,7 +62,7 @@
       </article>
 
       <!-- ABOUT -->
-      <article class="about">
+      <article id="about" class="about">
         <h3 class="ir_so">어바웃 영역 입니다.</h3>
         <div class="circle c_about">ABOUT</div>
         <div class="about_img">
@@ -86,18 +78,18 @@
       </article>
 
       <!-- PROJECT -->
-      <article class="project">
+      <article id="project" class="project">
         <h3 class="ir_so">프로젝트 소개 영역 입니다.</h3>
         <!-- <div class="circle c_project">PROJECT</div> -->
         <section class="list p_list">
           <h4 class="ir_so">프로젝트 리스트</h4>
           <span class="work1">WORK1</span>
           <ul class="work1_list">
-            <li>MEGABOX SITE<span>01</span></li>
-            <li>PHP SITE<span>02</span></li>
-            <li>TEAM PROJECT<span>03</span></li>
-            <li>APPLE SITE<span>04</span></li>
-            <li>REACT SITE<span>05</span></li>
+            <li data-img="megabox">MEGABOX SITE<span>01</span></li>
+            <li data-img="phpSite">PHP SITE<span>02</span></li>
+            <li data-img="joungshin">TEAM PROJECT<span>03</span></li>
+            <li data-img="apple">APPLE SITE<span>04</span></li>
+            <li data-img="reactSite">REACT SITE<span>05</span></li>
           </ul>
         </section>
 
@@ -109,12 +101,17 @@
 
 
   <!-- SCRIPT -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/gsap.min.js"></script>
   <script>
     const horizon = document.querySelector(".horizon");
+    const cursor = document.querySelector(".cursor");
     const circle = document.querySelector(".circle");
 
     const home = document.querySelector(".home");
+    const project = document.querySelector(".project");
+    const work1List = document.querySelectorAll(".work1_list li");
 
+    // 가로모드
     let scrollTotalWidth = horizon.clientWidth;
     document.querySelector("body").style.height = scrollTotalWidth + "px";
 
@@ -129,6 +126,35 @@
 
       horizon.style.left = -goLeft + "px";
     });
+
+    //커서
+    window.addEventListener("mousemove", function (e) {
+      const w = document.querySelector('.cursor').clientWidth / 2;
+      const y = document.querySelector('.cursor').clientHeight / 2;
+      const mouseX = e.clientX;
+      const mouseY = e.clientY;
+
+      gsap.to('.cursor', {
+        duration: .5,
+        left: e.pageX,
+        top: e.pageY
+      });
+    });
+
+
+    //work1 마우스 오버시
+    work1List.forEach((li) => {
+      li.addEventListener("mouseover", () => {
+        cursor.classList.add("img");
+        cursor.innerHTML = "<img class='hoverImg' src='assets/img/" + li.dataset.img + ".jpg' />";
+      });
+      li.addEventListener("mouseleave", () => {
+        cursor.classList.remove("img");
+        document.querySelector(".hoverImg").remove();
+      })
+    });
+
+
   </script>
 
 </body>

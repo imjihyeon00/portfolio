@@ -1,37 +1,25 @@
 @charset "utf-8";
 @import url(./font.css);
 
-/* 스킵메뉴 */
-#skip {
-  position: relative;
-  line-height: 30px;
-}
-
-#skip a {
-  position: absolute;
-  left: 0;
-  top: -40px;
-  width: 140px;
-  border: 1px solid #fff;
-  color: #fff;
-  text-align: center;
-  background: #333;
-}
-
-#skip a:active,
-#skip a:focus {
-  top: 0;
+body {
+  cursor: none;
 }
 
 /* CURSOR */
 .cursor {
-  pointer-events: none;
-  position: relative;
+  position: absolute;
   border-radius: 50%;
   z-index: 10000;
   background-color: #DFD3C3;
   width: 20px;
   height: 20px;
+}
+
+.cursor.img {
+  background-color: transparent;
+  width: 20vw;
+  height: auto;
+  mix-blend-mode: difference;
 }
 
 
@@ -159,7 +147,7 @@
   text-align: center;
   background-color: #242424;
   position: relative;
-  gap:1.5vw;
+  gap: 1.5vw;
 }
 
 .about_img {
@@ -198,7 +186,7 @@
   left: 5vw;
   bottom: 3vw;
   font-family: 'Eros Romano';
-  color:#242424;
+  color: #242424;
   font-size: 60px;
 }
 
@@ -214,7 +202,7 @@
   text-align: center;
   background-color: #242424;
   position: relative;
-  gap:1.5vw;
+  gap: 1.5vw;
   text-align-last: left;
   font-family: 'Eros Romano';
 }
@@ -231,16 +219,17 @@
   overflow: hidden;
   width: 40vw;
 }
-.work1_list > li {
+
+.work1_list>li {
   font-size: 3vw;
   line-height: 0.6;
   border-bottom: 1px solid #dfd3c3;
-  margin-bottom: 1vw;
+  margin: 1vw 0;
   position: relative;
-    padding-top: 6px;
+  padding-top: 2vw;
 }
 
-.work1_list > li > span {
+.work1_list>li>span {
   font-size: 1vw;
   margin-right: 0.7vw;
   margin-bottom: -1vw;
