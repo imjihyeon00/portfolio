@@ -100,13 +100,19 @@
   left: 0;
   top: 0;
 }
+
 .circle {
   width: 10vw;
   height: 10vw;
   position: absolute;
   background-color: #DFD3C3;
   border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
+
+/* HOME */
 .home {
   display: flex;
   flex-direction: column;
@@ -138,7 +144,7 @@
   margin-bottom: 30px;
 }
 
-.home_desc p{
+.home_desc p {
   font-size: 1vw;
   font-family: 'Chosunilbo_myungjo';
   line-height: 1.57;
@@ -148,6 +154,63 @@
   overflow: hidden;
 }
 
-.c_home{
+.c_home {
+  padding: 2vw;
+  right: 5vw;
+  bottom: 3vw;
+}
 
+/* ABOUT */
+.about {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  color: #DFD3C3;
+  width: 100vw;
+  height: 100vh;
+  text-align: center;
+  background-color: #242424;
+  position: relative;
+  gap:1.5vw;
+}
+
+.about_img {
+  position: relative;
+  width: 19vw;
+  height: 100%;
+}
+
+.about_img::before {
+  content: '';
+  width: 15vw;
+  height: 15vw;
+  position: absolute;
+  left: -100px;
+  top: 68px;
+  border-radius: 50%;
+  border: 1px solid #dfd3c3;
+}
+
+.about_img>img {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.about_desc {
+  width: 21%;
+  text-align: left;
+  margin-top: -12vw;
+  font-size: 16px;
+}
+
+.c_about {
+  padding: 2vw;
+  left: 5vw;
+  bottom: 3vw;
+  font-family: 'Eros Romano';
+  color:#242424;
+  font-size: 60px;
 }
