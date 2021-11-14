@@ -207,7 +207,7 @@ body {
   font-family: 'Eros Romano';
 }
 
-.work1 {
+.work {
   font-size: 10vw;
   color: #242424;
   background-color: #DFD3C3;
@@ -215,12 +215,12 @@ body {
   line-height: 0.6;
 }
 
-.work1_list {
+.work_list {
   overflow: hidden;
   width: 40vw;
 }
 
-.work1_list>li {
+.work_list>li {
   font-size: 3vw;
   line-height: 0.6;
   border-bottom: 1px solid #dfd3c3;
@@ -229,7 +229,7 @@ body {
   padding-top: 2vw;
 }
 
-.work1_list>li>span {
+.work_list>li>span {
   font-size: 1vw;
   margin-right: 0.7vw;
   margin-bottom: -1vw;

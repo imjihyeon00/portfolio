@@ -47,7 +47,7 @@
 
       <!-- HOME -->
       <article id="home" class="home">
-        <h3 class="ir_so">홈 영역 입니다.</h3>
+        <h2 class="ir_so">홈 영역 입니다.</h2>
         <div class="home_title">
           <p>frontend</p>
           <p>portfolio <span>works</span></p>
@@ -63,7 +63,7 @@
 
       <!-- ABOUT -->
       <article id="about" class="about">
-        <h3 class="ir_so">어바웃 영역 입니다.</h3>
+        <h2 class="ir_so">어바웃 영역 입니다.</h2>
         <div class="circle c_about">ABOUT</div>
         <div class="about_img">
           <img src="./assets/img/img2.png" alt="이미지2">
@@ -79,18 +79,34 @@
 
       <!-- PROJECT -->
       <article id="project" class="project">
-        <h3 class="ir_so">프로젝트 소개 영역 입니다.</h3>
+        <h2 class="ir_so">프로젝트 소개 영역 입니다.</h2>
         <!-- <div class="circle c_project">PROJECT</div> -->
         <section class="list p_list">
-          <h4 class="ir_so">프로젝트 리스트</h4>
-          <span class="work1">WORK1</span>
-          <ul class="work1_list">
+          <h3 class="ir_so">프로젝트 리스트</h3>
+          <span class="work work1">WORK1</span>
+          <ul class="work_list work1_list">
             <li data-img="megabox">MEGABOX SITE<span>01</span></li>
             <li data-img="phpSite">PHP SITE<span>02</span></li>
             <li data-img="joungshin">TEAM PROJECT<span>03</span></li>
             <li data-img="apple">APPLE SITE<span>04</span></li>
             <li data-img="reactSite">REACT SITE<span>05</span></li>
           </ul>
+        </section>
+
+        <section class="work_section megabox">
+          <h3>MEGABOX</h3>
+          <img src="./assets/img/megabox.jpg" alt="megabox">
+          <div class="work_desc">
+            <p>웹표준을 준수해 만든 메가박스 반응형 리뉴얼 사이트 입니다.
+              swiper api를 이용해 배너를 구현하였고,
+              탭 메뉴에 따라 해당 순서에 맞는 영화목록의 swiper가 나타나도록 하였습니다.
+              새로운 영화를 소개하는 곳에서는 유튜브 api를 이용해 영화의 예고편이 모달로 나타나 재생되도록 하였습니다.
+              크로스브라우징을 작업하여 IE9 버전까지 이용 가능하게 하였습니다.</p>
+            <div class="work_btn">
+              <button class="code_btn">CODE</button>
+              <a href="#" class="view_link">VIEW</a>
+            </div>
+          </div>
         </section>
 
       </article>
