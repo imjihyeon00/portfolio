@@ -12,6 +12,12 @@
 
   <title>portfolio</title>
 
+  <!-- font preload -->
+  <link rel="preload" href="./assets/font/ErosRomanoRegular.eot" as="font" crossorigin="anonymous" />
+  <link rel="preload" href="./assets/font/ErosRomanoRegular.svg" as="font" crossorigin="anonymous" />
+  <link rel="preload" href="./assets/font/ErosRomanoRegular.woff" as="font" crossorigin="anonymous" />
+  <link rel="preload" href="./assets/font/ErosRomanoRegular.woff2" as="font" crossorigin="anonymous" />
+
   <!-- CSS -->
   <link rel="stylesheet" href="./assets/css/reset.css">
   <link rel="stylesheet" href="./assets/css/style.css">
@@ -147,11 +153,9 @@
     window.addEventListener("mousemove", function (e) {
       const w = document.querySelector('.cursor').clientWidth / 2;
       const y = document.querySelector('.cursor').clientHeight / 2;
-      const mouseX = e.clientX;
-      const mouseY = e.clientY;
 
       gsap.to('.cursor', {
-        duration: .5,
+        duration: .2,
         left: e.pageX,
         top: e.pageY
       });
