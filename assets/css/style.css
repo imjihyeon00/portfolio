@@ -1,18 +1,34 @@
 @charset "utf-8";
 @import url(./font.css);
 
-body {
+body{
   cursor: none;
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+body::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Opera*/
 }
 
 /* CURSOR */
 .cursor {
-  position: absolute;
+  /* position: fixed;
   border-radius: 50%;
   z-index: 10000;
   background-color: #DFD3C3;
   width: 20px;
-  height: 20px;
+  height: 20px; */
+  width: 10vw;
+  height: 10vw;
+  position: absolute;
+  background-color: #DFD3C3;
+  z-index: 10000;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  mix-blend-mode: difference;
 }
 
 .cursor.img {
@@ -28,7 +44,7 @@ body {
   overflow: hidden;
   width: 100vw;
   position: fixed;
-  padding: 35px 65px;
+  padding: 30px 63px;
   z-index: 1000;
 }
 
@@ -38,21 +54,22 @@ body {
 
 .logo a {
   font-family: 'Montserrat', sans-serif;
+  text-transform: uppercase;
   color: #DFD3C3;
 }
 
 .logo a span {
   display: block;
-  line-height: 1.2;
+  line-height: 1.1;
 }
 
 .logo .frontend {
-  font-size: 1.2vw;
+  font-size: 1vw;
   font-weight: 300;
 }
 
 .logo .portfolio {
-  font-size: 1.15vw;
+  font-size: .96vw;
   font-weight: 800;
 }
 
@@ -62,7 +79,7 @@ body {
 
 .contactLink a {
   font-family: 'Eros Romano';
-  font-size: 2vw;
+  font-size: 1.2vw;
   color: #DFD3C3;
 }
 
@@ -76,7 +93,7 @@ body {
   top: 0;
 }
 
-.circle {
+/* .circle {
   width: 10vw;
   height: 10vw;
   position: absolute;
@@ -85,7 +102,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-}
+} */
 
 /* HOME */
 .home {
@@ -102,11 +119,12 @@ body {
 }
 
 .home_title {
-  font-size: 9vw;
+  font-size: 9.5vw;
   text-transform: uppercase;
   font-family: 'Eros Romano';
-  line-height: 1;
-  margin-bottom: 55px;
+  line-height: .86;
+  margin-top: 20px;
+      margin-bottom: 75px;
 }
 
 .home_desc {}

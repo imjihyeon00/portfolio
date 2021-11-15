@@ -52,7 +52,7 @@
     <div class="horizon">
 
       <!-- HOME -->
-      <article id="home" class="home">
+      <article id="home" class="home" data-cursor="&lt;img src='./assets/img/arrow.svg' alt='화살표'&gt;">
         <h2 class="ir_so">홈 영역 입니다.</h2>
         <div class="home_title">
           <p>frontend</p>
@@ -62,9 +62,9 @@
           <span class="line"></span>
           <p>새로운 변화가 끊임없이 일어나는 웹 환경에서 최신 트렌드에 뒤처지지 않기 위해 <br>스터디 혹은 세미나등의 참여하며 자기개발에 힘쓰겠습니다. </p>
         </div>
-        <div class="circle c_home">
+        <!-- <div class="circle c_home">
           <img src="./assets/img/arrow.svg" alt="화살표">
-        </div>
+        </div> -->
       </article>
 
       <!-- ABOUT -->
@@ -128,7 +128,7 @@
     const horizon = document.querySelector(".horizon");
     const cursor = document.querySelector(".cursor");
     const circle = document.querySelector(".circle");
-
+    
     const home = document.querySelector(".home");
     const project = document.querySelector(".project");
     const work1List = document.querySelectorAll(".work1_list li");
@@ -147,12 +147,21 @@
       let goLeft = scrollTop * ratio;
 
       horizon.style.left = -goLeft + "px";
+      
+      if(goLeft > home.offsetLeft){
+        // cursor.remove();
+        cursor.classList.add("c_home");
+        cursor.innerHTML = home.dataset.cursor;
+      }
+
     });
 
     //커서
     window.addEventListener("mousemove", function (e) {
       const w = document.querySelector('.cursor').clientWidth / 2;
       const y = document.querySelector('.cursor').clientHeight / 2;
+
+
 
       gsap.to('.cursor', {
         duration: .2,
