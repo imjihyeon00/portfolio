@@ -52,7 +52,8 @@
     <div class="horizon">
 
       <!-- HOME -->
-      <article id="home" class="home" data-cursor="&lt;img src='./assets/img/arrow.svg' alt='화살표'&gt;">
+      <article id="home" class="home" data-class="c_home"
+        data-cursor="&lt;img src='./assets/img/arrow.svg' alt='화살표'&gt;">
         <h2 class="ir_so">홈 영역 입니다.</h2>
         <div class="home_title">
           <p>frontend</p>
@@ -68,9 +69,9 @@
       </article>
 
       <!-- ABOUT -->
-      <article id="about" class="about">
+      <article id="about" class="about" data-class="c_about" data-cursor="ABOUT">
         <h2 class="ir_so">어바웃 영역 입니다.</h2>
-        <div class="circle c_about">ABOUT</div>
+        <!-- <div class="circle c_about">ABOUT</div> -->
         <div class="about_img">
           <img src="./assets/img/img2.png" alt="이미지2">
           <img src="./assets/img/img1.png" alt="이미지1">
@@ -89,28 +90,32 @@
         <!-- <div class="circle c_project">PROJECT</div> -->
         <section class="list p_list">
           <h3 class="ir_so">프로젝트 리스트</h3>
-          <span class="work work1">WORK1</span>
-          <ul class="work_list work1_list">
-            <li data-img="megabox">MEGABOX SITE<span>01</span></li>
-            <li data-img="phpSite">PHP SITE<span>02</span></li>
-            <li data-img="joungshin">TEAM PROJECT<span>03</span></li>
-            <li data-img="apple">APPLE SITE<span>04</span></li>
-            <li data-img="reactSite">REACT SITE<span>05</span></li>
-          </ul>
+          <div>
+            <span class="work work1">WORK1</span>
+            <ul class="work_list work1_list">
+              <li data-img="megabox">MEGABOX SITE<span>01</span></li>
+              <li data-img="phpSite">PHP SITE<span>02</span></li>
+              <li data-img="joungshin">TEAM PROJECT<span>03</span></li>
+              <li data-img="apple">APPLE SITE<span>04</span></li>
+              <li data-img="reactSite">REACT SITE<span>05</span></li>
+            </ul>
+          </div>
         </section>
 
         <section class="work_section megabox">
-          <h3>MEGABOX</h3>
-          <img src="./assets/img/megabox.jpg" alt="megabox">
-          <div class="work_desc">
-            <p>웹표준을 준수해 만든 메가박스 반응형 리뉴얼 사이트 입니다.
-              swiper api를 이용해 배너를 구현하였고,
-              탭 메뉴에 따라 해당 순서에 맞는 영화목록의 swiper가 나타나도록 하였습니다.
-              새로운 영화를 소개하는 곳에서는 유튜브 api를 이용해 영화의 예고편이 모달로 나타나 재생되도록 하였습니다.
-              크로스브라우징을 작업하여 IE9 버전까지 이용 가능하게 하였습니다.</p>
-            <div class="work_btn">
-              <button class="code_btn">CODE</button>
-              <a href="#" class="view_link">VIEW</a>
+          <div class="work_section_List">
+            <h3>MEGABOX</h3>
+            <img src="./assets/img/megabox.jpg" alt="megabox">
+            <div class="work_desc">
+              <p>웹표준을 준수해 만든 메가박스 반응형 리뉴얼 사이트 입니다.
+                swiper api를 이용해 배너를 구현하였고,
+                탭 메뉴에 따라 해당 순서에 맞는 영화목록의 swiper가 나타나도록 하였습니다.
+                새로운 영화를 소개하는 곳에서는 유튜브 api를 이용해 영화의 예고편이 모달로 나타나 재생되도록 하였습니다.
+                크로스브라우징을 작업하여 IE9 버전까지 이용 가능하게 하였습니다.</p>
+              <div class="work_btn">
+                <button class="code_btn">CODE</button>
+                <a href="#" class="view_link">VIEW</a>
+              </div>
             </div>
           </div>
         </section>
@@ -118,6 +123,8 @@
       </article>
 
     </div>
+
+
   </main>
   <!-- //MAIN -->
 
@@ -128,31 +135,43 @@
     const horizon = document.querySelector(".horizon");
     const cursor = document.querySelector(".cursor");
     const circle = document.querySelector(".circle");
-    
+
     const home = document.querySelector(".home");
+    const about = document.querySelector(".about");
     const project = document.querySelector(".project");
     const work1List = document.querySelectorAll(".work1_list li");
+
+    let goLeft = 0;
+    let scrollTop = 0;
+    let cursorClass = '';
 
     // 가로모드
     let scrollTotalWidth = horizon.clientWidth;
     document.querySelector("body").style.height = scrollTotalWidth + "px";
 
     window.addEventListener("scroll", () => {
-      let scrollTop = document.documentElement.scrollTop || window.scrollY || window.pageYOffset;
+      scrollTop = document.documentElement.scrollTop || window.scrollY || window.pageYOffset;
 
       let nWidth = scrollTotalWidth - document.querySelector("body").clientWidth;
       let nHeight = document.querySelector("body").clientHeight - window.innerHeight;
 
       let ratio = nWidth / nHeight;
-      let goLeft = scrollTop * ratio;
+      goLeft = scrollTop * ratio;
 
       horizon.style.left = -goLeft + "px";
-      
-      if(goLeft > home.offsetLeft){
-        // cursor.remove();
-        cursor.classList.add("c_home");
-        cursor.innerHTML = home.dataset.cursor;
-      }
+
+      // horizon.querySelectorAll("article").forEach(el=>{
+      //   if(goLeft > el.offsetLeft){
+      //     cursorClass = el.dataset.class;
+      //     console.log(el);
+      //     if(cursor.hasChildNodes()){
+      //       cursor.classList.remove(el.dataset.class)
+      //       cursor.removeChild(cursor.childNodes[0]);
+      //     }
+      //     cursor.classList.add(el.dataset.class);
+      //     cursor.innerHTML = el.dataset.cursor;
+      //   }
+      // });
 
     });
 
@@ -161,13 +180,12 @@
       const w = document.querySelector('.cursor').clientWidth / 2;
       const y = document.querySelector('.cursor').clientHeight / 2;
 
-
-
       gsap.to('.cursor', {
         duration: .2,
         left: e.pageX,
-        top: e.pageY
+        top: e.pageY - y
       });
+
     });
 
 
@@ -177,13 +195,15 @@
         cursor.classList.add("img");
         cursor.innerHTML = "<img class='hoverImg' src='assets/img/" + li.dataset.img + ".jpg' />";
       });
-      li.addEventListener("mouseleave", () => {
+    });
+    work1List.forEach((li) => {
+      li.addEventListener("mouseout", () => {
         cursor.classList.remove("img");
-        document.querySelector(".hoverImg").remove();
+        if (document.querySelector(".hoverImg")) {
+          document.querySelector(".hoverImg").remove();
+        }
       })
     });
-
-
   </script>
 
 </body>

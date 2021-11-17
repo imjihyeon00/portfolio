@@ -1,14 +1,17 @@
 @charset "utf-8";
 @import url(./font.css);
 
-body{
-  cursor: none;
-  -ms-overflow-style: none; /* IE and Edge */
-  scrollbar-width: none; /* Firefox */
+body {
+  /* cursor: none; */
+  -ms-overflow-style: none;
+  /* IE and Edge */
+  scrollbar-width: none;
+  /* Firefox */
 }
 
 body::-webkit-scrollbar {
-  display: none; /* Chrome, Safari, Opera*/
+  display: none;
+  /* Chrome, Safari, Opera*/
 }
 
 /* CURSOR */
@@ -124,7 +127,7 @@ body::-webkit-scrollbar {
   font-family: 'Eros Romano';
   line-height: .86;
   margin-top: 20px;
-      margin-bottom: 75px;
+  margin-bottom: 75px;
 }
 
 .home_desc {}
@@ -176,11 +179,11 @@ body::-webkit-scrollbar {
 
 .about_img::before {
   content: '';
-  width: 15vw;
-  height: 15vw;
+  width: 12vw;
+  height: 12vw;
   position: absolute;
-  left: -100px;
-  top: 68px;
+  left: -91px;
+  top: 103px;
   border-radius: 50%;
   border: 1px solid #dfd3c3;
 }
@@ -195,8 +198,12 @@ body::-webkit-scrollbar {
 .about_desc {
   width: 21%;
   text-align: left;
-  margin-top: -12vw;
-  font-size: 16px;
+  font-size: 0.95vw;
+  margin-left: 5vw;
+  margin-right: -11vw;
+  position: absolute;
+  top: 11vw;
+  right: 26vw;
 }
 
 .c_about {
@@ -215,7 +222,6 @@ body::-webkit-scrollbar {
   align-items: center;
   justify-content: center;
   color: #DFD3C3;
-  width: 100vw;
   height: 100vh;
   text-align: center;
   background-color: #242424;
@@ -225,8 +231,17 @@ body::-webkit-scrollbar {
   font-family: 'Eros Romano';
 }
 
+.list {
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
 .work {
-  font-size: 10vw;
+  font-size: 10.1vw;
   color: #242424;
   background-color: #DFD3C3;
   display: inline-block;
@@ -239,12 +254,15 @@ body::-webkit-scrollbar {
 }
 
 .work_list>li {
-  font-size: 3vw;
+  font-size: 4.2vw;
   line-height: 0.6;
   border-bottom: 1px solid #dfd3c3;
-  margin: 1vw 0;
   position: relative;
-  padding-top: 2vw;
+  padding-top: 2.4vw;
+}
+
+.work_list>li:first-child {
+  padding-top: 3.6vw;
 }
 
 .work_list>li>span {
@@ -254,4 +272,33 @@ body::-webkit-scrollbar {
   position: absolute;
   right: 0;
   bottom: 25px;
+}
+
+
+/* Project List */
+
+.work_section {
+  width: 100vw;
+}
+
+.work_section_List {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+}
+
+.work_section_List>h3 {
+  position: absolute;
+}
+
+.work_section_List>img {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80%;
+}
+
+.work_section_List>.work_desc {
+  position: absolute;
 }
