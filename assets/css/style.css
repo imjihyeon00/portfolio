@@ -231,6 +231,20 @@ body::-webkit-scrollbar {
   font-family: 'Eros Romano';
 }
 
+.project.ligth {
+  color: #242424;
+  background-color: #DFD3C3;
+}
+
+.project.ligth .work {
+  color: #DFD3C3;
+  background-color: #242424;
+}
+
+.project.ligth .work_list>li {
+  border-bottom: 1px solid #242424;
+}
+
 .list {
   width: 100vw;
   display: flex;
@@ -324,7 +338,7 @@ body::-webkit-scrollbar {
   color: #242424;
   padding: 1.9vw;
   width: 30%;
-  overflow: hidden;
+  min-height: 324px;
 }
 
 .work_desc>p {
@@ -352,3 +366,6 @@ body::-webkit-scrollbar {
   cursor: pointer;
   margin: 0 3px;
 }
+
+
+
