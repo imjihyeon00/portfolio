@@ -1,0 +1,110 @@
+@charset "utf-8";
+@import url(./font.css);
+
+/* HEADER */
+#header {
+    overflow: hidden;
+    width: 100vw;
+    position: fixed;
+    padding: 3.3vh 6.6vh;
+    z-index: 1000;
+    text-align: center;
+}
+
+.logo {
+    float: left;
+}
+
+.logo a {
+    font-family: 'Montserrat', sans-serif;
+    text-transform: uppercase;
+    color: #DFD3C3;
+}
+
+.logo a span {
+    display: block;
+    line-height: 1.1;
+}
+
+.logo .frontend {
+    font-size: 1.9vh;
+    font-weight: 300;
+}
+
+.logo .portfolio {
+    font-size: 1.8vh;
+    font-weight: 800;
+}
+
+.contactLink {
+    float: right;
+}
+
+.contactLink a {
+    font-family: 'Eros Romano';
+    font-size: 2.5vh;
+    color: #DFD3C3;
+}
+
+#header.dark .logo a,
+#header.dark .contactLink a {
+    color: #242424;
+}
+
+
+/* MAIN */
+#main {}
+
+.horizon {
+    display: flex;
+    position: fixed;
+    left: 0;
+    top: 0;
+}
+
+/* HOME */
+.home {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #DFD3C3;
+    width: 100vw;
+    height: 100vh;
+    text-align: center;
+    background-color: #242424;
+    position: relative;
+}
+
+.home_title {
+    font-size: 19.2vh;
+    text-transform: uppercase;
+    font-family: 'Eros Romano';
+    line-height: .86;
+    margin: 1.7vh 0 7vh;
+}
+
+.home_desc {}
+
+.home_desc .line {
+    border-top: 1px solid #dfd3c3;
+    width: 19.5vh;
+    height: 1px;
+    display: inline-block;
+}
+
+.home_desc p {
+    font-size: 1vw;
+    font-family: 'Chosunilbo_myungjo';
+    line-height: 1.57;
+}
+
+.hidden {
+    overflow: hidden;
+}
+
+.c_home {
+    padding: 2vw;
+    right: 5vw;
+    bottom: 3vw;
+}
