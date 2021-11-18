@@ -323,6 +323,19 @@ body::-webkit-scrollbar {
   overflow: hidden;
 }
 
+.project.ligth .work_section_List>h3 {
+  background-color: #242424;
+  color: #dfd3c3;
+}
+.work_section_List>iframe {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80%;
+  height: 86%;
+}
+
 .work_section_List>img {
   position: absolute;
   bottom: 0;
@@ -366,6 +379,3 @@ body::-webkit-scrollbar {
   cursor: pointer;
   margin: 0 3px;
 }
-
-
-
