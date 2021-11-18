@@ -16,12 +16,6 @@ body::-webkit-scrollbar {
 
 /* CURSOR */
 .cursor {
-  /* position: fixed;
-  border-radius: 50%;
-  z-index: 10000;
-  background-color: #DFD3C3;
-  width: 20px;
-  height: 20px; */
   width: 10vw;
   height: 10vw;
   position: fixed;
@@ -33,14 +27,6 @@ body::-webkit-scrollbar {
   align-items: center;
   mix-blend-mode: difference;
 }
-
-/* .cursor.img {
-  background-color: transparent;
-  width: 20vw;
-  height: auto;
-  mix-blend-mode: difference;
-} */
-
 
 /* HEADER */
 #header {
@@ -84,6 +70,11 @@ body::-webkit-scrollbar {
   font-family: 'Eros Romano';
   font-size: 1.2vw;
   color: #DFD3C3;
+}
+
+#header.dark .logo a,
+#header.dark .contactLink a {
+  color: #242424;
 }
 
 /* MAIN */
@@ -378,4 +369,26 @@ body::-webkit-scrollbar {
   line-height: 1;
   cursor: pointer;
   margin: 0 3px;
+}
+
+.project.ligth .work_section_List>.work_desc {
+  background-color: #242424;
+  color: #DFD3C3;
+}
+
+.project.ligth .work_desc>p {
+  background-color: #242424;
+  color: #DFD3C3;
+}
+
+.project.ligth .work_desc>.work_btn {
+  background-color: #242424;
+  color: #DFD3C3;
+}
+
+.project.ligth .work_btn>button,
+.project.ligth .work_btn>a {
+  background-color: #242424;
+  color: #DFD3C3;
+  border-bottom: 1px solid #DFD3C3;
 }
