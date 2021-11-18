@@ -99,6 +99,31 @@
               <li data-img="apple">APPLE SITE<span>04</span></li>
               <li data-img="reactSite">REACT SITE<span>05</span></li>
             </ul>
+            <!-- <div class="imgList">
+              <img src="./assets/img/megabox.jpg" class="megabox" alt="메가박스">
+              <img src="./assets/img/phpSite.jpg" class="phpSite" alt="php사이트">
+              <img src="./assets/img/joungshin.jpg" class="joungshin" alt="정신머리">
+              <img src="./assets/img/apple.jpg" class="apple" alt="애플">
+              <img src="./assets/img/reactSite.jpg" class="reactSite" alt="리엑트">
+            </div> -->
+          </div>
+        </section>
+
+        <section class="work_section megabox">
+          <div class="work_section_List">
+            <h3>MEGABOX</h3>
+            <img src="./assets/img/megabox.jpg" alt="megabox">
+            <div class="work_desc">
+              <p>웹표준을 준수해 만든 메가박스 반응형 리뉴얼 사이트 입니다.
+                swiper api를 이용해 배너를 구현하였고,
+                탭 메뉴에 따라 해당 순서에 맞는 영화목록의 swiper가 나타나도록 하였습니다.
+                새로운 영화를 소개하는 곳에서는 유튜브 api를 이용해 영화의 예고편이 모달로 나타나 재생되도록 하였습니다.
+                크로스브라우징을 작업하여 IE9 버전까지 이용 가능하게 하였습니다.</p>
+              <div class="work_btn">
+                <button class="code_btn">CODE</button>
+                <a href="#" class="view_link">VIEW</a>
+              </div>
+            </div>
           </div>
         </section>
 
@@ -139,6 +164,7 @@
     const home = document.querySelector(".home");
     const about = document.querySelector(".about");
     const project = document.querySelector(".project");
+    const work1 = document.querySelector(".work1_list");
     const work1List = document.querySelectorAll(".work1_list li");
 
     let goLeft = 0;
@@ -182,28 +208,41 @@
 
       gsap.to('.cursor', {
         duration: .2,
-        left: e.pageX,
-        top: e.pageY - y
+        left: e.pageX - window.scrollX,
+        top: e.pageY - window.scrollY
       });
-
     });
 
 
     //work1 마우스 오버시
-    work1List.forEach((li) => {
-      li.addEventListener("mouseover", () => {
-        cursor.classList.add("img");
-        cursor.innerHTML = "<img class='hoverImg' src='assets/img/" + li.dataset.img + ".jpg' />";
-      });
-    });
-    work1List.forEach((li) => {
-      li.addEventListener("mouseout", () => {
-        cursor.classList.remove("img");
-        if (document.querySelector(".hoverImg")) {
-          document.querySelector(".hoverImg").remove();
-        }
-      })
-    });
+    // work1List.forEach((li, idx) => {
+    //   li.addEventListener("mouseover", (e) => {
+    //     const img = document.querySelectorAll(".imgList img");
+    //     img.forEach((img, imgIdx) => {
+    //       img.style.display = "none";
+    //       img.style.opacity = 0;
+    //     });
+
+    //     window.addEventListener("mousemove", function (e) {
+    //       cursor.style.display="none";
+    //       gsap.to(img[idx], {
+    //         duration: .2,
+    //         left: e.pageX - window.scrollX,
+    //         top: e.pageY - window.scrollY
+    //       });
+    //     })
+    //     img[idx].style.display = "block";
+    //     img[idx].style.opacity = 1;
+
+    //   });
+    // });
+
+    // work1.addEventListener("mouseout", () => {
+    //   document.querySelectorAll(".imgList img").forEach((img, imgIdx) => {
+    //     img.style.display = "none";
+    //     img.style.opacity = 0;
+    //   });
+    // })
   </script>
 
 </body>
