@@ -178,83 +178,78 @@ body {
     /* gap: 1.5vw; */
     text-align-last: left;
     font-family: 'Eros Romano';
-  }
-  
-  .project.ligth {
+}
+
+.project.ligth {
     color: #242424;
     background-color: #DFD3C3;
-  }
-  
-  .project.ligth .work {
+}
+
+.project.ligth .work {
     color: #DFD3C3;
     background-color: #242424;
-  }
-  
-  .project.ligth .work_list>li {
+}
+
+.project.ligth .work_list>li {
     border-bottom: 1px solid #242424;
-  }
-  
-  .list {
+}
+
+.list {
     width: 100vw;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     position: relative;
-  }
-  
-  .work {
-    font-size: 10.1vw;
+}
+
+.list>div {
+    width: 59.5%;
+    margin: 0 auto;
+}
+
+.work {
+    font-size: 20.7vh;
     color: #242424;
     background-color: #DFD3C3;
     display: inline-block;
     line-height: 0.55;
-  }
-  
-  .work_list {
+}
+
+.work_list {
     overflow: hidden;
-    width: 109vh;
-  }
-  
-  .work_list>li {
-    font-size: 4.2vw;
+    width: 100%;
+}
+
+.work_list>li {
+    font-size: 8.4vh;
     line-height: 0.55;
     border-bottom: 1px solid #dfd3c3;
     position: relative;
-    padding-top: 2.4vw;
-  }
-  
-  .work_list>li:first-child {
-    padding-top: 3.6vw;
-  }
-  
-  .work_list>li>span {
-    font-size: 1vw;
-    margin-right: 0.7vw;
-    margin-bottom: -1vw;
+    padding-top: 5vh;
+}
+
+.work_list>li:first-child {
+    padding-top: 7vh;
+}
+
+.work_list>li>span {
+    font-size: 2vh;
+    margin-right: 0.7vh;
     position: absolute;
     right: 0;
-    bottom: 25px;
-  }
-  
-  .imgList img {
-    width: 20vw;
-    display: none;
-    opacity: 0;
-    /* transition: all .3s; */
-    position: absolute;
-    left: 50%;
-    top: 50%;
-  }
-
+    bottom: 1.5vh;
+}
 
 
 /* 미디어쿼리 */
 @media (max-width: 800px) {
+
     /* HOME */
     .home_title {
         font-size: 9.6vh;
     }
+
     .home_desc .line {
         width: 12.5vh;
     }
@@ -306,4 +301,34 @@ body {
         margin-bottom: 0;
         text-align: center;
     }
+
+
+    /* PROJECT */
+    .project {}
+
+    .project.ligth {}
+
+    .project.ligth .work {}
+
+    .project.ligth .work_list>li {}
+
+    .list {}
+
+    .work {
+            font-size: 13vh;
+    }
+
+    .work_list {
+    }
+
+    .work_list>li {
+        font-size: 4.4vh;
+    }
+
+    .work_list>li:first-child {}
+
+    .work_list>li>span {}
+
+    .imgList img {}
+
 }

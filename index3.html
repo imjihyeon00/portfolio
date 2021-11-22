@@ -126,10 +126,21 @@
         let goLeft = 0;
         let scrollTop = 0;
         let cursorClass = '';
+        let delay = 300;
+        let timer = null;
 
         // 가로모드
         let scrollTotalWidth = horizon.clientWidth;
         document.querySelector("body").style.height = scrollTotalWidth + "px";
+
+        window.addEventListener('resize', function () {
+            clearTimeout(timer);
+            timer = setTimeout(function () {
+                console.log('resize event!');
+                scrollTotalWidth = horizon.clientWidth;
+                document.querySelector("body").style.height = scrollTotalWidth + "px";
+            }, delay);
+        });
 
         window.addEventListener("scroll", () => {
             scrollTop = document.documentElement.scrollTop || window.scrollY || window.pageYOffset;
