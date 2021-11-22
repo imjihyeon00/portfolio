@@ -10,7 +10,7 @@
     <meta name="description" content="포트폴리오 입니다.">
     <meta name="keywords" content="포트폴리오, 프론트엔드, 개발자, 웹개발">
 
-    <title>portfolio3</title>
+    <title>portfolio4</title>
 
     <!-- font preload -->
     <link rel="preload" href="./assets/font/ErosRomanoRegular.eot" as="font" crossorigin="anonymous" />
@@ -20,7 +20,7 @@
 
     <!-- CSS -->
     <link rel="stylesheet" href="./assets/css/reset.css">
-    <link rel="stylesheet" href="./assets/css/style3.css">
+    <link rel="stylesheet" href="./assets/css/style4.css">
 
 
     <!-- google font -->
@@ -46,7 +46,7 @@
     <!-- MAIN -->
     <main id="main">
         <h1 class="ir_so">메인 영역입니다.</h1>
-        <div class="horizon">
+        <div id="horizon" class="horizon">
 
             <!-- HOME -->
             <article id="home" class="home" data-class="c_home"
@@ -111,7 +111,7 @@
     <!-- SCRIPT -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/gsap.min.js"></script>
     <script>
-        const horizon = document.querySelector(".horizon");
+        // const horizon = document.querySelector(".horizon");
         const cursor = document.querySelector(".cursor");
         const circle = document.querySelector(".circle");
         const header = document.querySelector("#header");
@@ -131,27 +131,108 @@
 
         // 가로모드
         let scrollTotalWidth = horizon.clientWidth;
-        document.querySelector("body").style.height = scrollTotalWidth + "px";
+        // document.querySelector("body").style.height = scrollTotalWidth + "px";
 
-        window.addEventListener('resize', function () {
-            clearTimeout(timer);
-            timer = setTimeout(function () {
-                console.log('resize event!');
-                scrollTotalWidth = horizon.clientWidth;
-                document.querySelector("body").style.height = scrollTotalWidth + "px";
-            }, delay);
-        });
+        // window.addEventListener('resize', function () {
+        //     clearTimeout(timer);
+        //     timer = setTimeout(function () {
+        //         console.log('resize event!');
+        //         scrollTotalWidth = horizon.clientWidth;
+        //         document.querySelector("body").style.height = scrollTotalWidth + "px";
+        //     }, delay);
+        // });
 
-        window.addEventListener("scroll", () => {
-            scrollTop = document.documentElement.scrollTop || window.scrollY || window.pageYOffset;
+        // window.addEventListener("scroll", () => {
+        //     scrollTop = document.documentElement.scrollTop || window.scrollY || window.pageYOffset;
 
-            let nWidth = scrollTotalWidth - document.querySelector("body").clientWidth;
-            let nHeight = document.querySelector("body").clientHeight - window.innerHeight;
+        //     let nWidth = scrollTotalWidth - document.querySelector("body").clientWidth;
+        //     let nHeight = document.querySelector("body").clientHeight - window.innerHeight;
 
-            let ratio = nWidth / nHeight;
-            goLeft = scrollTop * ratio;
+        //     let ratio = nWidth / nHeight;
+        //     goLeft = scrollTop * ratio;
 
-            horizon.style.left = -goLeft + "px";
+        //     horizon.style.left = -goLeft + "px";
+        // });
+
+
+        // ## Instancing
+        // const supahscroll = new SupahScroll({
+        //   el: 'main', // your element or classname or ID
+        //   speed: 0.1 // lower is slower, this value could go from 0.01 to 1
+        // })
+
+        // ## Methods
+        // - .update() // update and resize
+        // - .pause() // pause, every scroll is stopped
+        // - .play() // play, back to normality after pause
+        // - .scrollTo(y) // go to your offsetY smoothly
+        // - .staticScrollTo(y) // go to your offsetY without animation
+        // - .destroy() // kaput, au revoir, kthxbye
+
+        /*------------------------------
+        SupahScroll
+        ------------------------------*/
+        class SupahScroll {
+            constructor(options) {
+                this.opt = options || {};
+                this.el = this.opt.el ? this.opt.el : '.supah-scroll';
+                this.speed = this.opt.speed ? this.opt.speed : 0.1;
+                this.init();
+            }
+            init() {
+                this.scrollX = 0;
+                this.supahScroll = document.getElementById(this.el);
+                this.supahScroll.classList.add('supah-scroll');
+                this.events();
+                this.update();
+                this.animate();
+            }
+            update() {
+                if (this.supahScroll === null) return;
+                document.body.style.height = `${this.supahScroll.getBoundingClientRect().width}px`;
+            }
+            pause() {
+                document.body.style.overflow = 'hidden';
+                cancelAnimationFrame(this.raf);
+            }
+            play() {
+                document.body.style.overflow = 'inherit';
+                this.raf = requestAnimationFrame(this.animate.bind(this));
+            }
+            destroy() {
+                this.supahScroll.classList.remove('supah-scroll');
+                this.supahScroll.style.transform = 'none';
+                document.body.style.overflow = 'inherit';
+                window.removeEventListener('resize', this.update);
+                cancelAnimationFrame(this.raf);
+                delete this.supahScroll;
+            }
+            animate() {
+                this.scrollX += (window.scrollY - this.scrollX) * this.speed;
+                this.supahScroll.style.transform = `translate3d(${-this.scrollX}px,0,0)`;
+                this.raf = requestAnimationFrame(this.animate.bind(this));
+            }
+            scrollTo(x) {
+                window.scrollTo(x, 0);
+            }
+            staticScrollTo(x) {
+                cancelAnimationFrame(this.raf);
+                this.scrollX = x;
+                window.scrollTo(x, 0);
+                this.supahScroll.style.transform = `translate3d(${-x}px,0,0)`;
+                this.play();
+            }
+            events() {
+                window.addEventListener('load', this.update.bind(this));
+                window.addEventListener('resize', this.update.bind(this));
+            }
+        }
+        /*------------------------------
+        Initialize
+        ------------------------------*/
+        const supahscroll = new SupahScroll({
+            el: 'horizon',
+            speed: 0.05
         });
     </script>
 </body>

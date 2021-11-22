@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="author" content="imjihyeon">
+    <meta name="description" content="포트폴리오 입니다.">
+    <meta name="keywords" content="포트폴리오, 프론트엔드, 개발자, 웹개발">
+
+    <title>portfolio3</title>
+
+    <!-- font preload -->
+    <link rel="preload" href="./assets/font/ErosRomanoRegular.eot" as="font" crossorigin="anonymous" />
+    <link rel="preload" href="./assets/font/ErosRomanoRegular.svg" as="font" crossorigin="anonymous" />
+    <link rel="preload" href="./assets/font/ErosRomanoRegular.woff" as="font" crossorigin="anonymous" />
+    <link rel="preload" href="./assets/font/ErosRomanoRegular.woff2" as="font" crossorigin="anonymous" />
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="./assets/css/reset.css">
+    <link rel="stylesheet" href="./assets/css/style3.css">
+
+
+    <!-- google font -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;700;800;900&display=swap"
+        rel="stylesheet">
+
+</head>
+
+<body>
+    <!-- HEADER -->
+    <header id="header">
+        <h1 class="ir_so">헤더 영역입니다.</h1>
+        <div class="logo">
+            <a href="#">
+                <span class="frontend">frontend</span>
+                <span class="portfolio">portfolio</span>
+            </a>
+        </div>
+        <div class="contactLink"><a href="#">CONTACT</a></div>
+    </header>
+    <!-- //HEADER -->
+
+    <!-- MAIN -->
+    <main id="main">
+        <h1 class="ir_so">메인 영역입니다.</h1>
+        <div id="horizon" class="horizon">
+
+            <!-- HOME -->
+            <article id="home" class="home" data-class="c_home"
+                data-cursor="&lt;img src='./assets/img/arrow.svg' alt='화살표'&gt;">
+                <h2 class="ir_so">홈 영역 입니다.</h2>
+                <div class="home_title">
+                    <p>frontend</p>
+                    <p>portfolio <span>works</span></p>
+                </div>
+                <div class="home_desc">
+                    <span class="line"></span>
+                    <p>새로운 변화가 끊임없이 일어나는 웹 환경에서 최신 트렌드에 뒤처지지 않기 위해 <br>스터디 혹은 세미나등의 참여하며 자기개발에 힘쓰겠습니다. </p>
+                </div>
+            </article>
+
+            <!-- ABOUT -->
+            <article id="about" class="about" data-class="c_about" data-cursor="ABOUT">
+                <h2 class="ir_so">어바웃 영역 입니다.</h2>
+                <!-- <div class="circle c_about">ABOUT</div> -->
+                <div class="about_img_wrap">
+                    <div class="about_img">
+                        <img src="./assets/img/img1.png" alt="이미지1">
+                    </div>
+                </div>
+                <div class="about_desc">
+                    <p>
+                        일본에서 근무하던 때에 우연히 Angular.js를 이용해볼 기회가 있었습니다.<br />
+                        사용해본적 없는 언어였지만 매일매일 공부하며 제가 코딩한 대로 화면이 만들어지고 만들어진 화면에 데이터를 뿌려주고 바로 확인 할 수 있는 부분에 흥미를
+                        느겼습니다.<br />
+                        한국에 귀국 후 취업을 준비하며 프론트엔드 개발자로 전향하고자 국비교육을 이수하게 되었습니다.<br />
+                        빠르게 변화하는 웹 시장에서 변화에 따라갈 수 있도록 꾸준히 노력하는 임지현이 되겠습니다.
+                    </p>
+                </div>
+            </article>
+
+            <!-- PROJECT -->
+            <article id="project" class="project">
+                <h2 class="ir_so">프로젝트 소개 영역 입니다.</h2>
+                <!-- <div class="circle c_project">PROJECT</div> -->
+                <section class="list p_list">
+                    <h3 class="ir_so">프로젝트 리스트</h3>
+                    <div>
+                        <span class="work work1">WORK1</span>
+                        <ul class="work_list work1_list">
+                            <li data-img="megabox">MEGABOX SITE<span>01</span></li>
+                            <li data-img="phpSite">PHP SITE<span>02</span></li>
+                            <li data-img="joungshin">TEAM PROJECT<span>03</span></li>
+                            <li data-img="apple">APPLE SITE<span>04</span></li>
+                            <li data-img="reactSite">REACT SITE<span>05</span></li>
+                        </ul>
+                    </div>
+                </section>
+
+            </article>
+
+
+        </div>
+
+
+    </main>
+
+    <!-- SCRIPT -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/gsap.min.js"></script>
+    <script src="./assets/js/supahscroll.js"></script>
+    <script>
+    </script>
+</body>
+
+</html>
