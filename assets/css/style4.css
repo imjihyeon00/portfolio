@@ -27,16 +27,16 @@ body {
 
 .logo a span {
     display: block;
-    line-height: 1.1;
+    line-height: 1;
 }
 
 .logo .frontend {
-    font-size: 1.9vh;
+    font-size: 18px;
     font-weight: 300;
 }
 
 .logo .portfolio {
-    font-size: 1.8vh;
+    font-size: 17.5px;
     font-weight: 800;
 }
 
@@ -223,10 +223,19 @@ body {
 
 .work_list>li {
     font-size: 8.4vh;
-    line-height: 0.55;
-    border-bottom: 1px solid #dfd3c3;
+    /* line-height: 0.55; */
     position: relative;
-    padding-top: 5vh;
+    /* padding-top: 5vh; */
+}
+
+.work_list>li::after {
+    content: '';
+    position: absolute;
+    bottom: 37px;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background-color: #DFD3C3;
 }
 
 .work_list>li:first-child {
@@ -238,96 +247,5 @@ body {
     margin-right: 0.7vh;
     position: absolute;
     right: 0;
-    bottom: 1.5vh;
-}
-
-
-/* 미디어쿼리 */
-@media (max-width: 800px) {
-
-    /* HOME */
-    .home_title {
-        font-size: 9.6vh;
-    }
-
-    .home_desc .line {
-        width: 12.5vh;
-    }
-
-    .home_desc p {
-        font-size: 1.4vh;
-        margin-top: 4.4vh;
-    }
-
-    /* ABOUT */
-    .about {
-        gap: 0;
-        margin-left: 10vh;
-        flex-direction: column;
-    }
-
-    .about_img_wrap {
-        flex: auto;
-    }
-
-    .about_img {
-        overflow: visible;
-        width: fit-content;
-        height: fit-content;
-    }
-
-    .about_img::before {
-        width: 20vh;
-        height: 20vh;
-        right: 10.5vh;
-        top: -2vh;
-    }
-
-    .about_img>img {
-        width: 24vh;
-        position: relative;
-        z-index: 1;
-        top: auto;
-        transform: none;
-    }
-
-    .about_desc {
-        flex: auto;
-    }
-
-    .about_desc>p {
-        width: 30vh;
-        font-size: 1.4vh;
-        margin-bottom: 0;
-        text-align: center;
-    }
-
-
-    /* PROJECT */
-    .project {}
-
-    .project.ligth {}
-
-    .project.ligth .work {}
-
-    .project.ligth .work_list>li {}
-
-    .list {}
-
-    .work {
-        font-size: 13vh;
-    }
-
-    .work_list {}
-
-    .work_list>li {
-        font-size: 4.4vh;
-    }
-
-    .work_list>li:first-child {}
-
-    .work_list>li>span {}
-
-    .imgList img {}
-
+    bottom: 37px;
 }
