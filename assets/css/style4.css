@@ -73,7 +73,7 @@ body {
     align-items: center;
     justify-content: center;
     color: #DFD3C3;
-    width: 100vw;
+    width: 1920px;
     height: 100vh;
     text-align: center;
     background-color: #242424;
@@ -114,7 +114,7 @@ body {
     align-items: center;
     justify-content: center;
     color: #DFD3C3;
-    width: 100vw;
+    width: 1920px;
     height: 100vh;
     text-align: center;
     background-color: #242424;
@@ -195,7 +195,7 @@ body {
 }
 
 .list {
-    width: 100vw;
+    width: 1920px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -238,8 +238,9 @@ body {
     height: 1px;
     background-color: #DFD3C3;
 }
+
 body.mac .work_list>li::after {
-    bottom: 18%;
+    bottom: 3.4vh;
 }
 
 .work_list>li:first-child {
@@ -252,4 +253,116 @@ body.mac .work_list>li::after {
     position: absolute;
     right: 0;
     bottom: 37px;
+}
+
+
+
+/* Project List */
+
+.work_section {
+    width: 1920px;
+    margin: 0 300px;
+}
+
+.work_section_List {
+    position: relative;
+    width: 1920px;
+    height: 100vh;
+    margin: 0 auto;
+}
+
+.work_section_List>h3 {
+    position: absolute;
+    top: 7vh;
+    font-size: 20.9vh;
+    left: 50%;
+    z-index: 1;
+    background-color: #dfd3c3;
+    color: #242424;
+    line-height: 0.55;
+    letter-spacing: 6px;
+    overflow: hidden;
+}
+
+
+.project.ligth .work_section_List>h3 {
+    background-color: #242424;
+    color: #dfd3c3;
+}
+
+.work_section_List>iframe {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80%;
+    height: 86%;
+}
+
+.work_section_List>img {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 160vh;
+}
+
+.work_section_List>.work_desc {
+    position: absolute;
+    bottom: 4.2vh;
+    right: 50%;
+    transform: translateX(-50%);
+    background-color: #DFD3C3;
+    color: #242424;
+    padding: 3.65vh;
+    width: 61vh;
+    min-height: 324px;
+}
+
+.work_desc>p {
+    font-family: 'Chosunilbo_myungjo';
+    font-size: 1.8vh;
+    color: #242424;
+    text-align: left;
+}
+
+.work_desc>.work_btn {
+    position: absolute;
+    bottom: 3.65vh;
+    right: 3.65vh;
+}
+
+.work_btn>button,
+.work_btn>a {
+    font-family: 'Eros Romano';
+    background-color: transparent;
+    font-size: 4.1vh;
+    display: inline-block;
+    color: #242424;
+    border-bottom: 1px solid #242424;
+    line-height: 1;
+    cursor: pointer;
+    margin: 0 3px;
+}
+
+.project.ligth .work_section_List>.work_desc {
+    background-color: #242424;
+    color: #DFD3C3;
+}
+
+.project.ligth .work_desc>p {
+    background-color: #242424;
+    color: #DFD3C3;
+}
+
+.project.ligth .work_desc>.work_btn {
+    background-color: #242424;
+    color: #DFD3C3;
+}
+
+.project.ligth .work_btn>button,
+.project.ligth .work_btn>a {
+    background-color: #242424;
+    color: #DFD3C3;
+    border-bottom: 1px solid #DFD3C3;
 }
