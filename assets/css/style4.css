@@ -286,6 +286,7 @@ body.mac .work_list>li::after {
     line-height: 0.55;
     letter-spacing: 6px;
     overflow: hidden;
+    white-space: nowrap;
 }
 
 
