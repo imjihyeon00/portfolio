@@ -5,6 +5,11 @@ body {
     background-color: #242424;
 }
 
+.supah-scroll {
+    will-change: transform;
+    overflow: hidden;
+}
+
 /* HEADER */
 #header {
     overflow: hidden;
@@ -223,8 +228,8 @@ body {
 }
 
 .work_list>li {
-    font-size: 8.4vh;
-    /* line-height: 0.55; */
+    font-size: 8.3vh;
+    line-height: 1.2;
     position: relative;
     /* padding-top: 5vh; */
 }
@@ -232,8 +237,7 @@ body {
 .work_list>li::after {
     content: '';
     position: absolute;
-    bottom: 3.9vh;
-    /* mac bottom: 18%; */
+    bottom: 2.6vh;
     left: 0;
     width: 100%;
     height: 1px;

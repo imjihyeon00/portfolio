@@ -33,6 +33,7 @@ class SupahScroll {
     update() {
         if (this.supahScroll === null) return;
         document.body.style.height = `${this.supahScroll.getBoundingClientRect().width}px`;
+        // document.body.style.height = `${document.querySelector(".horizen").getBoundingClientRect().width}px`;
     }
     pause() {
         document.body.style.overflow = 'hidden';
