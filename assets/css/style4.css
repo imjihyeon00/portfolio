@@ -249,8 +249,17 @@ body {
     background-color: #242424;
 }
 
+body.mac .work {
+    font-size: 20.7vh;
+    color: #242424;
+    background-color: #DFD3C3;
+    display: inline-block;
+    line-height: 0.5;
+    padding-bottom: 1.6vh;
+    overflow: hidden;
+}
 body.mac .work_list>li::after {
-    bottom: 3.4vh;
+    bottom: 2.1vh;
 }
 
 .work_list>li:first-child {
