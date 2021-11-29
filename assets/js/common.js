@@ -27,7 +27,7 @@ class Modal {
         this.modalc = modalCont.querySelector("#modal");
         //버튼
         // this.showBtn = modalCont.querySelector(".code_btn");
-        this.hideBtn = modalCont.querySelector(".view-header .dot span:nth-child(1) ");
+        this.hideBtn = modalCont.querySelector(".view-header .dot span:nth-child(1)");
         //탭메뉴
         this.viewBtn = modalCont.querySelectorAll(".view-title ul li");
         this.viewCont = modalCont.querySelectorAll(".view-cont > div");
@@ -45,13 +45,15 @@ class Modal {
         this.modalc.classList.add("show");
     }
     hideModal() {
+        console.log(11);
         // this.modalc.classList.remove("show", "hide");
-        // this.modalc.classList.add("hide");
+        this.modalc.classList.add("hide").sibling().remove("show", "hide");
         // setTimeout(() => {
         //     this.codeViewArea.classList.remove("show");
         // }, 500);
     }
     tabmenu() {
+        console.log(22);
         this.viewBtn.forEach((btn, index) => {
             this.removeAct();
             btn.addEventListener("click", function (e) {
