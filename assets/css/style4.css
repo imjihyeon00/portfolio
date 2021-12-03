@@ -289,6 +289,15 @@ body.mac .work_list>li::after {
     height: 100vh;
     margin: 0 auto;
 }
+body.mac .work_section_List>h3 {
+    font-size: 20.7vh;
+    color: #242424;
+    background-color: #DFD3C3;
+    display: inline-block;
+    line-height: 0.5;
+    padding-bottom: 1.6vh;
+    overflow: hidden;
+}
 
 .work_section_List>h3 {
     position: absolute;
