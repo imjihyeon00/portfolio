@@ -303,7 +303,7 @@ body.mac .work_section_List>h3 {
     position: absolute;
     top: 7vh;
     font-size: 20.9vh;
-    left: 50%;
+    right: 0;
     z-index: 1;
     background-color: #dfd3c3;
     color: #242424;
@@ -311,6 +311,12 @@ body.mac .work_section_List>h3 {
     letter-spacing: 6px;
     overflow: hidden;
     white-space: nowrap;
+}
+
+.work_section_List>h3>span {
+    display: block;
+    opacity: 0;
+    transform: translateX(300px);
 }
 
 

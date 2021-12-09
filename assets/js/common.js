@@ -62,8 +62,10 @@ window.onload = () => {
     //         new Modal(btn.closest(".work_section_List"));
     //     })
     // });
+
 };
 
+    
 // class Modal {
 //     constructor(modalCont) {
 //         //모달 위치
