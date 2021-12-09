@@ -376,6 +376,8 @@ body.mac .work_section_List>h3 {
     font-size: 1.8vh;
     color: #242424;
     text-align: left;
+    opacity: 0;
+    transform: translateY(50px);
 }
 
 .work_desc>.work_btn {

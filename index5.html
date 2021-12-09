@@ -274,7 +274,7 @@
             </article>
 
             <!-- SCRIPT AREA -->
-            <article id="script" class="project ligth">
+            <article id="scriptP" class="project ligth">
                 <h2 class="ir_so">스크립트 소개 영역 입니다.</h2>
                 <!-- <div class="circle c_project">PROJECT</div> -->
                 <section class="list p_list">
@@ -404,10 +404,10 @@
     <script>
         //스크롤 이벤트
         const porject = document.querySelector("#project");
+        const scriptP = document.querySelector("#scriptP");
         const work = document.querySelectorAll(".work_section");
         window.addEventListener("scroll", (e) => {
             let scrollTop = window.pageYOffset || document.documentElement.offsetTop || window.scrollY;
-            // console.log(scrollTop);
 
             // work.forEach(workArea => {
             //     const title = workArea.querySelector(".work_section_List");
@@ -420,16 +420,43 @@
             //gsap
             work.forEach((workArea, idx) => {
                 const title = workArea.querySelector(".work_section_List");
-                let sectionLeft = porject.offsetLeft + title.offsetLeft;
-                if (scrollTop >= sectionLeft) {
-                    gsap.to(title.querySelector("h3 > span"), {
-                        duration: 2,
-                        opacity: 1,
-                        stagger: 1,
-                        x: 0,
-                        // ease: "power2.out",
-                        ease: "circ.out",
-                    });
+                const desc = workArea.querySelector(".work_desc");
+                if (scrollTop >= porject.offsetLeft && scrollTop < scriptP.offsetLeft) {
+                    let sectionLeft = porject.offsetLeft + title.offsetLeft;
+                    if (scrollTop >= sectionLeft) {
+                        gsap.to(title.querySelector("h3 > span"), {
+                            duration: 1.5,
+                            opacity: 1,
+                            stagger: .5,
+                            x: 0,
+                            ease: "power2.in",
+                        });
+                        gsap.to(desc.querySelector("p"), {
+                            duration: 1.5,
+                            opacity: 1,
+                            stagger: .1,
+                            y: 0,
+                            ease: "power2.out",
+                        });
+                    }
+                } else if (scrollTop >= scriptP.offsetLeft) {
+                    let sectionLeft = scriptP.offsetLeft + title.offsetLeft;
+                    if (scrollTop >= sectionLeft) {
+                        gsap.to(title.querySelector("h3 > span"), {
+                            duration: 1.5,
+                            opacity: 1,
+                            stagger: .5,
+                            x: 0,
+                            ease: "power2.in",
+                        });
+                        gsap.to(desc.querySelector("p"), {
+                            duration: 1.5,
+                            opacity: 1,
+                            stagger: .1,
+                            y: 0,
+                            ease: "power2.out",
+                        });
+                    }
                 }
             });
         });
