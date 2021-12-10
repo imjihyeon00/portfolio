@@ -407,7 +407,7 @@
         const scriptP = document.querySelector("#scriptP");
         const work = document.querySelectorAll(".work_section");
         window.addEventListener("scroll", (e) => {
-            let scrollTop = window.pageYOffset || document.documentElement.offsetTop || window.scrollY;
+            // let scrollTop = window.pageYOffset || document.documentElement.offsetTop || window.scrollY;
 
             // work.forEach(workArea => {
             //     const title = workArea.querySelector(".work_section_List");
@@ -418,47 +418,47 @@
             // });
 
             //gsap
-            work.forEach((workArea, idx) => {
-                const title = workArea.querySelector(".work_section_List");
-                const desc = workArea.querySelector(".work_desc");
-                if (scrollTop >= porject.offsetLeft && scrollTop < scriptP.offsetLeft) {
-                    let sectionLeft = porject.offsetLeft + title.offsetLeft;
-                    if (scrollTop >= sectionLeft) {
-                        gsap.to(title.querySelector("h3 > span"), {
-                            duration: 1.5,
-                            opacity: 1,
-                            stagger: .5,
-                            x: 0,
-                            ease: "power2.in",
-                        });
-                        gsap.to(desc.querySelector("p"), {
-                            duration: 1.5,
-                            opacity: 1,
-                            stagger: .1,
-                            y: 0,
-                            ease: "power2.out",
-                        });
-                    }
-                } else if (scrollTop >= scriptP.offsetLeft) {
-                    let sectionLeft = scriptP.offsetLeft + title.offsetLeft;
-                    if (scrollTop >= sectionLeft) {
-                        gsap.to(title.querySelector("h3 > span"), {
-                            duration: 1.5,
-                            opacity: 1,
-                            stagger: .5,
-                            x: 0,
-                            ease: "power2.in",
-                        });
-                        gsap.to(desc.querySelector("p"), {
-                            duration: 1.5,
-                            opacity: 1,
-                            stagger: .1,
-                            y: 0,
-                            ease: "power2.out",
-                        });
-                    }
-                }
-            });
+            // work.forEach((workArea, idx) => {
+            //     const title = workArea.querySelector(".work_section_List");
+            //     const desc = workArea.querySelector(".work_desc");
+            //     if (scrollTop >= porject.offsetLeft && scrollTop < scriptP.offsetLeft) {
+            //         let sectionLeft = porject.offsetLeft + title.offsetLeft;
+            //         if (scrollTop >= sectionLeft) {
+            //             gsap.to(title.querySelector("h3 > span"), {
+            //                 duration: 1.5,
+            //                 opacity: 1,
+            //                 stagger: .5,
+            //                 x: 0,
+            //                 ease: "power2.in",
+            //             });
+            //             gsap.to(desc.querySelector("p"), {
+            //                 duration: 1.5,
+            //                 opacity: 1,
+            //                 stagger: .1,
+            //                 y: 0,
+            //                 ease: "power2.out",
+            //             });
+            //         }
+            //     } else if (scrollTop >= scriptP.offsetLeft) {
+            //         let sectionLeft = scriptP.offsetLeft + title.offsetLeft;
+            //         if (scrollTop >= sectionLeft) {
+            //             gsap.to(title.querySelector("h3 > span"), {
+            //                 duration: 1.5,
+            //                 opacity: 1,
+            //                 stagger: .5,
+            //                 x: 0,
+            //                 ease: "power2.in",
+            //             });
+            //             gsap.to(desc.querySelector("p"), {
+            //                 duration: 1.5,
+            //                 opacity: 1,
+            //                 stagger: .1,
+            //                 y: 0,
+            //                 ease: "power2.out",
+            //             });
+            //         }
+            //     }
+            // });
         });
     </script>
 </body>

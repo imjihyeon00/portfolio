@@ -26,6 +26,9 @@ class SupahScroll {
         this.scrollX = 0;
         this.supahScroll = document.getElementById(this.el);
         this.supahScroll.classList.add('supah-scroll');
+        this.pj = document.querySelector("#project");
+        this.sc = document.querySelector("#script");
+        this.work = document.querySelectorAll(".work_section_List");
         this.events();
         this.update();
         this.animate();
@@ -44,7 +47,8 @@ class SupahScroll {
         this.raf = requestAnimationFrame(this.animate.bind(this));
     }
     destroy() {
-        this.supahScroll.classList.remove('supah-scroll');
+        this.supahScroll.classList.remove('supah-scroll'
+        );
         this.supahScroll.style.transform = 'none';
         document.body.style.overflow = 'inherit';
         window.removeEventListener('resize', this.update);
@@ -54,6 +58,12 @@ class SupahScroll {
     animate() {
         this.scrollX += (window.scrollY - this.scrollX) * this.speed;
         this.supahScroll.style.transform = `translate3d(${-this.scrollX}px,0,0)`;
+        this.work.forEach((wk)=>{
+            if(scrollX >= this.sc.offsetLeft){
+                wk.querySelector(" h3 > span").style.transform = `translateX(${-(this.scrollX - wk.offsetLeft) * 0.05}px)`;
+            }
+            wk.querySelector(" h3 > span").style.transform = `translateX(${-(this.scrollX - wk.offsetLeft) * 0.05}px)`;
+        })
         this.raf = requestAnimationFrame(this.animate.bind(this));
     }
     scrollTo(x) {
