@@ -511,66 +511,8 @@
     <!-- SCRIPT -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.8.0/gsap.min.js"></script>
     <script src="./assets/js/common.js"></script>
-    <script src="./assets/js/supahscroll.js"></script>
+    <script src="./assets/js/supahscroll2.js"></script>
     <script>
-        //스크롤 이벤트
-        const porject = document.querySelector("#project");
-        const scriptP = document.querySelector("#scriptP");
-        const work = document.querySelectorAll(".work_section");
-        window.addEventListener("scroll", (e) => {
-            // let scrollTop = window.pageYOffset || document.documentElement.offsetTop || window.scrollY;
-
-            // work.forEach(workArea => {
-            //     const title = workArea.querySelector(".work_section_List");
-            //     let sectionLeft = porject.offsetLeft + title.offsetLeft;
-            //     let x = scrollTop - sectionLeft;
-
-            //     title.querySelector("h3 > span").style.transform = `translateX(${-x*0.1}px)`;
-            // });
-
-            //gsap
-            // work.forEach((workArea, idx) => {
-            //     const title = workArea.querySelector(".work_section_List");
-            //     const desc = workArea.querySelector(".work_desc");
-            //     if (scrollTop >= porject.offsetLeft && scrollTop < scriptP.offsetLeft) {
-            //         let sectionLeft = porject.offsetLeft + title.offsetLeft;
-            //         if (scrollTop >= sectionLeft) {
-            //             gsap.to(title.querySelector("h3 > span"), {
-            //                 duration: 1.5,
-            //                 opacity: 1,
-            //                 stagger: .5,
-            //                 x: 0,
-            //                 ease: "power2.in",
-            //             });
-            //             gsap.to(desc.querySelector("p"), {
-            //                 duration: 1.5,
-            //                 opacity: 1,
-            //                 stagger: .1,
-            //                 y: 0,
-            //                 ease: "power2.out",
-            //             });
-            //         }
-            //     } else if (scrollTop >= scriptP.offsetLeft) {
-            //         let sectionLeft = scriptP.offsetLeft + title.offsetLeft;
-            //         if (scrollTop >= sectionLeft) {
-            //             gsap.to(title.querySelector("h3 > span"), {
-            //                 duration: 1.5,
-            //                 opacity: 1,
-            //                 stagger: .5,
-            //                 x: 0,
-            //                 ease: "power2.in",
-            //             });
-            //             gsap.to(desc.querySelector("p"), {
-            //                 duration: 1.5,
-            //                 opacity: 1,
-            //                 stagger: .1,
-            //                 y: 0,
-            //                 ease: "power2.out",
-            //             });
-            //         }
-            //     }
-            // });
-        });
     </script>
 </body>
 
