@@ -20,6 +20,7 @@ window.onload = () => {
 
     codeBtn.forEach((btn, idx) => {
         btn.addEventListener("click", function () {
+            // console.log(modal[idx].classList.contains("hide"));
             if (modal[idx].classList.contains("hide")) {
                 modal[idx].classList.remove("hide");
             }
