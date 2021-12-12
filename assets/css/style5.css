@@ -702,7 +702,22 @@ body.mac .work_section_List>h3 {
     max-height: 69vh;
     overflow-y: auto;
     background-color: #242424;
-    padding-left: 23px;
+    padding: 0 23px;
+    color: #fff;
+    font-size: 15px;
+}
+
+.code-view .view-cont::-webkit-scrollbar{
+    background-color: #242424;
+}
+.code-view .view-cont::-webkit-scrollbar-thumb{
+    background-color: #494949;
+    border-radius: 10px;
+    background-clip: padding-box;
+    border: 2px solid transparent;
+}
+.code-view .view-cont::-webkit-scrollbar-corner{
+    background-color: #242424;
 }
 
 .code-view .view-cont>div {
@@ -711,6 +726,10 @@ body.mac .work_section_List>h3 {
 
 .code-view .view-cont>div:first-child {
     display: block;
+}
+
+.code-view .view-cont code {
+    font-family: 'Lato';
 }
 
 @media (max-width: 800px) {
