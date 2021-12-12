@@ -56,11 +56,6 @@
                     <p>frontend</p>
                     <p><span>works</span></p>
                 </div>
-
-
-
-
-
                 <div class="home_desc">
                     <span class="line"></span>
                     <p>새로운 변화가 끊임없이 일어나는 웹 환경에서 최신 트렌드에 뒤처지지 않기 위해 <br>스터디 혹은 세미나등의 참여하며 자기개발에 힘쓰겠습니다. </p>
@@ -110,8 +105,6 @@
                     <div class="work_section_List">
                         <h3><span>MEGABOX</span></h3>
                         <img src="./assets/img/megabox.jpg" alt="megabox">
-
-
                         <div class="codeView">
                             <!-- modal -->
                             <div id="modal">
@@ -137,7 +130,765 @@
                                                     <pre><code class="language-html"></code></pre>
                                                 </div>
                                                 <div class="css">
-                                                    <pre><code class="language-css"></code></pre>
+                                                    <pre><code class="language-css">&sol;* 스킵메뉴 *&sol;
+#skip &lbrace;position: relative; line-height: 30px;&rbrace;
+#skip a &lbrace;position: absolute; left: 0; top: -40px; width: 140px; border: 1px solid #fff; color: #fff; text-align: center; background: #333;&rbrace;
+#skip a:active,
+#skip a:focus &lbrace;top:0;&rbrace;
+
+&sol;* 레이아웃 *&sol;
+#mNav &lbrace;
+  display: none;
+  position: absolute;
+  top: 10px;
+  right: 14px;
+&rbrace;
+
+#header &lbrace;
+  width: 100%;
+  background-color: #fff;
+  border-bottom: 1px solid #c6c6c6;
+&rbrace;
+
+#banner &lbrace;
+  position: relative;
+&rbrace;
+
+#movie &lbrace;
+  background-color: #f8f8f8;
+&rbrace;
+
+#event &lbrace;&rbrace;
+#opening &lbrace;
+  margin: 17px 0;
+  background: url&lpar;&quot;..&sol;img&sol;bg01.jpg&quot;&rpar; no-repeat center top;
+  background-size: cover;
+&rbrace;
+#new &lbrace;&rbrace;
+#help &lbrace;&rbrace;
+#footer &lbrace;background: #211f1f;&rbrace;
+
+&sol;* 가운데 영역 *&sol;
+.container &lbrace;
+  position: relative;
+  width: 1280px;
+  margin: 0 auto;
+  background: rgba&lpar;0, 0, 0, 0&rpar;;
+&rbrace;
+
+&sol;* 로우 영역 *&sol;
+.row &lbrace;
+  padding: 0 28px;
+&rbrace;
+
+&sol;* 모바일 메뉴 *&sol;
+.ham &lbrace;
+  display: block;
+  width: 25px;
+  height: 10px;
+  background: rgba&lpar;0, 0, 0, 0&rpar;;
+  padding: 15px 10px 10px 10px;
+&rbrace;
+
+.ham span &lbrace;
+  position: relative;
+  display: block;
+  width: 25px;
+  height: 4px;
+  background: #39106a;
+&rbrace;
+
+.ham span:before &lbrace;
+  content: '';
+  width: 25px;
+  height: 4px;
+  background: #39106a;
+  position: absolute;
+  left: 0;
+  bottom: -7px;
+&rbrace;
+
+.ham span:after &lbrace;
+  content: '';
+  width: 25px;
+  height: 4px;
+  background: #39106a;
+  position: absolute;
+  left: 0;
+  top: -7px;
+&rbrace;
+
+&sol;* 헤더 영역 *&sol;
+.header h1 &lbrace;
+  float: left;
+&rbrace;
+
+.header h1 em &lbrace;
+  padding: 15px 8px 5px 0;
+  display: inline-block;
+&rbrace;
+
+.header h1 em img &lbrace;
+  width: 155px;
+&rbrace;
+
+.header h1 strong &lbrace;
+  display: block;
+  position: absolute;
+  left: 194px;
+  top: 23px;
+&rbrace;
+
+.header h1 strong img &lbrace;
+  width: 126px;
+&rbrace;
+
+.header .nav &lbrace;
+  float: right;
+&rbrace;
+
+.header .nav ul &lbrace;
+  border-left: 1px solid #c6c6c6
+&rbrace;
+
+.header .nav ul li &lbrace;
+  float: left;
+  width: 103px;
+  text-align: center;
+  border-right: 1px solid #c6c6c6;
+&rbrace;
+
+.header .nav ul li a &lbrace;
+  display: block;
+  padding: 19px 10px;
+  font-size: 17px;
+  font-weight: 700;
+  color: #444;
+&rbrace;
+
+&sol;* 배너 *&sol;
+.banner_menu &lbrace;
+  overflow: hidden;
+  position: absolute;
+  left: 0;
+  top: 20px;
+  width: 100%;
+  height: 100px;
+  z-index: 100;
+&rbrace;
+
+.banner_menu a &lbrace;
+  color: #fff;
+  font-size: 16px;
+  transition: all 0.3s;
+&rbrace;
+
+.banner_menu a:hover &lbrace;
+  color: #c1c1c1;
+&rbrace;
+
+.banner_menu .bm_left &lbrace;
+  float: left;
+&rbrace;
+
+.banner_menu .bm_left ul &lbrace;
+  padding-top: 7px;
+&rbrace;
+
+.banner_menu .bm_left li &lbrace;
+  display: inline;
+  position: relative;
+  margin-right: 30px;
+&rbrace;
+
+.banner_menu .bm_left li.total &lbrace;
+  margin-right: 20px;
+&rbrace;
+
+.banner_menu .bm_left li.total a &lbrace;
+  font-size: 14px;
+  padding: 3px 10px;
+  display: inline-block;
+  border: 1px solid #fff;
+  transition: all 0.3s;
+&rbrace;
+
+.banner_menu .bm_left li.total a:hover &lbrace;
+  background: #fff;
+  border-color: #000;
+  color: #000;
+&rbrace;
+
+.banner_menu .bm_right &lbrace;
+  float: right;
+  overflow: hidden;
+&rbrace;
+
+.banner_menu .bm_right ul &lbrace;
+  float: left;
+&rbrace;
+
+.banner_menu .bm_right ul:first-child &lbrace;
+  padding-top: 7px;
+&rbrace;
+
+.banner_menu .bm_right li &lbrace;
+  position: relative;
+  display: inline;
+  text-align: center;
+  margin-right: 20px;
+&rbrace;
+
+.banner_menu .bm_right li.line &lbrace;
+  margin-right: 30px;
+&rbrace;
+
+.banner_menu .bm_right li.white &lbrace;
+  margin-right: 10px;
+&rbrace;
+
+.banner_menu .bm_right li.white a &lbrace;
+  width: 80px;
+  background-color: #fff;
+  color: #3a0e6a;
+  padding: 7px 30px 9px 30px;
+  display: inline-block;
+  border: 1px solid #fff;
+&rbrace;
+
+.banner_menu .bm_right li.purple &lbrace;
+  margin-right: 0;
+&rbrace;
+
+.banner_menu .bm_right li.purple a &lbrace;
+  width: 80px;
+  background-color: #3a0e6a;
+  color: #fff;
+  padding: 7px 30px 9px 30px;
+  display: inline-block;
+  border: 1px solid #6e40c4;
+&rbrace;
+
+.banner_menu li.line:after &lbrace;
+  content: '';
+  width: 1px;
+  height: 14px;
+  background: #fff;
+  position: absolute;
+  right: -18px;
+  top: 2px;
+&rbrace;
+
+&sol;* 슬라이드 *&sol;
+.slider &lbrace;
+  width: 100%;
+  height: 600px;
+&rbrace;
+
+.slider .ss1 &lbrace;
+  background: url&lpar;..&sol;img&sol;swiper01.jpg&rpar; no-repeat center center;
+  background-size: cover;
+&rbrace;
+
+.slider .ss2 &lbrace;
+  background: url&lpar;..&sol;img&sol;swiper01.jpg&rpar; no-repeat center center;
+  background-size: cover;
+&rbrace;
+
+.slider .ss3 &lbrace;
+  background: url&lpar;..&sol;img&sol;swiper01.jpg&rpar; no-repeat center center;
+  background-size: cover;
+&rbrace;
+
+.slider .swiper-slide h2 &lbrace;
+  position: relative;
+  display: inline-block;
+  font-size: 62px;
+  line-height: 70px;
+  color: #fff;
+  margin-top: 200px;
+&rbrace;
+.slider .swiper-slide h2::after &lbrace;
+  content: '';
+  width: 100%;
+  height: 1px;
+  background: rgba&lpar;255, 255, 255, .3&rpar;;
+  position: absolute;
+  left: 0;
+  bottom: -35px;
+&rbrace;
+.slider .swiper-slide h2 em &lbrace;
+  display: block;
+  font-size: 59px;
+  font-weight: 100;
+&rbrace;
+.slider .swiper-slide p &lbrace;
+  font-size: 27px;
+  color: #fff;
+  padding-top: 55px;
+&rbrace;
+
+&sol;* 무비 *&sol;
+.movie &lbrace; padding: 100px 0;&rbrace;
+.movie_title &lbrace;margin-bottom: 60px;&rbrace;
+.movie_title ul &lbrace;overflow: hidden; width: 848px; margin: 0 auto;&rbrace;
+.movie_title li &lbrace; float: left; width: 210px; text-align: center; border: 1px solid #c4c4c4; margin-right: -1px;&rbrace;
+.movie_title li a &lbrace;display: block; padding: 15px 0; font-size: 18px; color: #666; font-weight: 700;&rbrace;
+.movie_title li.active a&lbrace;background: #666; color: #fff;&rbrace;
+.movie_chart &lbrace;overflow: hidden;&rbrace;
+.movie_chart > div > div > div &lbrace; float: left; width: 292px; margin-right: 18px;&rbrace;
+.movie_chart > div > div > div:last-child &lbrace;margin-right: 0;&rbrace;
+.movie_chart > div > div > div .poster &lbrace;position: relative;&rbrace;
+.movie_chart > div > div > div .poster img &lbrace;display: block;&rbrace;
+.movie_chart > div > div > div .poster .rank &lbrace;position: absolute; top: 7px; left: 0; width: 50px; height: 50px; line-height: 50px; font-size: 22px; box-shadow: 3px 3px 8px rgba&lpar;0, 0, 0, .5&rpar;; background-color: #38116a; text-align: center;&rbrace;
+.movie_chart > div > div > div .poster .rank strong &lbrace; color: #fff; text-shadow: 2px 2px 3px rgba&lpar;0, 0, 0, .1&rpar;;&rbrace;
+.movie_chart > div > div > div .poster .mx &lbrace;position: absolute; top: 17px; right: 17px;&rbrace;
+.movie_chart > div > div > div .poster .mx span &lbrace;width: 103px; height: 25px; display: block;&rbrace;
+.movie_chart > div > div > div .poster .mx .m &lbrace;background-position: 0 -75px;&rbrace;
+.movie_chart > div > div > div .poster .mx .b &lbrace;background-position: 0 -100px;&rbrace;
+.movie_chart > div > div > div .infor &lbrace;background: #fff; padding: 17px; border: 1px solid #d9d9d9;&rbrace;
+.movie_chart > div > div > div .infor h3 &lbrace;color: #333; font-size: 30px; font-weight: 700; margin-bottom: 20px;&rbrace;
+.movie_chart > div > div > div .infor h3 strong &lbrace;&rbrace;
+.movie_chart > div > div > div .infor h3 span &lbrace;width: 29px; height: 29px; display: inline-block; margin-top: 9px; &rbrace;
+.movie_chart > div > div > div .infor h3 span.all &lbrace;background-position: -87px -125px;&rbrace;
+.movie_chart > div > div > div .infor h3 span.a12 &lbrace;background-position: -0px -125px;&rbrace;
+.movie_chart > div > div > div .infor h3 span.a15 &lbrace;background-position: -29px -125px;&rbrace;
+.movie_chart > div > div > div .infor h3 span.a19 &lbrace;background-position: -58px -125px;&rbrace;
+.movie_chart > div > div > div .infor .infor_btn &lbrace;overflow: hidden;&rbrace;
+.movie_chart > div > div > div .infor .infor_btn a &lbrace; float: left; width: 49%; margin-right: 2%; background: #f2f2f2; font-size: 18px; text-align: center; padding: 15px 0; box-sizing: border-box;&rbrace;
+.movie_chart > div > div > div .infor .infor_btn a:last-child &lbrace;margin-right: 0;&rbrace;
+
+&sol;* 이벤트 *&sol;
+.event &lbrace;
+  overflow: hidden;
+  padding: 100px 0;
+&rbrace;
+.event img &lbrace;display: block;&rbrace;
+.event h2 &lbrace;
+  font-size: 30px;
+  font-weight: 500;
+  margin-bottom: 20px;
+&rbrace;
+.event .event_left &lbrace;
+  float: left;
+  width: 66%;
+  margin-right: 2%;
+  overflow: hidden;
+&rbrace;
+.event .event_left .event_box1 &lbrace;float: left; width: 50%;&rbrace;
+.event .event_left .event_box2 &lbrace;float: left; width: 50%;&rbrace;
+.event .event_right &lbrace;
+  float: left;
+  width: 32%;
+&rbrace;
+
+&sol;* 오프닝 *&sol;
+.opening &lbrace;padding: 100px 0; text-align: center; color: #bb9b51;&rbrace;
+.opening h2 &lbrace;
+  margin-bottom: 15px;
+&rbrace;
+.opening h2 .grand &lbrace;
+  background-position: 0 -175px;
+  display: inline-block;
+  width: 330px;
+  height: 50px;
+&rbrace;
+.opening .date &lbrace;
+  background-position: 0 -225px;
+  display: inline-block;
+  width: 260px;
+  height: 45px;
+&rbrace;
+.opening .desc &lbrace;
+  font-size: 35px;
+  font-weight: 300;
+  padding-bottom: 20px;
+  background: url&lpar;..&sol;img&sol;bar.png&rpar; no-repeat bottom center;
+  background-size: 100%;
+&rbrace;
+.opening .open_box &lbrace;overflow: hidden; padding: 20px 3% 0 3%;&rbrace;
+.opening .open_box > div &lbrace;
+  float: left;
+  width: 27.333%;
+  margin: 4% 3% 0 3%;
+  background: rgba&lpar;0, 0, 0, .5&rpar;;
+  border: 1px solid #3e4b44;
+  box-sizing: border-box;
+&rbrace;
+.opening .open_box > div h3 &lbrace;
+  color: #fff;
+  border: 1px solid #6e3abb;
+  margin-top: -24px;
+  font-size: 19px;
+  font-weight: 300;
+  display: inline-block;
+  padding: 10px 20px;
+  background: #551e9b;
+&rbrace;
+
+.opening .open_box > div p &lbrace;
+  font-size: 23px;
+  color: #fff;
+  font-weight: 700;
+  padding: 6% 0 10%;
+
+&rbrace;
+
+.opening .open_box > div em &lbrace;
+  display: block;
+  font-weight: bold;
+&rbrace;
+.opening .open_box > div strong &lbrace;
+  display: block;
+  font-weight: bold;
+&rbrace;
+
+&sol;* 새로운 영화 *&sol;
+.new &lbrace;padding: 100px 0; position: relative;&rbrace;
+.new h2 &lbrace;font-size: 30px; font-weight: 500; margin-bottom: 20px;&rbrace;
+.new .new_left &lbrace;position: relative; margin-right: 423px; height: 500px; background: #ccc url&lpar;..&sol;img&sol;new01.jpg&rpar; center center; background-size: cover;&rbrace;
+.new .new_left .play &lbrace;position: absolute; left: 50%; top: 50%; width: 120px; height: 120px; transform: translate&lpar;-50%, -50%&rpar;; cursor: pointer;&rbrace;
+.new .new_left .play .st0 &lbrace;fill: #fff; opacity: .3;&rbrace;
+.new .new_left .play .st1 &lbrace;fill: #fff;&rbrace;
+.new .new_right &lbrace;position: absolute; right: 0; top: 165px; width: 400px; height: 500px; padding: 34px; background: #f0f0f0; box-sizing: border-box;&rbrace;
+.new .new_right .title &lbrace;font-size: 28px; color: #000;&rbrace;
+.new .new_right .release &lbrace;font-size: 12px; color: #333;&rbrace;
+.new .new_right .star &lbrace;padding: 13px 0; padding-left: 5px;&rbrace;
+.new .new_right .star strong &lbrace;font-size: 15px;&rbrace;
+.new .new_right .star span &lbrace;display: inline-block; width: 20px; height: 20px; vertical-align: -3px;&rbrace;
+.new .new_right .star .star1 &lbrace;background-position: -393px 0;&rbrace;
+.new .new_right .star .star2 &lbrace;background-position: -412px 0;&rbrace;
+.new .new_right .star .star0 &lbrace;background-position: -374px 0;&rbrace;
+.new .new_right .summary &lbrace;font-size: 14px;&rbrace;
+.new .new_right .summary .genre &lbrace;padding-bottom: 3px;&rbrace;
+.new .new_right .summary .age &lbrace;padding-bottom: 10px;&rbrace;
+.new .new_right .summary .desc &lbrace;height: 108px; overflow: hidden;&rbrace;
+
+.new .new_right .select &lbrace;overflow: hidden;&rbrace;
+.new .new_right .select .s1&lbrace;float: left; width: 49%; margin-right: 2%; background: #000;&rbrace;
+.new .new_right .select .s2&lbrace;float: left; width: 49%; background: #000;&rbrace;
+.new .new_right .select .s3&lbrace;float: left; width: 100%; margin-top: 2%;&rbrace;
+.new .new_right .btn &lbrace;overflow: hidden; margin-top: 20px; text-align: center;&rbrace;
+.new .new_right .btn a &lbrace;float: left; width: 49%; box-sizing: border-box; display: block; padding: 10px 30px 12px 30px;&rbrace;
+.new .new_right .btn a.white &lbrace;background-color: #fff; color: #3a0e6a; margin-right: 2%; border: 1px solid #3a0e6a;&rbrace;
+.new .new_right .btn a.purple &lbrace;background-color: #3a0e6a; color: #fff; border: 1px solid #6e40c4;&rbrace;
+
+&sol;* help *&sol;
+.help &lbrace;overflow: hidden; padding-bottom: 200px;&rbrace;
+.help article &lbrace;float: left; width: 32%; margin-right: 2%; height: 350px;&rbrace;
+.help article > div &lbrace; border: 1px solid #dbdbdb; height: 350px;&rbrace;
+.help article.help_box3 &lbrace;margin-right: 0;&rbrace;
+.help article.help_box3 > div &lbrace;border: 0;&rbrace;
+.help article h3 &lbrace;font-size: 30px; font-weight: 500; margin-bottom: 20px;&rbrace;
+
+&sol;* 공지사항 *&sol;
+.notice &lbrace;padding: 17px; position: relative;&rbrace;
+.notice ul &lbrace;overflow: hidden;&rbrace;
+.notice ul li &lbrace;float: left; text-align: center; margin-right: -1px;&rbrace;
+.notice ul li a &lbrace;border: 1px solid #dbdbdb; font-size: 15px; color: #666; display: block; width: 80px; padding: 10px 20px; background-color: #f5f5f5;&rbrace;
+.notice ul li.active a &lbrace;background-color: #fff;&rbrace;
+.notice ul li ul &lbrace;position: absolute; left: 17px; top: 70px; width: 90%;&rbrace;
+.notice ul li ul li &lbrace;width: 100%; box-sizing: border-box; text-align: left; padding: 17px; border-bottom: 1px solid #dbdbdb;&rbrace;
+.notice ul li ul li:last-child &lbrace;border-bottom: 0;&rbrace;
+.notice ul li ul li dt em &lbrace;color: #999;&rbrace;
+.notice ul li ul li dt .bar&lbrace;position: relative; padding-right: 10px;&rbrace;
+.notice ul li ul li dt .bar::after &lbrace;content: ''; position: absolute; right: 4px; top: 5px; width: 1px; height: 10px; background: #999&rbrace;
+.notice ul li ul li dd &lbrace;color: #777; padding-top: 3px;&rbrace;
+.notice ul li ul li a &lbrace;border: 0; padding: 0; width: 100%; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;&rbrace; 
+
+&sol;* 할인카드 *&sol;
+.card &lbrace;padding: 17px;&rbrace;
+.card ul li &lbrace;
+  border: 1px solid #d7d7d7;
+  padding: 17px;
+  margin-bottom: 17px;
+  position: relative;
+  min-height: 102px;
+  box-sizing: border-box;
+&rbrace;
+.card ul li span &lbrace;position: absolute; left: 17px; top: 17px;&rbrace;
+.card ul li span img &lbrace;width: 105px; &rbrace;
+.card ul li strong &lbrace; display: block; font-size: 18px; color: #777; padding-left: 120px;&rbrace;
+.card ul li em &lbrace;display: block; font-size: 14px; font-weight: 300; color: #777;  padding-left: 120px;&rbrace;
+
+
+&sol;* 고객센터 *&sol;
+.service ul &lbrace;overflow: hidden;&rbrace;
+.service li &lbrace;float: left; width: 50%; height: 193px; box-sizing: border-box;  border: 1px solid #d7d7d7; text-align: center;&rbrace;
+.service li a &lbrace;&rbrace;
+.service li a span &lbrace;display: block; width: 120px; height: 120px; margin: 20px auto 0; overflow: hidden;&rbrace;
+.service li a strong &lbrace;color: #666; font-size: 18px; font-weight: 500;&rbrace;
+.service li:nth-child&lpar;1&rpar; &lbrace;border-right: 0; border-bottom: 0;&rbrace;
+.service li:nth-child&lpar;2&rpar; &lbrace;border-bottom: 0;&rbrace;
+.service li:nth-child&lpar;3&rpar; &lbrace;border-right: 0;&rbrace;
+
+&sol;* 푸터 *&sol;
+.footer_sns &lbrace;position: absolute; right: 17px; top: 33px; z-index: 1;&rbrace;
+.footer_sns li &lbrace;display: inline-block; margin-left: 4px;&rbrace;
+.footer_sns li a &lbrace;display: block; width: 36px; height: 36px; &rbrace;
+.footer_sns li.s1 &lbrace;background-position: 0 -375px;&rbrace;
+.footer_sns li.s2 &lbrace;background-position: -36px -375px;&rbrace;
+.footer_sns li.s3 &lbrace;background-position: -72px -375px;&rbrace;
+.footer_sns li.s4 &lbrace;background-position: -108px -375px;&rbrace;
+.footer_sns li.s5 &lbrace;background-position: -144px -375px;&rbrace;
+.footer_sns li.s1:hover &lbrace;background-position: 0 -411px;&rbrace;
+.footer_sns li.s2:hover &lbrace;background-position: -36px -411px;&rbrace;
+.footer_sns li.s3:hover &lbrace;background-position: -72px -411px;&rbrace;
+.footer_sns li.s4:hover &lbrace;background-position: -108px -411px;&rbrace;
+.footer_sns li.s5:hover &lbrace;background-position: -144px -411px;&rbrace;
+.footer_sns .tel &lbrace;text-align: right; padding-top: 5px;&rbrace;
+.footer_sns .tel a &lbrace;color: #8f8f8f; font-size: 21px;&rbrace;
+.footer_sns .tel a em &lbrace;color: #fff;&rbrace;
+
+.footer_info &lbrace;padding: 50px 0; width: 80%;&rbrace;
+.footer_info h2 img &lbrace;width: 150px;&rbrace;
+.footer_info ul &lbrace;padding: 15px 0;&rbrace;
+.footer_info li &lbrace;display: inline; padding-right: 16px; white-space: nowrap; position: relative;&rbrace;
+.footer_info li::after &lbrace;content: ''; position: absolute; right: 5px; top: 5px; width: 1px; height: 11px; background: #8f8f8f;&rbrace;
+.footer_info li:last-child:after &lbrace;width: 0; height: 0;&rbrace;
+.footer_info li a &lbrace;color: #8f8f8f;&rbrace;
+.footer_info address p &lbrace;color: #8f8f8f; padding-bottom: 15px;&rbrace;
+
+
+&sol;* 트레일러 *&sol;
+.overlay &lbrace;background: rgba&lpar;0, 0, 0, 0.92&rpar;; display: none; width: 100%; height: 100%; position: fixed; top: 0; left: 0; z-index: 10000&rbrace;
+.modal &lbrace;position: absolute;&rbrace;
+.modal_close &lbrace;
+    background: url&lpar;..&sol;img&sol;close.svg&rpar; no-repeat; background-size: 32px 32px;
+    border: 0; color: transparent;
+    display: block; width: 32px; height: 32px; overflow: hidden;
+    position: absolute; top: 24px; right: 24px; text-indent: 100%;
+&rbrace;
+body.modal_on &lbrace;overflow: hidden;&rbrace;
+
+
+&sol;* 미디어쿼리 *&sol;
+@media &lpar;max-width: 1290px&rpar; &lbrace;
+  .container &lbrace;
+    width: 100%;
+  &rbrace;
+
+  .header .nav ul li &lbrace;
+    width: 93px;
+  &rbrace;
+
+  .header .nav ul li a &lbrace;
+    font-size: 15px;
+    padding: 17px 10px
+  &rbrace;
+
+  .header h1 em &lbrace;
+    padding: 11px 8px 5px 0;
+  &rbrace;
+
+  .header h1 strong &lbrace;
+    top: 19px;
+  &rbrace;
+
+  .swiper-button-prev, .swiper-button-next &lbrace;
+    display: none;
+  &rbrace;
+&rbrace;
+
+@media &lpar;max-width: 1024px&rpar; &lbrace;
+  #mNav &lbrace;
+    display: block;
+  &rbrace;
+
+  .nav &lbrace;
+    display: none;
+  &rbrace;
+
+  .row &lbrace;
+    padding: 0 24px;
+  &rbrace;
+
+  .header h1 &lbrace;
+    float: none;
+    text-align: center;
+  &rbrace;
+
+  .header h1 strong &lbrace;
+    left: 24px;
+  &rbrace;
+
+  .banner_menu .bm_left ul &lbrace; display: none;&rbrace;
+  .banner_menu .bm_right ul:first-child &lbrace; display: none;&rbrace;
+
+  .help article.help_box1 &lbrace;width: 49%; margin-right: 2%;&rbrace;
+  .help article.help_box2 &lbrace;width: 49%; margin-right: 0;&rbrace;
+  .help article.help_box3 &lbrace;width: 100%; margin-top: 2%;&rbrace;
+  .help article &lbrace;height: auto;&rbrace;
+  .service li &lbrace;width: 25%; height: auto; &rbrace;
+  .service li:nth-child&lpar;1&rpar; &lbrace;border-bottom: 1px solid #d7d7d7;&rbrace;
+  .service li:nth-child&lpar;2&rpar; &lbrace;border-bottom: 1px solid #d7d7d7; border-right: 0;&rbrace;
+  .service li a strong &lbrace;display: block; padding-bottom: 10%;&rbrace;
+&rbrace;
+
+@media &lpar;max-width: 960px&rpar; &lbrace;
+  .slider &lbrace;height: 500px;&rbrace;
+  .slider .swiper-slide h2 &lbrace;margin-top: 170px; font-size: 37px; line-height: 45px;&rbrace;
+  .slider .swiper-slide h2::after &lbrace;bottom: -15px;&rbrace;
+  .slider .swiper-slide h2 em &lbrace;font-size: 34px;&rbrace;
+  .slider .swiper-slide p &lbrace;font-size: 16px; padding-top: 35px;&rbrace;
+
+  .movie_title ul &lbrace;width: auto;&rbrace;
+  .movie_title li &lbrace;width: 25%; box-sizing: border-box;&rbrace;
+
+  .opening &lbrace;padding: 50px 0;&rbrace;
+  .opening .open_box &lbrace;display: none;&rbrace;
+  .opening .desc &lbrace;background: none; font-size: 25px;&rbrace;
+
+  .new .new_left &lbrace;margin-right: 0; height: 400px;&rbrace;
+  .new .new_right &lbrace;position: relative; top: 0; width: 100%; height: auto;&rbrace;
+
+  .footer_sns &lbrace;position: static; text-align: center; background: #352c2c; padding-bottom: 15px;&rbrace;
+  .footer_sns .tel &lbrace;display: none;&rbrace;
+
+  .footer_info &lbrace;width: 100%; text-align: center;&rbrace;
+&rbrace;
+
+@media &lpar;max-width: 768px&rpar; &lbrace;
+  body &lbrace;background: #d9d7e0;&rbrace;
+  .row &lbrace;
+    padding: 0 16px;
+  &rbrace;
+
+  #mNav &lbrace;
+    right: 6px;
+  &rbrace;
+
+  .header h1 &lbrace;
+    text-align: left;
+  &rbrace;
+
+  .header h1 strong &lbrace;
+    display: none;
+  &rbrace;
+
+  #movie &lbrace;background: none;&rbrace;
+  #movie .row &lbrace;background: #fff; margin: 24px 24px 0 24px; padding: 24px;&rbrace;
+  #movie .ir_so &lbrace; position: static; width: auto; height: auto; line-height: normal; text-indent: 0; font-size: 24px; font-weight: bold; padding-bottom: 20px;&rbrace;
+  .movie &lbrace;padding: 0;&rbrace;
+  .movie_title &lbrace;margin-bottom: 30px;&rbrace;
+  .movie_title ul &lbrace;position: relative; padding-bottom: 10px;&rbrace;
+  .movie_title ul:before &lbrace;content: ''; position: absolute; z-index: 1; left: 0; bottom: 0; width: 100%; height: 2px; background: #e1e1e1;&rbrace;
+  .movie_title li &lbrace;width: auto; border: 0;&rbrace;
+  .movie_title li a &lbrace;position: relative; font-size: 18px; color: #666; font-weight: 400; padding: 0; margin-right: 35px;&rbrace;
+  .movie_title li.active a:before &lbrace;content: ''; position: absolute; z-index: 2; left: 0; bottom: -10px; width: 100%; height: 2px; background: #666;&rbrace;
+  .movie_title li.active a &lbrace;background: none; color: #666;&rbrace;
+
+  #event .row &lbrace;padding: 24px;&rbrace;
+  .event &lbrace;padding: 24px; background-color: #fff;&rbrace;
+  .event h2 &lbrace;font-size: 24px; font-weight: 700;&rbrace;
+  .event .event_left &lbrace;width: 100%;&rbrace;
+  .event .event_right &lbrace;display: none;&rbrace;
+
+  #opening &lbrace;margin: 0;&rbrace;
+
+  
+  #new .row &lbrace;padding: 0 24px;&rbrace;
+  .new &lbrace;padding: 24px; margin-top: 24px; background-color: #fff;&rbrace;
+  .new h2 &lbrace;font-size: 24px; font-weight: 700; height: 27px; margin-bottom: 20px; padding-bottom: 10px;&rbrace;
+  .new .new_right &lbrace;padding: 24px;&rbrace;
+
+  #help .row &lbrace;padding: 0 24px;&rbrace;
+  .help &lbrace;padding-bottom: 24px;&rbrace;
+  .help article.help_box1 &lbrace;padding: 24px; box-sizing: border-box; width: 100%; background-color: #fff; margin-right: 0; margin-top: 24px;&rbrace;
+  .help article.help_box2 &lbrace;padding: 24px; box-sizing: border-box; width: 100%; background-color: #fff; margin-right: 0; margin-top: 24px;&rbrace;
+  .help article.help_box3 &lbrace;width: 100%; background-color: #fff; margin-top: 24px;&rbrace;
+  .help article.help_box1 h3 &lbrace;font-size: 24px; font-weight: 700; height: 27px; margin-bottom: 20px; padding-bottom: 10px; &rbrace;
+  .help article.help_box2 h3 &lbrace;font-size: 24px; font-weight: 700; height: 27px; margin-bottom: 20px; padding-bottom: 10px; &rbrace;
+  .help article.help_box3 h3 &lbrace;display: none;&rbrace;
+  .help article.help_box3 > div &lbrace;height: auto;&rbrace;
+  .service li &lbrace;border: 0;&rbrace;
+  .service li:nth-child&lpar;1&rpar; &lbrace;border-bottom: 0;&rbrace;
+  .service li:nth-child&lpar;2&rpar; &lbrace;border-bottom: 0;&rbrace;
+&rbrace;
+
+
+@media &lpar;max-width: 600px&rpar; &lbrace;
+  .slider&lbrace;height: 400px;&rbrace;
+  .slider .swiper-slide h2 &lbrace;margin-top: 140px; font-size: 24px; line-height: 30px;&rbrace;
+  .slider .swiper-slide h2::after &lbrace;bottom: -5px;&rbrace;
+  .slider .swiper-slide h2 em &lbrace;font-size: 20px;&rbrace;
+  .slider .swiper-slide p &lbrace;font-size: 14px; padding-top: 25px;&rbrace;
+  .banner_menu &lbrace;top: 16px;&rbrace;
+  .banner_menu .bm_right li.white a &lbrace;font-size: 14px; padding: 3px 5px 5px 5px; color: #fff; background: rgba&lpar;0, 0, 0, .6&rpar;; border-color: #fff;&rbrace;
+  .banner_menu .bm_right li.purple a &lbrace;font-size: 14px; padding: 3px 5px 5px 5px; color: #fff; background: rgba&lpar;0, 0, 0, .6&rpar;; border-color: #fff;&rbrace;
+  .swiper-pagination-bullet &lbrace;width: 13px !important; height: 13px !important;&rbrace;
+
+  #movie .container &lbrace;&rbrace;
+  #movie .container::after &lbrace;content: ''; position: absolute; z-index: 20; top: 0; right: 0; width: 8px; height: 100%; background: #d9d7e0;&rbrace;
+  #movie .row &lbrace;position: relative; margin: 8px; padding: 16px; margin-right: 0; padding-right: 0;&rbrace;
+  #movie .row::after &lbrace; content: ''; position: absolute; top: 0; right: 0; z-index: 10; width: 24px; height: 100%; background-color: #fff;&rbrace;
+  #movie .ir_so &lbrace;font-size: 18px; padding-bottom: 10px;&rbrace;
+  .movie_title &lbrace;margin-bottom: 20px;&rbrace;
+  .movie_title ul &lbrace;padding-bottom: 8px; white-space: nowrap; overflow-x: auto;&rbrace;
+  .movie_title li a &lbrace;font-size: 14px; margin-right: 15px;&rbrace;
+  .movie_title li.active a::before &lbrace;bottom: -8px;&rbrace;
+  .movie_chart &lbrace;position: relative; z-index: 30;&rbrace;
+  .movie_chart > div > div > div .infor &lbrace;padding: 5px;&rbrace;
+  .movie_chart > div > div > div .infor h3 &lbrace;text-align: center; margin: 5px 0 10px;&rbrace;
+  .movie_chart > div > div > div .infor h3 strong &lbrace;display: block; font-size: 19px; color: #222; font-weight: 300;&rbrace;
+  .movie_chart > div > div > div .infor h3 span &lbrace;display: none;&rbrace;
+  .movie_chart > div > div > div .infor .infor_btn a &lbrace;width: 52%; margin-left: 24%; display: block; margin-right: 0; padding: 5px; color: #777; margin-bottom: 5px; box-sizing: border-box; font-size: 14px; background: none; border: 1px solid #ddd;&rbrace;
+  .movie_chart > div > div > div .infor .infor_btn a:last-child &lbrace;display: none;&rbrace;
+
+  #event .row &lbrace;padding: 0 8px;&rbrace;
+  .event &lbrace;padding: 16px;&rbrace;
+  .event h2 &lbrace;font-size: 18px; margin-bottom: 8px;&rbrace;
+
+  #opening &lbrace;margin: 8px 0;&rbrace;
+  .opening &lbrace;padding: 20px 0;&rbrace;
+  .opening h2 &lbrace;margin-bottom: 10px;&rbrace;
+  .opening h2 .grand &lbrace;background-size: 300px; background-position: 0 -105px; width: 197px; height: 24px;&rbrace;
+  .opening .date &lbrace;display: none;&rbrace;
+  .opening .desc &lbrace;font-size: 16px; font-weight: 400; padding-bottom: 0;&rbrace;
+
+  #new .row &lbrace;padding: 0 8px;&rbrace;
+  .new &lbrace;padding: 16px; margin-top: 8px;&rbrace;
+  .new h2 &lbrace;font-size: 18px; margin-bottom: 0;&rbrace;
+  .new .new_left &lbrace;height: 300px;&rbrace;
+  .new .new_right &lbrace;padding: 17px;&rbrace;
+  .new .new_right .title &lbrace;font-size: 22px;&rbrace;
+  .new .new_right .star &lbrace; padding: 9px 0;&rbrace;
+  .new .new_right .select .s1 &lbrace;width: 100%; margin-right: 0; margin-bottom: 2%;&rbrace;
+  .new .new_right .select .s2 &lbrace;width: 100%;&rbrace;
+
+  #help .row &lbrace;padding: 0 8px;&rbrace;
+  .help article.help_box1 &lbrace;margin-top: 8px; padding: 16px;&rbrace;
+  .help article.help_box2 &lbrace;margin-top: 8px; padding: 16px;&rbrace;
+  .help article.help_box3 &lbrace;margin-top: 8px; &rbrace;
+  .help article.help_box1 h3 &lbrace;font-size: 18px; margin-bottom: 0;&rbrace;
+  .help article.help_box2 h3 &lbrace;font-size: 18px; margin-bottom: 0;&rbrace;
+  .card &lbrace;padding: 8px;&rbrace;
+  .service li &lbrace;width: 50%;&rbrace;
+  .service li:nth-child&lpar;1&rpar; &lbrace;border-right: 1px solid #d7d7d7; border-bottom: 1px solid #d7d7d7;&rbrace;
+  .service li:nth-child&lpar;2&rpar; &lbrace;border-bottom: 1px solid #d7d7d7;&rbrace;
+  .service li:nth-child&lpar;3&rpar; &lbrace;border-right: 1px solid #d7d7d7;&rbrace;
+
+&rbrace;
+
+@media &lpar;max-width: 480px&rpar; &lbrace;&rbrace;
+
+@media &lpar;max-width: 320px&rpar; &lbrace;
+  .movie_title li a &lbrace;margin-right: 9px;&rbrace;
+
+  .notice &lbrace;padding: 8px;&rbrace;
+  .notice ul li ul &lbrace;left: 9px; top: 56px;&rbrace;
+  .notice ul li ul li &lbrace;padding: 8px;&rbrace;
+  .notice ul li a &lbrace;padding: 5px 10px;&rbrace;
+  .help article > div &lbrace;height: 287px;&rbrace;
+  .card ul li &lbrace;padding: 8px; margin-bottom: 8px; min-height: 90px;&rbrace;
+  .card ul li span &lbrace;left: 11px; top: 10px;&rbrace;
+  .card ul li span img &lbrace; width: 60px; &rbrace;
+  .card ul li strong &lbrace;padding-left: 75px; font-size: 14px;&rbrace;
+  .card ul li em &lbrace;padding-left: 70px;&rbrace;
+  .service li a span &lbrace;width: 70px; height: 70px;&rbrace;
+  .service li a strong &lbrace;font-size: 14px;&rbrace;
+&rbrace;
+</code></pre>
                                                 </div>
                                                 <div class="javascript">
                                                     <pre><code class="language-js"></code></pre>
@@ -510,9 +1261,128 @@
 
     <!-- SCRIPT -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.8.0/gsap.min.js"></script>
-    <script src="./assets/js/common.js"></script>
+    <!-- <script src="./assets/js/common.js"></script> -->
     <script src="./assets/js/supahscroll2.js"></script>
     <script>
+        window.onload = () => {
+            //운영체제 정보 알아내기
+            let os = navigator.userAgent.toLowerCase();
+
+            if (os.indexOf("windows") >= 0) {
+                document.querySelector("body").classList.add("windows");
+            } else if (os.indexOf("macintosh") >= 0) {
+                document.querySelector("body").classList.add("mac");
+            } else if (os.indexOf("iphone") >= 0) {
+                document.querySelector("body").classList.add("iphone");
+            } else if (os.indexOf("android") >= 0) {
+                document.querySelector("body").classList.add("android");
+            }
+
+            //모달 창 스크립트
+            const workSection = document.querySelectorAll("#project .work_section");
+
+            workSection.forEach((work, index) => {
+                //CODE 버튼
+                const codeBtn = work.querySelector(".code_btn");
+                //section 제목, 설명
+                const sectionH3 = work.querySelector(".work_section_List h3");
+                const sectionDesc = work.querySelector(".work_section_List .work_desc");
+
+                const codeViewArea = work.querySelector(".codeView");
+                const modal = work.querySelector("#modal");
+                const modalBtn = work.querySelector(".view-header .dot span:nth-child(1) ");
+
+                const viewBtn = codeViewArea.querySelectorAll(".view-title ul li");
+                const viewCont = codeViewArea.querySelectorAll(".view-cont > div");
+
+                codeBtn.addEventListener("click", function () {
+                    if (modal.classList.contains("hide")) {
+                        modal.classList.remove("hide");
+                    }
+                    setTimeout(() => {
+                        sectionH3.style.cssText = "opacity: 0; transform: translateY(-70%);"
+                    }, 500);
+                    setTimeout(() => {
+                        sectionDesc.style.cssText =
+                            "opacity: 0; transform: translate(-50%, -70%);"
+                    }, 1000);
+                    setTimeout(() => {
+                        codeViewArea.classList.add("show");
+                        modal.classList.add("show");
+                    }, 1500);
+                });
+
+                modalBtn.addEventListener("click", function () {
+                    modal.classList.remove("show");
+                    modal.classList.add("hide");
+                    setTimeout(() => {
+                        sectionH3.style.cssText = "opacity: 1; transform: auto;"
+                    }, 500);
+                    setTimeout(() => {
+                        sectionDesc.style.cssText =
+                            "opacity: 1; transform: translate(-50%, 0);"
+                    }, 1000);
+                    setTimeout(() => {
+                        codeViewArea.classList.remove("show");
+                    }, 1500);
+                });
+
+                viewBtn.forEach((btn, index) => {
+                    btn.addEventListener("click", function (e) {
+                        e.preventDefault();
+                        viewBtn.forEach(el => el.classList.remove("active"));
+                        btn.classList.add("active");
+                        viewCont.forEach(el => el.style.display = "none");
+                        viewCont[index].style.display = "block";
+                    });
+                });
+            });
+
+            // const codeBtn = document.querySelectorAll(".code_btn");
+            // const codeViewArea = document.querySelectorAll(".codeView");
+            // const modal = document.querySelectorAll("#modal");
+            // const modalBtn = document.querySelectorAll(".view-header .dot span:nth-child(1) ");
+
+            // codeBtn.forEach((btn, idx) => {
+            //     btn.addEventListener("click", function () {
+            //         // console.log(modal[idx].classList.contains("hide"));
+            //         if (modal[idx].classList.contains("hide")) {
+            //             modal[idx].classList.remove("hide");
+            //         }
+            //         codeViewArea[idx].classList.add("show");
+            //         modal[idx].classList.add("show");
+            //     });
+            // });
+
+            // modalBtn.forEach((btn, idx) => {
+            //     btn.addEventListener("click", function () {
+            //         modal[idx].classList.remove("show");
+            //         modal[idx].classList.add("hide");
+            //         setTimeout(() => {
+            //             codeViewArea[idx].classList.remove("show");
+            //         }, 500);
+            //     });
+
+            // })
+
+
+            // codeViewArea.forEach((codeView, idx) => {
+            //     const viewBtn = codeView.querySelectorAll(".view-title ul li");
+            //     const viewCont = codeView.querySelectorAll(".view-cont > div");
+
+            //     viewBtn.forEach((btn, index) => {
+            //         btn.addEventListener("click", function (e) {
+            //             e.preventDefault();
+            //             viewBtn.forEach(el => el.classList.remove("active"));
+            //             btn.classList.add("active");
+
+            //             viewCont.forEach(el => el.style.display = "none");
+            //             viewCont[index].style.display = "block";
+            //         });
+            //     });
+            // })
+
+        };
     </script>
 </body>
 

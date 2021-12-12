@@ -311,6 +311,7 @@ body.mac .work_section_List>h3 {
     letter-spacing: 6px;
     overflow: hidden;
     white-space: nowrap;
+    transition: transform 0.5s, opacity 0.5s;
 }
 
 .work_section_List>h3>span {
@@ -371,6 +372,7 @@ body.mac .work_section_List>h3 {
     padding: 3.65vh;
     width: 61vh;
     min-height: 324px;
+    transition: transform 0.5s, opacity 0.5s;
 }
 
 .work_desc>p {
