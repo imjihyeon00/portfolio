@@ -48,6 +48,18 @@
     <h1 class="ir_so">메인 영역입니다.</h1>
     <div id="horizon" class="horizon">
 
+      <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="800">
+        <defs>
+          <filter id="goo">
+            <feGaussianBlur in="SourceGraphic" stdDeviation="6" result="blur" />
+            <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 35 -15"
+              result="goo" />
+            <feComposite in="SourceGraphic" in2="goo" operator="atop" />
+          </filter>
+        </defs>
+      </svg>
+      <div id="cursor" class="cursor"></div>
+
       <!-- HOME -->
       <article id="home" class="home" data-class="c_home"
         data-cursor="&lt;img src='./assets/img/arrow.svg' alt='화살표'&gt;">
@@ -2220,6 +2232,140 @@ body.modal_on &lbrace;overflow: hidden;&rbrace;
         displacementImage: 'assets/img/heightMap.png',
         imagesRatio: 1.6
       });
+
+
+
+
+      //커서
+      const cursor = document.getElementById("cursor");
+      const amount = 20;
+      const sineDots = Math.floor(amount * 0.3);
+      const width = 26;
+      const idleTimeout = 150;
+      let lastFrame = 0;
+      let mousePosition = {
+        x: 0,
+        y: 0
+      };
+      let dots = [];
+      let timeoutID;
+      let idle = false;
+      let hoverButton;
+      let hoverTL;
+
+      class Dot {
+        constructor(index = 0) {
+          this.index = index;
+          this.anglespeed = 0.05;
+          this.x = 0;
+          this.y = 0;
+          this.scale = 1 - 0.05 * index;
+          this.range = width / 2 - width / 2 * this.scale + 2;
+          this.limit = width * 0.75 * this.scale;
+          this.element = document.createElement("span");
+          TweenMax.set(this.element, {
+            scale: this.scale
+          });
+          cursor.appendChild(this.element);
+        }
+
+        lock() {
+          this.lockX = this.x;
+          this.lockY = this.y;
+          this.angleX = Math.PI * 2 * Math.random();
+          this.angleY = Math.PI * 2 * Math.random();
+        }
+
+        draw(delta) {
+          if (!idle || this.index <= sineDots) {
+            TweenMax.set(this.element, {
+              x: this.x,
+              y: this.y
+            });
+          } else {
+            this.angleX += this.anglespeed;
+            this.angleY += this.anglespeed;
+            this.y = this.lockY + Math.sin(this.angleY) * this.range;
+            this.x = this.lockX + Math.sin(this.angleX) * this.range;
+            TweenMax.set(this.element, {
+              x: this.x,
+              y: this.y
+            });
+          }
+        }
+      }
+
+      function init() {
+        window.addEventListener("mousemove", onMouseMove);
+        window.addEventListener("touchmove", onTouchMove);
+        lastFrame += new Date();
+        buildDots();
+        render();
+      }
+
+      function startIdleTimer() {
+        timeoutID = setTimeout(goInactive, idleTimeout);
+        idle = false;
+      }
+
+      function resetIdleTimer() {
+        clearTimeout(timeoutID);
+        startIdleTimer();
+      }
+
+      function goInactive() {
+        idle = true;
+        for (let dot of dots) {
+          dot.lock();
+        }
+      }
+
+      function buildDots() {
+        for (let i = 0; i < amount; i++) {
+          let dot = new Dot(i);
+          dots.push(dot);
+        }
+      }
+
+      const onMouseMove = event => {
+        mousePosition.x = event.pageX - window.scrollX/2;
+        mousePosition.y = event.pageY - window.scrollY/2;
+        console.log(event.pageX);
+        resetIdleTimer();
+      };
+
+      const onTouchMove = () => {
+        mousePosition.x = event.touches[0].pageX - window.scrollX / 2;
+        mousePosition.y = event.touches[0].pageY - window.scrollY / 2;
+        resetIdleTimer();
+      };
+
+      const render = timestamp => {
+        const delta = timestamp - lastFrame;
+        positionCursor(delta);
+        lastFrame = timestamp;
+        requestAnimationFrame(render);
+      };
+
+      const positionCursor = delta => {
+        let x = mousePosition.x;
+        let y = mousePosition.y;
+        dots.forEach((dot, index, dots) => {
+          let nextDot = dots[index + 1] || dots[0];
+          dot.x = x;
+          dot.y = y;
+          dot.draw(delta);
+          if (!idle || index <= sineDots) {
+            const dx = (nextDot.x - dot.x) * 0.35;
+            const dy = (nextDot.y - dot.y) * 0.35;
+            x += dx;
+            y += dy;
+          }
+        });
+      };
+
+      init();
+
     };
   </script>
 </body>

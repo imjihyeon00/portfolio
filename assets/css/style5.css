@@ -734,6 +734,34 @@ body.mac .work_section_List>h3 {
     font-family: 'Lato';
 }
 
+
+svg {
+    display: none;
+}
+.cursor {
+    pointer-events: none;
+    position: fixed;
+    display: block;
+    border-radius: 0;
+    transform-origin: center center;
+    mix-blend-mode: difference;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    filter: url("#goo");
+}
+
+.cursor span {
+    position: absolute;
+    display: block;
+    width: 26px;
+    height: 26px;
+    border-radius: 20px;
+    background-color: #fff;
+    transform-origin: center center;
+    transform: translate(-50%, -50%);
+}
+
 @media (max-width: 800px) {
     .info h1 {
         font-size: 14px;
