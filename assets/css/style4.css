@@ -150,6 +150,16 @@ body {
     border: 1px solid #6f6a64;
 }
 
+
+.about_img>.img {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-52%);
+    width: 37.5vh;
+    height: 62vh;
+}
+
 .about_img>img {
     position: absolute;
     right: 0;
